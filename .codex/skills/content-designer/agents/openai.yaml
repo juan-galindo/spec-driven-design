@@ -1,4 +1,4 @@
 interface:
   display_name: "Content Designer"
   short_description: "UX writing and product narrative"
-  default_prompt: "Use -designer to design clear product messaging and user-facing copy."
+  default_prompt: "Use $content-designer to design clear product messaging and user-facing copy."

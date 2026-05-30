@@ -1,0 +1,29 @@
+# Project Agent Structure
+
+This project uses Codex skills as specialized agents. Project-local skills live under `.codex/skills/<skill-name>/SKILL.md` and optional UI metadata lives under `.codex/skills/<skill-name>/agents/openai.yaml`.
+
+## Available Skills
+
+- `$researcher`: gather evidence, compare sources, validate assumptions, and summarize implications.
+- `$business-analyst`: structure business problems, evaluate options, size opportunities, and prepare decision-ready recommendations.
+- `$product-strategist`: define product direction, positioning, MVP scope, roadmap, metrics, and validation plan.
+- `$content-designer`: design product narrative, UX writing, terminology, messaging hierarchy, and user-facing copy.
+- `$tech-lead`: assess feasibility, architecture, implementation sequencing, risks, and verification plan.
+
+## Default Workflow
+
+For discovery or specification work, prefer this sequence:
+
+1. Use `$researcher` to gather and validate evidence.
+2. Use `$business-analyst` to frame the business problem and strategic options.
+3. Use `$product-strategist` to define product strategy, scope, and roadmap.
+4. Use `$content-designer` to shape narrative and user-facing content.
+5. Use `$tech-lead` to translate the strategy into a buildable technical plan.
+
+## Working Rules
+
+- Keep assumptions explicit.
+- Separate facts, estimates, hypotheses, and open questions.
+- Prefer concise, decision-ready outputs over long narrative.
+- Match the user's language unless asked otherwise.
+- Use the existing project structure and avoid adding unrelated documentation.
