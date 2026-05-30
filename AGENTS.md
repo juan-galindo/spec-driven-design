@@ -9,6 +9,8 @@ This project uses Codex skills as specialized agents. Project-local skills live 
 - `$product-strategist`: define product direction, positioning, MVP scope, roadmap, metrics, and validation plan.
 - `$content-designer`: design product narrative, UX writing, terminology, messaging hierarchy, and user-facing copy.
 - `$tech-lead`: assess feasibility, architecture, implementation sequencing, risks, and verification plan.
+- `$agent-harness`: orchestrate workflow-level evaluation and improvement across the base role skills.
+- `$consulting-slide-md`: generate slide-by-slide Markdown for executive presentations using Minto Pyramid structure and clear consulting-style communication.
 
 ## Default Workflow
 
@@ -19,6 +21,10 @@ For discovery or specification work, prefer this sequence:
 3. Use `$product-strategist` to define product strategy, scope, and roadmap.
 4. Use `$content-designer` to shape narrative and user-facing content.
 5. Use `$tech-lead` to translate the strategy into a buildable technical plan.
+
+For evaluating or improving the agent workflow itself, use `$agent-harness` after a role-based workflow produces an artifact. It should review role fit, evidence quality, reasoning, handoffs, implementation readiness, risks, and improvement actions.
+
+For presentation planning, use `$consulting-slide-md` to convert strategy, product, business, design, research, or technical content into a slide-by-slide Markdown deck blueprint before creating slides.
 
 ## Working Rules
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Harness"
+  short_description: "Evaluate and improve agent workflows"
+  default_prompt: "Use $agent-harness to evaluate this multi-agent workflow and recommend improvements."

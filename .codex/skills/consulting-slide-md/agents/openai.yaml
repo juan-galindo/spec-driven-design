@@ -1,0 +1,4 @@
+interface:
+  display_name: "Consulting Slide MD"
+  short_description: "Slide-by-slide executive markdown"
+  default_prompt: "Use $consulting-slide-md to turn this topic into a clear slide-by-slide Markdown deck outline."
