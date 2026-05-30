@@ -1,0 +1,4 @@
+interface:
+  display_name: "Researcher"
+  short_description: "Evidence gathering and synthesis"
+  default_prompt: "Use  to gather evidence, compare sources, and summarize implications."

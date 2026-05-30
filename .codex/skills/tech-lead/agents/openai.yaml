@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tech Lead"
+  short_description: "Architecture and implementation planning"
+  default_prompt: "Use -lead to assess feasibility and create a practical implementation plan."

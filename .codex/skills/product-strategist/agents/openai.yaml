@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Strategist"
+  short_description: "Product strategy and roadmap decisions"
+  default_prompt: "Use -strategist to turn this opportunity into product strategy and MVP scope."

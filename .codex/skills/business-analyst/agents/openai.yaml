@@ -1,0 +1,4 @@
+interface:
+  display_name: "Business Analyst"
+  short_description: "Executive business analysis and framing"
+  default_prompt: "Use -analyst to structure this business problem and recommend next steps."
