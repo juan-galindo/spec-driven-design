@@ -137,7 +137,11 @@ Milestones claves para asegurar la ejecución saludable del plan:
 
 **1.1 Oportunidad de negocio:** Define por qué vale la pena lanzar este MVP, qué oportunidad concreta se quiere capturar y desde qué ventaja se va a competir.
 
-**1.2 Alineación:** Convierte esa hipótesis inicial en una base compartida de decisiones, restricciones y lenguaje de dominio.
+**1.2 Alineación:** Convertimos esa hipótesis inicial en una base compartida de decisiones, restricciones y lenguaje de dominio.
+
+### Why
+
+Nos ayuda a evitar que el equipo arranque con una meta incompleta o contradictoria. Alineamos negocio, producto, tecnología, data y riesgo antes de profundizar en solución, y reducimos el riesgo de optimizar por originación sin claridad sobre valor, cartera ni aprendizaje.
 
 **Decisión a cerrar:** Qué estamos validando realmente con el MVP, qué no vamos a validar todavía y qué resultados no se deben sacrificar por perseguir originación.
 
@@ -145,31 +149,31 @@ Milestones claves para asegurar la ejecución saludable del plan:
 
 ### Actividades
 
-1. Descubrir con producto, tecnologia, data, riesgo y marketing cuál es la meta real detrás del MVP:
+1. **Descubrir la meta real del MVP** con producto, tecnologia, data, riesgo y marketing:
    - ¿Adquisición, frecuencia, ticket promedio, retención, margen, aprendizaje o una combinación?
    - Qué resultado importa más en el corto plazo y cuál no se debe sacrificar.
-2. Mapear la oportunidad de negocio:
+2. **Mapear la oportunidad de negocio**:
    - Tamaño potencial de la oportunidad dentro del contexto.
    - Segmentos de usuario con mayor probabilidad de adopción y pago sano.
    - Momentos del journey donde crédito podría destrabar valor.
    - Señales disponibles o faltantes para medir elegibilidad, incrementalidad y calidad de cartera.
-3. Analizar el landscape competitivo y sustitutos:
+3. **Analizar el landscape competitivo y los sustitutos**:
    - Tarjetas de crédito.
    - Otros BNPL o créditos de corto plazo.
    - Otros mecanismos de financiamiento.
-4. Facilitar un **kickoff de decisiones o workshop** para cerrar:
+4. **Facilitar un kickoff de decisiones o workshop** para cerrar:
    - Problema inicial.
    - Objetivo de negocio.
    - Restricciones no negociables.
    - Riesgos principales.
    - Alcance del discovery.
    - Primer criterio de éxito.
-5. Generar una primera capa de alineación async arquitectónica con Domain-Driven Design:
+5. **Generar una primera capa de alineación arquitectónica con Domain-Driven Design**:
    - Entidades y eventos de dominio clave.
    - Revisión de supuestos de backend contra objetivos de negocio y casos de uso esperados.
    - Architecture draft con decisiones abiertas, dependencias y supuestos de arquitectura.
    - Primer ADR con tradeoffs todavía por validar.
-6. Definir con Data la primera capa de medición:
+6. **Definir con Data la primera capa de medición**:
    - Baseline previo al experimento.
    - Cohortes iniciales.
    - Eventos y propiedades críticas.
@@ -193,29 +197,33 @@ Una hipótesis inicial del MVP con oportunidad priorizada, segmento objetivo, le
 
 **2.2 Benchmarking y Design System review:** Contrasta hallazgos con patrones de mercado y con las capacidades reales del sistema de diseño.
 
+### Why
+
+Nos ayuda a no diseñar una solución correcta en ejecución pero equivocada en valor. Esta fase traduce evidencia de usuario, referencias de mercado y capacidades internas en una definición temprana que protege el avance técnico y reduce retrabajo posterior.
+
 **Decisión a cerrar:** Qué problemas del usuario sí justifican el MVP y qué experiencia mínima debemos proteger para no lanzar una solución que no aporta valor o no mueve la aguja.
 
 **Participan:** Product Designer, UX Researcher, Content Designer, Product Manager, Data, Tech Lead y Front Lead.
 
 ### Actividades
 
-1. Apoyar la definición y ejecución de investigación junto al Researcher. [Propuesta plan de investigación](./research-plan.md)
-2. Identificar Jobs To Be Done funcionales, emocionales y sociales.
-3. Trabajar con Content Designer para definir:
+1. **Apoyar la definición y ejecución de investigación** junto al Researcher. [Propuesta plan de investigación](./research-plan.md)
+2. **Identificar Jobs To Be Done** funcionales, emocionales y sociales.
+3. **Trabajar con Content Designer para definir**:
    - Estrategia de contenido.
    - Jerarquía de información.
    - Mensajes mínimos para comprensión.
-4. Traducir cada hallazgo relevante en implicaciones:
+4. **Traducir cada hallazgo relevante en implicaciones**:
    - Implicación de experiencia.
    - Implicación de regla de negocio.
    - Implicación de contrato, estado o dependencia técnica.
    - Implicación de medición, segmentación o lectura posterior.
-5. Sintetizar hallazgos en:
+5. **Sintetizar hallazgos** en:
    - JTBDs principal y secundarios.
    - Customer Journey con pains, puntos de contacto y oportunidades.
    - Principios de experiencia.
    - Ajustes al modelo de diagrama de architectura.
-6. Hacer benchmarking de flujos comparables:
+6. **Hacer benchmarking de flujos comparables**:
    - Checkout con financiamiento o pago diferido.
    - BNPL y créditos de corto plazo.
    - Wallets y métodos de pago guardados.
@@ -223,12 +231,12 @@ Una hipótesis inicial del MVP con oportunidad priorizada, segmento objetivo, le
    - Resumen de costo, fecha límite y términos.
    - Recordatorios de pago y repayment.
    - Estados de atraso, error y servicio al cliente.
-7. Definir con Data la estructura de instrumentación del flujo:
+7. **Definir con Data la estructura de instrumentación del flujo**:
    - Eventos del funnel.
    - Propiedades de elegibilidad, oferta, aceptación, pago y atraso.
    - Cohortes y cortes de lectura.
    - Dependencias de tracking con frontend y backend.
-8. Definir qué componentes se reutilizan, qué se extiende y qué se crea desde cero.
+8. **Definir qué componentes se reutilizan, qué se extiende y qué se crea desde cero**.
 
 ### Resultado esperado
 
@@ -244,9 +252,13 @@ JTBD, principios de experiencia, criterios de comprensión, patterns reutilizabl
 
 ## Fase 3: Solution shaping
 
-**3.1 Definición:** Convierte el aprendizaje en reglas, estados, componentes, criterios de experiencia y contratos mínimos.
+**3.1 Definición:** Convertimos el aprendizaje en reglas, estados, componentes, criterios de experiencia y contratos mínimos.
 
 **3.2 Prototipo code-first:** Vuelve la definición una experiencia tangible, evaluable y útil para destrabar implementación.
+
+### Why
+
+Convertimos hallazgos y decisiones de producto en una solución implementable. Esta fase baja la ambigüedad antes de construir a escala, congela lo esencial del MVP y usa el prototipo como puente real entre diseño, frontend y backend.
 
 **Decisión a cerrar:** Happy path, edge cases críticos del MVP, reglas de negocio visibles para front, componentes, estados y contratos mínimos para implementación.
 
@@ -254,16 +266,16 @@ JTBD, principios de experiencia, criterios de comprensión, patterns reutilizabl
 
 ### Actividades
 
-1. Traducir hallazgos del discovery a design use cases priorizados.
-2. Definir criterios de experiencia por design use case.
-3. Definir estrategia de contenido:
+1. **Traducir hallazgos del discovery a design use cases priorizados**.
+2. **Definir criterios de experiencia por design use case**.
+3. **Definir estrategia de contenido**:
    - Jerarquía de información por momento del flujo.
    - Terminología clara para crédito, costo total, fecha límite, atraso, pago y elegibilidad.
    - Mensajes clave por design use case.
    - Tono responsable: claro, directo y sin presión comercial.
    - Disclosures mínimos que deben aparecer antes de aceptar.
    - Criterios de comprensión para validar copy con usuarios.
-4. Definir reglas de negocio, estados y restricciones del MVP:
+4. **Definir reglas de negocio, estados y restricciones del MVP**:
    - Elegibilidad.
    - Límite disponible.
    - Cálculo de costo total.
@@ -272,17 +284,17 @@ JTBD, principios de experiencia, criterios de comprensión, patterns reutilizabl
    - Confirmación de originación.
    - Pago pendiente, pagado y vencido.
    - Servicio al cliente y escalamiento.
-5. Traducir reglas de negocio a reglas de medición y monitoreo:
+5. **Traducir reglas de negocio a reglas de medición y monitoreo**:
    - Qué define una oferta elegible.
    - Qué define una adopción válida.
    - Qué define un pago puntual.
    - Qué define deterioro temprano.
    - Qué alertas disparan revisión manual o pausa.
-6. Consolidar la definición de arquitectura:
+6. **Consolidar la definición de arquitectura**:
    - Revisar que backend soporte los design use cases priorizados.
    - Registrar decisiones de arquitectura y tradeoffs en ADRs cortos.
-8. Explorar 2 o 3 rutas basadas en JTBD usando AI.
-9. Diseñar directamente en un prototipo de alta fidelidad en código del happy path, usando componentes reales o equivalentes del design system.
+8. **Explorar 2 o 3 rutas** basadas en JTBD usando AI.
+9. **Diseñar directamente en un prototipo de alta fidelidad en código del happy path** usando componentes reales o equivalentes del design system.
 
 ### Resultado esperado
 
@@ -300,7 +312,11 @@ Un prototipo happy path code-first validado, content aprobado, estados críticos
 
 **4.1 Spec y build:** Consolida la definición en una fuente de verdad ejecutable y acompaña la implementación sin abrir scope tardío.
 
-**4.2 GTM y medición:** Prepara el piloto, la operación de soporte y el aprendizaje post-launch para decidir si iterar, pausar o escalar.
+**4.2 GTM y medición:** Preparamos el piloto, la operación de soporte y el aprendizaje post-launch para decidir si iterar, pausar o escalar.
+
+### Why
+
+Nos ayuda a evitar que la presión de entrega degrade el criterio de producto, experiencia y riesgo. Esta fase convierte la definición en producto real, prepara un lanzamiento controlado y deja listo el sistema de lectura para decidir con datos qué hacer después del piloto.
 
 **Decisión a cerrar:** Qué entra al MVP, qué se difiere y qué riesgos quedan aceptados antes de lanzar.
 
@@ -308,7 +324,7 @@ Un prototipo happy path code-first validado, content aprobado, estados críticos
 
 ### Actividades
 
-1. Consolidar la spec final con:
+1. **Consolidar la spec final** con:
    - Vistas.
    - Casos de uso.
    - Comportamientos esperados.
@@ -316,27 +332,27 @@ Un prototipo happy path code-first validado, content aprobado, estados críticos
    - Dependencias técnicas.
    - Eventos analíticos.
    - Definiciones de métricas y cohortes.
-2. Trabajar con development desde la spec para cubrir escenarios críticos.
-3. Compartir progreso en async daily y mantener alineaciones semanales con el squad:
+2. **Trabajar con development desde la spec** para cubrir escenarios críticos.
+3. **Compartir progreso en async daily y mantener alineaciones semanales con el squad**:
    - Decisiones tomadas.
    - Cambios por discovery validado.
    - Riesgos abiertos.
    - Dependencias.
    - Casos no cubiertos.
-4. Verificar que la implementación respete:
+4. **Verificar que la implementación respete**:
    - Comportamientos del prototipo.
    - Spec.
    - Uso acordado de componentes existentes y nuevos.
    - Estados definidos.
    - Criterios de aceptación.
-5. Preparar lanzamiento como piloto limitado:
+5. **Preparar el lanzamiento como piloto limitado**:
    - Segmento inicial.
    - Mensajes responsables.
    - FAQs.
    - Scripts de atención.
    - Rutas de escalamiento.
    - Rollout gradual.
-6. Establecer el ritual de seguimiento post-launch:
+6. **Establecer el ritual de seguimiento post-launch**:
    - Reunión semanal con Product Manager, Product Design, Research, Content, Data y Tech Lead.
    - Revisar métricas, hallazgos y riesgos.
    - Tomar una de cuatro decisiones: iterar, pausar, ampliar o rediseñar.
@@ -377,5 +393,3 @@ Una spec ejecutable, criterios verificables, aceptación QA, readiness legal y o
 ## Dependencias
 ## Riesgos abiertos
 ```
-
-
