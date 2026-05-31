@@ -1,9 +1,9 @@
 ---
-name: consulting-slide-md
-description: Generate slide-by-slide Markdown outlines for executive presentations in a McKinsey-style consulting format. Use when Codex needs to turn product, business, design, strategy, research, roadmap, discovery, or technical planning content into a clear deck narrative using the Minto Pyramid Principle, action titles, concise communication, and audience-specific messaging for product, business, and design stakeholders.
+name: slides-structurer
+description: Structure executive presentations as slide-by-slide Markdown outlines in a McKinsey-style consulting format. Use when Codex needs to turn product, business, design, strategy, research, roadmap, discovery, or technical planning content into a clear deck narrative using the Minto Pyramid Principle, action titles, concise communication, and audience-specific messaging for product, business, and design stakeholders.
 ---
 
-# Consulting Slide MD
+# Slides Structurer
 
 ## Overview
 
@@ -63,8 +63,6 @@ Use this exact structure:
 
 ## Slide 1: [Action title]
 
-**Purpose:** [Why this slide exists]
-
 **Message:** [One clear takeaway]
 
 **Content:**
@@ -86,6 +84,7 @@ Repeat the slide block for every slide.
 
 - Use action titles such as "The onboarding gap is concentrated in the first 10 minutes", not topic titles like "Onboarding".
 - Keep slide messages direct and executive-readable.
+- Do not add a separate `Purpose` field unless the user explicitly asks for it.
 - Prefer 3 to 5 bullets per slide.
 - Use parallel structure across grouped slides.
 - Make implications explicit.

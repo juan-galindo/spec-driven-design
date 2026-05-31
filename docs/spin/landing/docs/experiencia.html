@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Journey Map: BNPL del super a 15 dias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --brand-pink: #e5007d;
+        --brand-aqua: #19c9c3;
+        --brand-yellow: #ffd54a;
+        --ink: #111111;
+        --text: #242124;
+        --muted: #625b61;
+        --line: #e7e1e5;
+        --white: #ffffff;
+        --soft: #f6f4f6;
+        --pink-soft: #fff0f8;
+        --aqua-soft: #e9fffd;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--white);
+        color: var(--text);
+        font-family:
+          Figtree, "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+      }
+
+      .shell {
+        min-height: 100vh;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(18px);
+      }
+
+      .topbarInner,
+      .heroInner,
+      .footerInner {
+        width: min(1120px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .topbarInner {
+        min-height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--ink);
+        font-size: 14px;
+        font-weight: 900;
+        text-decoration: none;
+      }
+
+      .brandMark {
+        width: 34px;
+        height: 34px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--brand-pink);
+        color: var(--white);
+        font-weight: 900;
+      }
+
+      .topActions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .topActions a {
+        border-radius: 999px;
+        padding: 10px 14px;
+        color: var(--ink);
+        font-size: 13px;
+        font-weight: 900;
+        text-decoration: none;
+      }
+
+      .topActions .primary {
+        background: var(--brand-pink);
+        color: var(--white);
+      }
+
+      .hero {
+        background: var(--brand-pink);
+        color: var(--white);
+        padding: 56px 0;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 16px;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 12px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 28px;
+        height: 5px;
+        border-radius: 999px;
+        background: var(--brand-yellow);
+      }
+
+      h1 {
+        max-width: 920px;
+        margin: 0;
+        color: var(--white);
+        font-size: clamp(42px, 7vw, 84px);
+        font-weight: 900;
+        line-height: 0.94;
+      }
+
+      .layout {
+        width: min(1120px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 42px 0 76px;
+        display: grid;
+        grid-template-columns: 220px minmax(0, 1fr);
+        gap: 46px;
+      }
+
+      .toc {
+        position: sticky;
+        top: 100px;
+        align-self: start;
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        box-shadow: 0 14px 40px rgba(17, 17, 17, 0.08);
+      }
+
+      .toc b {
+        display: block;
+        margin-bottom: 12px;
+        color: var(--brand-pink);
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
+      .toc a {
+        display: block;
+        padding: 10px 0;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .toc a:hover {
+        color: var(--brand-pink);
+      }
+
+      .doc {
+        max-width: 860px;
+      }
+
+      .doc h1 {
+        display: none;
+      }
+
+      .doc h2 {
+        margin: 52px 0 18px;
+        color: var(--ink);
+        font-size: clamp(28px, 4vw, 44px);
+        font-weight: 900;
+        line-height: 1.02;
+      }
+
+      .doc h3 {
+        margin: 34px 0 12px;
+        color: var(--ink);
+        font-size: 24px;
+        font-weight: 900;
+        line-height: 1.16;
+      }
+
+      .doc p,
+      .doc li {
+        color: var(--text);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.72;
+      }
+
+      .doc p {
+        margin: 0 0 16px;
+      }
+
+      .doc ul,
+      .doc ol {
+        margin: 0 0 22px;
+        padding-left: 22px;
+      }
+
+      .doc li + li {
+        margin-top: 6px;
+      }
+
+      .doc strong {
+        color: var(--ink);
+        font-weight: 900;
+      }
+
+      .doc a {
+        color: var(--brand-pink);
+        font-weight: 900;
+      }
+
+      .doc blockquote {
+        margin: 28px 0;
+        border-left: 6px solid var(--brand-aqua);
+        border-radius: 8px;
+        background: var(--aqua-soft);
+        padding: 18px 20px;
+      }
+
+      .doc blockquote p {
+        margin: 0;
+        color: var(--ink);
+        font-size: 18px;
+        font-weight: 800;
+      }
+
+      .doc table {
+        width: 100%;
+        margin: 24px 0;
+        border-collapse: separate;
+        border-spacing: 0;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        overflow: hidden;
+        font-size: 14px;
+      }
+
+      .doc th {
+        background: var(--ink);
+        color: var(--white);
+        text-align: left;
+        font-weight: 900;
+      }
+
+      .doc th,
+      .doc td {
+        border-bottom: 1px solid var(--line);
+        padding: 12px 14px;
+        vertical-align: top;
+        line-height: 1.45;
+      }
+
+      .doc td {
+        background: var(--white);
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .doc tr:last-child td {
+        border-bottom: 0;
+      }
+
+      .callout {
+        margin: 28px 0;
+        border-radius: 18px;
+        background: var(--pink-soft);
+        padding: 20px;
+      }
+
+      .callout h3 {
+        margin-top: 0;
+        color: var(--brand-pink);
+      }
+
+      .footer {
+        padding: 28px 0;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .footerInner {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .brandLine {
+        width: 120px;
+        height: 6px;
+        border-radius: 999px;
+        background:
+          linear-gradient(
+            90deg,
+            var(--brand-pink),
+            var(--brand-aqua),
+            var(--brand-yellow)
+          );
+      }
+
+      @media (max-width: 820px) {
+        .layout {
+          grid-template-columns: 1fr;
+        }
+
+        .toc {
+          position: static;
+        }
+
+        .topActions a:not(.primary) {
+          display: none;
+        }
+
+        .footerInner {
+          display: grid;
+        }
+
+        .doc table {
+          display: block;
+          overflow-x: auto;
+          white-space: nowrap;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div class="topbarInner">
+          <a class="brand" href="../index.html">
+            <span class="brandMark">S</span>
+            <span>Super credito MVP</span>
+          </a>
+          <nav class="topActions">
+            <a href="../index.html#entry-points">Artefactos</a>
+            <a class="primary" href="../../deliverables/customer-journey-map.md">Ver Markdown</a>
+          </nav>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="heroInner">
+          <p class="eyebrow">Documento del caso</p>
+          <h1>Customer Journey Map: BNPL del super a 15 dias</h1>
+        </div>
+      </section>
+
+      <div class="layout">
+        <aside class="toc">
+          <b>Contenido</b>
+          <a href="#proposito">Proposito</a>
+          <a href="#tesis">Tesis estrategica</a>
+          <a href="#usuario">Usuario primario</a>
+          <a href="#principios">Principios</a>
+          <a href="#journey">Journey</a>
+          <a href="#momentos">Momentos de verdad</a>
+          <a href="#pain-points">Pain points</a>
+          <a href="#oportunidades">Oportunidades</a>
+          <a href="#mvp">Implicaciones para el MVP</a>
+          <a href="#metricas">Metricas</a>
+          <a href="#preguntas">Preguntas de investigacion</a>
+        </aside>
+
+        <article class="doc">
+          <h1>Customer Journey Map: BNPL del super a 15 dias</h1>
+
+          <h2 id="proposito">Proposito del artefacto</h2>
+          <p>
+            Traducir la oportunidad de negocio del BNPL del super a 15 dias en
+            decisiones de experiencia, producto y medicion para un supermercado
+            online con delivery.
+          </p>
+          <p>
+            Este journey no describe una linea de credito amplia. Describe un
+            producto embebido en checkout para una compra necesaria del hogar.
+          </p>
+
+          <h2 id="tesis">Tesis estrategica</h2>
+          <p>
+            La oportunidad no es lanzar otro credito generico. La oportunidad
+            es ofrecer una opcion clara para cerrar hoy una compra necesaria y
+            pagarla quince dias despues.
+          </p>
+          <blockquote>
+            <p>
+              Destrabar carritos necesarios cuando el usuario ya decidio
+              comprar, pero no quiere pagar todo hoy.
+            </p>
+          </blockquote>
+          <p>
+            El espacio defendible aparece en checkout: cuando el cliente ya
+            armo su pedido, detecta presion de presupuesto y necesita decidir si
+            paga completo, recorta, pospone o financia.
+          </p>
+
+          <h2 id="usuario">Usuario primario</h2>
+          <p>
+            <strong>
+              Responsable de compra del hogar que compra super online y llega
+              corto de presupuesto al cierre
+            </strong>
+          </p>
+          <p>
+            Persona adulta, urbana o semiurbana, que compra despensa o
+            reposicion por e-commerce o delivery y que, al cierre del carrito,
+            puede recortar categorias, posponer la compra, cambiar de tienda o
+            buscar una promo.
+          </p>
+
+          <h3>Job principal</h3>
+          <blockquote>
+            <p>
+              Cuando ya arme mi carrito del super y no quiero pagarlo todo hoy,
+              quiero una opcion simple para recibir el pedido ahora y pagarlo
+              despues sin sorpresas.
+            </p>
+          </blockquote>
+
+          <div class="callout">
+            <h3>Misiones de compra prioritarias</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Mision</th>
+                  <th>Descripcion</th>
+                  <th>Prioridad MVP</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Reposicion urgente</td>
+                  <td>Faltantes del hogar que no pueden esperar.</td>
+                  <td>Alta</td>
+                </tr>
+                <tr>
+                  <td>Despensa de quincena acotada</td>
+                  <td>Compra planificada con restriccion temporal de presupuesto.</td>
+                  <td>Alta</td>
+                </tr>
+                <tr>
+                  <td>Compra por promocion util</td>
+                  <td>Carrito que conviene cerrar hoy por precio o disponibilidad.</td>
+                  <td>Media</td>
+                </tr>
+                <tr>
+                  <td>Compra discrecional grande</td>
+                  <td>Categorias menos necesarias o de impulso.</td>
+                  <td>Baja</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="principios">Principios de experiencia</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Principio</th>
+                <th>Implicacion</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Contexto de checkout</td>
+                <td>La opcion aparece cuando el usuario ya decidio comprar.</td>
+              </tr>
+              <tr>
+                <td>Claridad antes de aceptar</td>
+                <td>Monto, costo total, fecha y atraso visibles antes del consentimiento.</td>
+              </tr>
+              <tr>
+                <td>Conveniencia con control</td>
+                <td>Debe sentirse util, no como deuda escondida.</td>
+              </tr>
+              <tr>
+                <td>Guardrails visibles</td>
+                <td>Montos, frecuencia y estados deben ser comprensibles.</td>
+              </tr>
+              <tr>
+                <td>Recompra como norte</td>
+                <td>El producto debe mejorar habito, no solo originacion.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 id="journey">Customer journey map</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Etapa</th>
+                <th>Situacion del usuario</th>
+                <th>Necesidad / pregunta</th>
+                <th>Riesgo principal</th>
+                <th>Oportunidad de diseno</th>
+                <th>Senales a medir</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1. Planea la compra</td>
+                <td>Prepara una compra de despensa o reposicion.</td>
+                <td>Que necesito comprar hoy?</td>
+                <td>Ticket demasiado alto para su presupuesto.</td>
+                <td>Separar misiones necesarias vs discrecionales.</td>
+                <td>Frecuencia, tamano de carrito, categorias.</td>
+              </tr>
+              <tr>
+                <td>2. Arma el carrito</td>
+                <td>Agrega productos y ajusta cantidades.</td>
+                <td>Me alcanza para todo?</td>
+                <td>Friccion por precio o promociones.</td>
+                <td>Reducir friccion antes del pago y sostener visibilidad del total.</td>
+                <td>Valor del carrito, ediciones, tiempo.</td>
+              </tr>
+              <tr>
+                <td>3. Siente presion de presupuesto</td>
+                <td>Llega al checkout y duda si pagar todo hoy.</td>
+                <td>Lo pago completo, recorto o lo dejo?</td>
+                <td>Abandono o reduccion de carrito.</td>
+                <td>Activar BNPL solo cuando tiene sentido.</td>
+                <td>Abandono, reduccion, cambio de metodo.</td>
+              </tr>
+              <tr>
+                <td>4. Descubre la opcion BNPL</td>
+                <td>Ve "paga en 15 dias" en checkout.</td>
+                <td>Esto me conviene? Es confiable?</td>
+                <td>Rechazo por deuda o desconfianza.</td>
+                <td>Beneficio simple y sin exageracion.</td>
+                <td>Impresiones, clicks, apertura de detalle.</td>
+              </tr>
+              <tr>
+                <td>5. Revisa elegibilidad y terminos</td>
+                <td>Consulta monto, costo, total, fecha y atraso.</td>
+                <td>Cuanto pago despues y cuando?</td>
+                <td>Mala comprension o sorpresa posterior.</td>
+                <td>Resumen financiero obligatorio.</td>
+                <td>Comprension, tiempo de lectura, abandono.</td>
+              </tr>
+              <tr>
+                <td>6. Decide aceptar</td>
+                <td>Compara BNPL con tarjeta, promo o recorte.</td>
+                <td>Me ayuda a cerrar la compra sin meterme en un problema?</td>
+                <td>Aceptacion impulsiva o rechazo por miedo.</td>
+                <td>Friccion responsable y recordatorio de fecha exacta.</td>
+                <td>Tasa de aceptacion, rechazo por costo o desconfianza.</td>
+              </tr>
+              <tr>
+                <td>7. Confirma pedido</td>
+                <td>Termina checkout y recibe confirmacion.</td>
+                <td>Ya quedo? Que tengo que hacer despues?</td>
+                <td>Ambiguedad sobre la deuda activa.</td>
+                <td>Unificar estado del pedido y repayment.</td>
+                <td>Exito de checkout, errores, contactos a soporte.</td>
+              </tr>
+              <tr>
+                <td>8. Recibe el pedido</td>
+                <td>La compra llega y el valor del producto se materializa.</td>
+                <td>Valio la pena usar esta opcion?</td>
+                <td>Una mala entrega afecta la percepcion del BNPL.</td>
+                <td>Reforzar control posterior, no vender mas credito.</td>
+                <td>Satisfaccion, cancelaciones, devoluciones.</td>
+              </tr>
+              <tr>
+                <td>9. Recibe recordatorios</td>
+                <td>Se acerca la fecha limite.</td>
+                <td>Cuando vence y como pago?</td>
+                <td>Mora por olvido o poca visibilidad.</td>
+                <td>Recordatorios utiles y accionables.</td>
+                <td>Apertura, consultas, promesas de pago.</td>
+              </tr>
+              <tr>
+                <td>10. Paga</td>
+                <td>Liquida por el canal definido.</td>
+                <td>Como cierro esto facil y con certeza?</td>
+                <td>Falla operativa o pago no aplicado.</td>
+                <td>Flujo simple, comprobante y confirmacion inmediata.</td>
+                <td>Pago puntual, exito, errores.</td>
+              </tr>
+              <tr>
+                <td>11. Repite o se restringe</td>
+                <td>El sistema permite nueva compra o bloquea por atraso.</td>
+                <td>Puedo volver a usarlo?</td>
+                <td>Reuso riesgoso o arbitrariedad.</td>
+                <td>Reglas claras de continuidad o pausa.</td>
+                <td>Recompra, segundo uso, mora por cohorte.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 id="momentos">Momentos de verdad</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Momento</th>
+                <th>Por que importa</th>
+                <th>Decision de diseno</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Shock de presupuesto en checkout</td>
+                <td>Define conversion o abandono.</td>
+                <td>Activar BNPL como opcion contextual.</td>
+              </tr>
+              <tr>
+                <td>Resumen financiero</td>
+                <td>Define confianza y riesgo reputacional.</td>
+                <td>Mostrar costo total y fecha antes de aceptar.</td>
+              </tr>
+              <tr>
+                <td>Confirmacion del pedido</td>
+                <td>Debe cerrar la ansiedad de compra y deuda.</td>
+                <td>Unificar estado del pedido y repayment.</td>
+              </tr>
+              <tr>
+                <td>Recordatorio previo al vencimiento</td>
+                <td>Impacta pago puntual.</td>
+                <td>Mensaje util y accionable.</td>
+              </tr>
+              <tr>
+                <td>Segundo uso</td>
+                <td>Define si mejora frecuencia o deteriora riesgo.</td>
+                <td>Reuso solo con comportamiento sano.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 id="pain-points">Pain points priorizados</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Prioridad</th>
+                <th>Pain point</th>
+                <th>Impacto si no se resuelve</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Alta</td>
+                <td>El usuario no quiere una deuda abierta; quiere cerrar una compra puntual.</td>
+                <td>Rechazo del producto.</td>
+              </tr>
+              <tr>
+                <td>Alta</td>
+                <td>No entender costo total ni fecha exacta.</td>
+                <td>Quejas, arrepentimiento, mora.</td>
+              </tr>
+              <tr>
+                <td>Alta</td>
+                <td>Llegar corto de presupuesto al final del carrito.</td>
+                <td>Abandono o reduccion de canasta.</td>
+              </tr>
+              <tr>
+                <td>Media</td>
+                <td>No confiar en quien financia o cobra.</td>
+                <td>Baja adopcion.</td>
+              </tr>
+              <tr>
+                <td>Media</td>
+                <td>No saber si podra volver a usarlo.</td>
+                <td>Confusion y frustracion.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 id="oportunidades">Oportunidades de producto</h2>
+          <ol>
+            <li>Defender ticket sin presionar al usuario.</li>
+            <li>Posicionar el producto como conveniencia de checkout, no como credito amplio.</li>
+            <li>Hacer del resumen financiero el centro del flujo.</li>
+            <li>Convertir repayment en parte visible de la experiencia.</li>
+            <li>Aprender por misiones de compra, no solo por volumen.</li>
+          </ol>
+
+          <h2 id="mvp">Implicaciones para el MVP</h2>
+          <h3>Alcance recomendado</h3>
+          <ul>
+            <li>Opcion BNPL en checkout.</li>
+            <li>Financiamiento a 15 dias.</li>
+            <li>Montos iniciales acotados.</li>
+            <li>Resumen financiero claro.</li>
+            <li>Recordatorios previos al vencimiento.</li>
+            <li>Repayment digital simple.</li>
+            <li>Reglas de pausa o reuso visibles.</li>
+          </ul>
+
+          <h3>Fuera de alcance inicial</h3>
+          <ul>
+            <li>Linea abierta de credito.</li>
+            <li>Multiples mensualidades.</li>
+            <li>Uso fuera de checkout.</li>
+            <li>Categorias de alto riesgo sin aprendizaje previo.</li>
+            <li>Ampliacion agresiva de monto desde el primer ciclo.</li>
+          </ul>
+
+          <h2 id="metricas">Metricas recomendadas</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Dimension</th>
+                <th>Metricas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Conversion</td>
+                <td>Take rate, uplift en checkout, disminucion de abandono.</td>
+              </tr>
+              <tr>
+                <td>Producto</td>
+                <td>Comprension de costo y fecha, completion del flujo, exito de repayment.</td>
+              </tr>
+              <tr>
+                <td>Riesgo</td>
+                <td>Mora temprana, fraude, reversos, segunda compra sana.</td>
+              </tr>
+              <tr>
+                <td>Negocio</td>
+                <td>Ticket retenido, frecuencia de recompra, contribution por cohorte.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 id="preguntas">Preguntas de investigacion derivadas</h2>
+          <ul>
+            <li>Que tipo de carrito si amerita BNPL y cual no?</li>
+            <li>Que lenguaje disminuye miedo y aumenta claridad?</li>
+            <li>El usuario lo usa para comprar mas o para no recortar una compra necesaria?</li>
+            <li>El repayment a 15 dias se siente comodo o riesgoso?</li>
+            <li>Que condiciones minimas necesita para confiar en el producto?</li>
+          </ul>
+        </article>
+      </div>
+
+      <footer class="footer">
+        <div class="footerInner">
+          <span>Formato de lectura generado desde el nuevo journey del caso.</span>
+          <span class="brandLine"></span>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

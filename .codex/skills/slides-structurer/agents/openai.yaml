@@ -1,0 +1,4 @@
+interface:
+  display_name: "Slides Structurer"
+  short_description: "Slide-by-slide executive markdown"
+  default_prompt: "Use $slides-structurer to turn this topic into a clear slide-by-slide Markdown deck outline."
