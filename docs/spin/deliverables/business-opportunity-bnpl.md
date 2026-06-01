@@ -2,7 +2,7 @@
 
 ## 1. Resumen ejecutivo
 
-**Recomendación:** avanzar con un MVP controlado de **"pide tu súper ahora y págalo en quince días"** para un supermercado online con delivery en México.
+**Recomendación:** avanzar con un MVP controlado de **"pide tu súper ahora y págalo en quince días"** en el checkout del **súper online de OXXO**, como retailer piloto prioritario por facilidad de partnership dentro del ecosistema Spin/FEMSA.
 
 La recomendación es **sí, con guardrails claros**:
 
@@ -10,12 +10,13 @@ La recomendación es **sí, con guardrails claros**:
 - elegibilidad contextual en checkout;
 - foco inicial en canasta básica y reposición;
 - resumen financiero claro antes de aceptar;
-- monitoreo estricto de fraude, mora temprana y recompra.
+- monitoreo estricto de fraude, mora temprana y recompra;
+- **priorización del partner por facilidad de integración** (checkout, datos, repago y time-to-pilot), no solo por tamaño de mercado.
 
 ### Por qué conviene avanzar
 
 1. **Resuelve un problema real en un momento crítico del funnel.**  
-   En supermercado online, parte del abandono ocurre cuando el usuario ya decidió comprar, pero no quiere pagar el carrito completo ese mismo día ni recortar una compra necesaria.
+   En el supermercado online, parte del abandono ocurre cuando el usuario ya decidió comprar, pero no quiere pagar el carrito completo ese mismo día ni recortar una compra necesaria.
 
 2. **Tiene un encaje más claro que un crédito amplio.**  
    Financiar una compra de despensa o reposición en checkout es más entendible y defendible que ofrecer una línea de crédito general fuera del contexto de compra.
@@ -40,12 +41,13 @@ La decisión no es solo si lanzar crédito. La decisión es:
 
 > si conviene lanzar un BNPL a 15 días embebido en checkout para compras de supermercado online, y bajo qué condiciones vale la pena escalarlo.
 
-Este documento responde esa decisión desde cuatro preguntas:
+Este documento responde esa decisión desde cinco preguntas:
 
 1. **Demanda:** ¿existe un problema suficientemente frecuente y relevante?
 2. **Encaje:** ¿el producto agrega valor frente a tarjeta, promociones o postergación de compra?
 3. **Economía y riesgo:** ¿la recurrencia compensa fraude, mora y costo?
 4. **Implementación:** ¿puede lanzarse en 4 meses como un MVP controlado?
+5. **Partner retail:** ¿con qué súper online conviene iniciar el piloto según facilidad de partnership, no solo según TAM?
 
 ## 3. Objetivo del MVP y métricas líderes
 
@@ -112,7 +114,34 @@ La mejor primera apuesta no es una línea de crédito amplia ni una tarjeta. Es 
 - no debe depender de mensajes agresivos de deuda;
 - no debe priorizar originación sobre pago sano.
 
+El piloto debe lanzarse primero donde Spin pueda integrar **checkout, riesgo y repago con menor fricción de alianza**. Otros retailers de súper online siguen siendo viables en fases posteriores, pero no deben retrasar el aprendizaje del MVP.
+
 ## 5. Opciones estratégicas y tradeoffs
+
+### Selección y priorización del partner retail
+
+El retailer del piloto no debe elegirse solo por volumen de mercado. Debe elegirse por **facilidad de partnership** para cerrar un piloto en la ventana de 4 meses.
+
+| Dimensión | Por qué importa para el MVP |
+| --- | --- |
+| Integración checkout | Sin API o flujo de checkout acordado, no hay BNPL embebido |
+| Identidad y datos | Elegibilidad, scoring y antifraude requieren señales compartidas |
+| Repago | Recordatorios digitales y liquidación en canales ya adoptados |
+| Alineación estratégica | Prioridad del retailer y del ecosistema Spin/FEMSA en crédito disciplinado |
+| Legal y operación | Tiempos de contrato, cobranza, responsabilidad de marca |
+| Time-to-pilot | Capacidad de acordar alcance mínimo viable sin integraciones de largo plazo |
+
+| Partner potencial | Facilidad de partnership (lectura) | Implicación |
+| --- | --- | --- |
+| **OXXO (prioritario)** | Alta: ecosistema Spin/Premia, red física, pago en caja, iniciativas de crédito enmaradas en la estrategia FEMSA 2026 hacia OXXO México [10] | **Canal recomendado del piloto** |
+| Otros súper online (Walmart, Soriana, Chedraui, etc.) | Media–baja: integraciones, datos y repago suelen requerir más tiempo y acuerdos | Benchmark de mercado; evaluar en **fase 2+** si el piloto valida el modelo |
+| Marketplaces o agregadores | Variable | Menor control del checkout; peor encaje con BNPL contextual |
+
+**Ventajas del partner prioritario (supuesto, no exclusividad contractual):**
+
+- OXXO México atiende a más de **13 millones** de consumidores diarios; Spin alcanzó **11.0M** usuarios activos y **103M** transacciones promedio mensuales en 1T26 [10].
+- FEMSA pausó la licencia bancaria de Spin y reorientó el foco a OXXO México, pagos y lealtad, lo que favorece un piloto disciplinado en ese ecosistema [10].
+- Repago potencial vía **Spin y/o caja OXXO** reduce fricción frente a retailers sin canal físico-digital integrado.
 
 | Opción | Qué es | Ventaja | Debilidad | Lectura |
 | --- | --- | --- | --- | --- |
@@ -123,14 +152,17 @@ La mejor primera apuesta no es una línea de crédito amplia ni una tarjeta. Es 
 
 ### Recomendación
 
-Elegir la **opción A**.
+Elegir la **opción A**, ejecutada como **piloto OXXO-first** en el checkout del súper online de OXXO.
 
 Es la alternativa que mejor concentra:
 
 - necesidad real del usuario;
 - facilidad de explicación;
 - control de riesgo por carrito;
-- potencial de impacto en conversión y frecuencia.
+- potencial de impacto en conversión y frecuencia;
+- **menor fricción de partnership** para integrar checkout, riesgo y repago en 4 meses.
+
+Las opciones B–D siguen vigentes como benchmarks o alternativas conservadoras; la novedad es la **secuencia de canal**, no un cambio de producto.
 
 ## 6. Hechos relevantes del mercado en México
 
@@ -141,7 +173,7 @@ Nota de comunicación: cuando se incluyen montos en USD, se usan solo como refer
 | e-commerce retail | En 2025 creció **19.2%** y llegó a **941 mil millones de pesos** | El canal digital ya tiene escala suficiente para justificar optimización de pagos. [1] |
 | compradores digitales | México llegó a **77.2 millones** de compradores digitales en 2025 | La base potencial es amplia. [1] |
 | participación del canal online | El canal digital ya representa **17.7%** de las ventas minoristas | El checkout online ya mueve volumen relevante. [1] |
-| frecuencia digital | **4 de cada 10** usuarios planea comprar por internet al menos una vez por semana | El hábito digital recurrente favorece categorías de alta frecuencia como supermercado. [2] |
+| frecuencia digital | **4 de cada 10** usuarios planean comprar por internet al menos una vez por semana | El hábito digital recurrente favorece categorías de alta frecuencia como supermercado. [2] |
 | shopper híbrido | **84%** de los compradores digitales de consumo masivo también compra en físico | La experiencia no debe asumir un comportamiento 100% digital. [3] |
 | consumo masivo digital | El e-commerce de consumo masivo crece al doble ritmo que el mercado total y mantiene una brecha de penetración de **49 puntos** frente al consumo físico | Hay oportunidad real, pero aún no es un comportamiento universal. [4] |
 | crédito formal | Solo **37.3%** de la población de 18 a 70 años tenía algún crédito formal en 2024 | No conviene asumir alta sofisticación crediticia. [5] |
@@ -164,19 +196,61 @@ Persona adulta, urbana o semiurbana, usuaria de delivery o supermercado online, 
 - combina sensibilidad a precio con urgencia funcional;
 - usa medios digitales de pago, pero no siempre quiere cargar todo el gasto el mismo día;
 - puede recortar carrito, posponer compra o buscar una promo si no le alcanza;
-- valora certeza: cuánto paga, cuándo paga y qué ocurre si se atrasa.
+- valora certeza: cuánto paga, cuándo paga y qué ocurre si se atrasa;
+- en el piloto, puede tener **relación con OXXO, Spin o Premia** (visitas, app, pagos), lo que facilita confianza y repago sin ser requisito del mercado total de súper online.
 
 ### Job to be done
 
-> Cuando ya armé mi pedido del súper y no quiero pagar todo hoy, quiero una opción clara para recibir mi compra ahora y pagarla después, sin sorpresas y sin sentir que entro en una deuda difícil de controlar.
+Job principal por resolver:
+
+> Cuando tengo que hacer una compra en súper online y no tengo liquidez para pagarlo hoy, aunque ya decidí que la compra es necesaria, quiero una forma de pago que me permita recibir el pedido ahora y pagarlo después.
+
+#### Desglose del job
+
+| Dimensión | Qué busca el usuario | Implicación para el producto |
+| --- | --- | --- |
+| **Funcional** | Cerrar el checkout sin pagar todo hoy y sin perder productos necesarios del carrito | BNPL contextual en checkout, monto y plazo acotados (15 días) |
+| **Emocional** | Sentir control: saber cuánto debe, cuándo vence y qué pasa si se atrasa | Resumen financiero obligatorio antes de aceptar; tono sobrio |
+| **Social** | Evitar pedir dinero a familiares o verse “sin lana” frente al hogar en una compra básica | Posicionar como herramienta puntual de cierre de compra, no como “crédito fácil” |
+
+#### Progreso que el usuario intenta lograr
+
+- **De:** carrito listo + restricción temporal de presupuesto + riesgo de recorte o abandono.
+- **A:** pedido confirmado + compromiso de pago previsible + tranquilidad de que la despensa del hogar no se queda a medias.
+
+#### Criterios de contratación (qué “contrata” frente a alternativas)
+
+| Alternativa actual | Por qué no basta en el momento | Qué debe ofrecer el BNPL para ganar |
+| --- | --- | --- |
+| Pagar con débito o transferencia | Exige liquidez hoy | Postergar el pago total sin salir del checkout |
+| Tarjeta de crédito | No todos tienen cupo o confían en el costo visible | Opción más acotada y explícita para una sola compra |
+| Cupón o promo | No siempre cubre el faltante | Resolver el gap de presupuesto sin depender de descuentos |
+| Recortar carrito | Elimina productos necesarios | Proteger la canasta funcional del hogar |
+| Posponer la compra | Retrasa una necesidad real | Recibir hoy y pagar en 15 días con reglas claras |
+
+En el piloto OXXO, el repago por **Spin y/o caja** puede reforzar la contratación frente a BNPL genérico sin canal físico-digital integrado.
+
+#### Jobs que este producto no resuelve
+
+- Obtener una línea de crédito abierta o liquidez fuera de una compra específica.
+- Financiar consumo discrecional o impulsivo sin relación con abastecimiento del hogar.
+- Sustituir ingresos recurrentes o resolver sobreendeudamiento estructural.
+
+#### Jobs secundarios (no definen el MVP, pero informan diseño)
+
+| Job secundario | Lectura |
+| --- | --- |
+| Consultar deuda y fecha sin buscar en correos o soporte | Estado de repago visible post-compra |
+| Pagar sin fricción al vencimiento | Recordatorios útiles + canal de pago conocido |
+| Volver a comprar si el primer ciclo fue sano | Reglas claras de segundo uso o pausa |
 
 ### Momento de uso prioritario
 
 El momento correcto es **el cierre del checkout**, cuando el usuario ya:
 
-- construyó su carrito;
-- comparó precios o promociones;
-- decidió que la compra es necesaria;
+- construye su carrito;
+- compara precios o promociones;
+- decide que la compra es necesaria;
 - y detecta una restricción temporal de presupuesto o flujo disponible.
 
 ## 8. Mercado, sizing y escenarios
@@ -185,10 +259,11 @@ El momento correcto es **el cierre del checkout**, cuando el usuario ya:
 
 No existe una fuente pública que mida con precisión el mercado de BNPL grocery en México. Por eso el sizing debe leerse como **proxy de oportunidad**, no como TAM definitivo.
 
-Se usan dos lentes:
+Se usan tres lentes:
 
-1. **mercado estratégico amplio** para justificar que el espacio existe;
-2. **backsolve operativo** para probar si la meta de 3,000 créditos en 3 meses es razonable.
+1. **TAM macro** para justificar que el problema existe a nivel país;
+2. **SEM piloto OXXO** para estimar el universo alcanzable en el retailer prioritario;
+3. **backsolve operativo** para probar si la meta de 3,000 créditos en 3 meses es razonable en ese checkout.
 
 ### Supuestos base
 
@@ -197,7 +272,8 @@ Se usan dos lentes:
 | compradores digitales en México | 77.2M | Base amplia de usuarios online [1] |
 | usuarios con compra online semanal | 40% | Proxy de compradores digitales de alta recurrencia [2] |
 | usuarios de compra semanal | 30.9M | 77.2M x 40% |
-| universo servible inicial | 5%-12% del universo semanal | Proxy conservador para supermercados online con delivery, ticket adecuado y checkout elegible |
+| universo servible inicial (macro) | 5%-12% del universo semanal | Proxy conservador para súper online con delivery y checkout elegible a nivel país |
+| SEM piloto OXXO | Subconjunto del anterior | Usuarios alcanzables vía checkout del súper online OXXO en el piloto; depende de cobertura, ticket y acuerdos de partnership |
 | ticket BNPL inicial sugerido | $600-$1,800 MXN | Rango razonable para reposición o despensa acotada |
 | plazo | 15 días | Alineado al brief |
 
@@ -207,7 +283,8 @@ Se usan dos lentes:
 | --- | --- | ---: | --- |
 | **TAM amplio** | Compradores digitales en México | 77.2M | Universo digital total |
 | **TAM relevante** | Compradores digitales con hábito semanal | 30.9M | Límite superior de shoppers recurrentes |
-| **Mercado servible inicial** | 5%-12% del universo semanal | 1.5M-3.7M | Base potencial para un operador relevante con delivery y checkout BNPL |
+| **Mercado servible inicial (macro)** | 5%-12% del universo semanal | 1.5M-3.7M | Techo amplio de súper online con delivery; no equivale al universo del piloto |
+| **SEM piloto OXXO** | Checkout elegible del súper online OXXO | Por validar | Universo efectivo del MVP; requiere volumen real de checkouts y acuerdo de partnership |
 
 ### Backsolve operativo para la meta del caso
 
@@ -230,13 +307,15 @@ entonces la conversión BNPL sobre el total de checkouts estaría entre:
 
 Con ese rango, para llegar a 1,000 créditos mensuales se requeriría aproximadamente:
 
-- **26 mil a 83 mil checkouts mensuales**
+- **26 mil a 83 mil checkouts mensuales** en el retailer piloto
+
+Ese rango debe validarse con el **volumen real de checkouts del súper online OXXO** (dato interno pendiente). Sin esa cifra, el backsolve queda como prueba de orden de magnitud, no como compromiso operativo.
 
 ### Lectura de negocio
 
-- La meta de 3,000 créditos es alcanzable, pero exige una base relevante de checkouts.
+- La meta de 3,000 créditos es alcanzable, pero exige una base relevante de checkouts en el canal piloto.
 - La pregunta clave no es solo si se llega a 3,000, sino con qué mora, con qué fraude y con qué impacto en recompra.
-- El MVP debe probar que adopción y calidad de cartera justifican escalar.
+- El MVP debe probar que adopción y calidad de cartera justifican escalar a otros retailers, no solo que el TAM nacional es grande.
 
 ## 9. Competencia, sustitutos y espacio blanco
 
@@ -249,13 +328,14 @@ El usuario no compara BNPL solo contra otros créditos. Lo compara contra cualqu
 | Cupones / promos / cashback | Reducen fricción de precio | Consumen margen y no resuelven la restricción completa | Complementan, pero no sustituyen siempre el financiamiento |
 | Reducir carrito | Evita deuda | Reduce ticket y puede eliminar categorías necesarias | BNPL puede proteger canasta |
 | Posponer compra | Evita deuda | Debilita recurrencia y resuelve peor una necesidad urgente | BNPL compite de forma directa aquí |
-| Otros BNPL | Propuesta similar | Menor integración con el supermercado y menor control del checkout | Competencia directa si el retailer no controla la experiencia |
+| Otros BNPL | Propuesta similar | Menor integración con el retailer y menor control del checkout | Presión de mercado en otros súper; el piloto OXXO-first apuesta por time-to-learning |
+| BNPL en otros retailers | Integración en checkout ajeno | Spin no controla datos ni experiencia de punta a punta | Refuerza priorizar partnership donde la integración sea más viable |
 
 ### Espacio blanco
 
 El espacio defendible no es sumar una alternativa financiera indistinta. Es:
 
-> una opción embebida, clara y acotada para cerrar hoy una compra necesaria y pagarla en 15 días.
+> una opción embebida, clara y acotada en el checkout del retailer piloto, con repago en ecosistema conocido, para cerrar hoy una compra necesaria y pagarla en 15 días.
 
 ## 10. Riesgos del modelo y guardrails
 
@@ -267,7 +347,11 @@ El espacio defendible no es sumar una alternativa financiera indistinta. Es:
 | Mala comprensión | Genera quejas, arrepentimiento y daño reputacional | Resumen financiero obligatorio antes de aceptar |
 | Uso en categorías no prioritarias | Puede elevar riesgo sin agregar valor suficiente | Empezar con categorías necesarias o carritos elegibles por composición |
 | Costo operativo | Cobranza, soporte y conciliación pueden crecer rápido | Automatizar repago, autoservicio y alertas tempranas |
-| Riesgo reputacional | El crédito en supermercado puede percibirse como predatorio | Tono responsable, mensajes de control y exclusiones visibles |
+| Riesgo reputacional | El crédito en supermercado puede percibirse como predatorio; en OXXO el daño de marca se amplifica | Tono responsable, mensajes de control y exclusiones visibles |
+| Elegir retailer solo por TAM | Retrasa el piloto por integraciones largas | Priorizar por matriz de facilidad de partnership; OXXO-first en MVP |
+| Dependencia de acuerdos OXXO/Spin | Sin checkout, datos o repago acordados, el MVP no arranca | Integraciones mínimas viables; plan B de datos y canales de pago documentado |
+| Escalar antes de validar piloto | Replica riesgo sin aprendizaje | Gate de escala: adopción, mora y economía en cohorte OXXO antes de otros retailers |
+| Fricción de partnership subestimada | Aunque OXXO sea prioritario, SLAs y acceso a datos pueden frenar el piloto | Dueños claros del acuerdo; alcance MVP acotado; revisión semanal de dependencias |
 
 ### Guardrails mínimos del MVP
 
@@ -290,10 +374,18 @@ El espacio defendible no es sumar una alternativa financiera indistinta. Es:
 
 ### Producto
 
-- BNPL embebido en checkout;
+- BNPL embebido en el **checkout del súper online de OXXO**;
 - promesa principal: **"lleva tu pedido hoy y págalo en 15 días"**;
 - aplicación contextual solo en checkouts elegibles;
-- rango inicial sugerido: **$600-$1,800 MXN**.
+- rango inicial sugerido: **$600-$1,800 MXN**;
+- repago prioritario vía **Spin y/o caja OXXO**, según acuerdos del partnership.
+
+### Dependencias críticas del partner
+
+- integración de oferta y confirmación en checkout OXXO;
+- reglas de elegibilidad y señales mínimas de riesgo compartidas;
+- conciliación de pedido financiado vs pago a 15 días;
+- canales de recordatorio y liquidación acordados con el retailer.
 
 ### Experiencia mínima
 
@@ -308,7 +400,7 @@ El espacio defendible no es sumar una alternativa financiera indistinta. Es:
 4. El usuario acepta.
 5. El pedido se confirma.
 6. El usuario recibe recordatorios previos al vencimiento.
-7. El usuario paga por el canal digital definido.
+7. El usuario paga por Spin, caja OXXO u otro canal acordado en el partnership.
 8. El sistema confirma el pago y habilita recompra futura si corresponde.
 
 ### Lo que Data debe dejar listo junto con el MVP
@@ -358,17 +450,18 @@ El espacio defendible no es sumar una alternativa financiera indistinta. Es:
 El cambio de foco es defendible porque:
 
 - vuelve al brief original;
-- se alinea mejor con un supermercado online con delivery;
+- se alinea con súper online con delivery, iniciando por el retailer con **menor fricción de partnership**;
 - propone un producto más acotado, más claro y más fácil de validar que una apuesta crediticia más amplia y menos contextual.
 
-La recomendación es **lanzar un BNPL del súper a 15 días**, pero no como una oferta de crédito masiva y generalista.
+La recomendación es **lanzar un BNPL del súper a 15 días en piloto OXXO-first**, pero no como una oferta de crédito masiva ni como exclusividad permanente con un solo retailer.
 
 Debe salir al mercado como:
 
-- un producto contextual;
+- un producto contextual en checkout OXXO;
 - una narrativa simple;
 - un esquema de guardrails fuertes;
-- y una evaluación estricta de frecuencia vs riesgo.
+- una evaluación estricta de frecuencia vs riesgo;
+- y un criterio explícito para evaluar expansión a otros súper online solo después de validar el piloto.
 
 El objetivo del MVP no es demostrar que "la gente toma crédito". Es demostrar que:
 
@@ -376,15 +469,15 @@ El objetivo del MVP no es demostrar que "la gente toma crédito". Es demostrar q
 
 ## 14. Fuentes
 
-1. ANTAD / AMVO, [Crece e-commerce 19.2% en Mexico](https://antad.net/crece-e-commerce-19-2-en-mexico/), publicado el 12 de marzo de 2026.
+1. ANTAD / AMVO, [Crece e-commerce 19.2% en México](https://antad.net/crece-e-commerce-19-2-en-mexico/), publicado el 12 de marzo de 2026.
 2. AMVO, [Consumer Pulse abril-junio 2026](https://amvo.org.mx/consumer-pulse-abril-junio-2026), consultado el 31 de mayo de 2026.
-3. AMVO, [Los 4 tipos de compradores digitales de consumo masivo en Mexico](https://blog.amvo.org.mx/blog/los-4-tipos-de-compradores-digitales-de-consumo-masivo-en-m%C3%A9xico-y-c%C3%B3mo-activar-cada-uno), publicado en marzo de 2026.
+3. AMVO, [Los 4 tipos de compradores digitales de consumo masivo en México](https://blog.amvo.org.mx/blog/los-4-tipos-de-compradores-digitales-de-consumo-masivo-en-m%C3%A9xico-y-c%C3%B3mo-activar-cada-uno), publicado en marzo de 2026.
 4. AMVO, [Segmentos de Consumo Masivo: El journey de los compradores digitales](https://blog.amvo.org.mx/publicaciones/segmentos-de-consumo-masivo-el-journey-de-los-compradores-digitales), consultado el 31 de mayo de 2026.
-5. INEGI / CNBV, [Encuesta Nacional de Inclusion Financiera 2024 - Principales resultados](https://www.inegi.org.mx/contenidos/programas/enif/2024/doc/enif_2024_resultados.pdf), publicada en 2025.
-6. INEGI / CNBV, [ENIF 2024 - motivos para no tener credito formal](https://www.inegi.org.mx/contenidos/programas/enif/2024/doc/enif_2024_resultados.pdf), tabla de población sin crédito formal, datos 2024.
-7. INEGI / CNBV, [ENIF 2024 - pago con tarjeta y transferencia en plataformas de compra en linea](https://www.inegi.org.mx/contenidos/programas/enif/2024/doc/enif_2024_resultados.pdf), datos 2024.
-8. INEGI / CNBV, [ENIF 2024 - uso de aplicacion de celular para consultas o movimientos](https://www.inegi.org.mx/contenidos/programas/enif/2024/doc/enif_2024_resultados.pdf), datos 2024.
-9. Banco de Mexico, [Indicadores Basicos de Tarjetas de Credito, datos a junio de 2025](https://www.banxico.org.mx/publicaciones-y-prensa/rib-tarjetas-de-credito/%7BEDFAC909-76C7-749D-778B-859D724250E2%7D.pdf), publicado en 2026.
+5. INEGI / CNBV, [Encuesta Nacional de Inclusión Financiera 2024 - Principales resultados](https://www.inegi.org.mx/contenidos/programas/enif/2024/doc/enif_2024_resultados.pdf), publicada en 2025.
+6. INEGI / CNBV, [ENIF 2024 - motivos para no tener crédito formal](https://www.inegi.org.mx/contenidos/programas/enif/2024/doc/enif_2024_resultados.pdf), tabla de población sin crédito formal, datos 2024.
+7. INEGI / CNBV, [ENIF 2024 - pago con tarjeta y transferencia en plataformas de compra en línea](https://www.inegi.org.mx/contenidos/programas/enif/2024/doc/enif_2024_resultados.pdf), datos 2024.
+8. INEGI / CNBV, [ENIF 2024 - uso de aplicación de celular para consultas o movimientos](https://www.inegi.org.mx/contenidos/programas/enif/2024/doc/enif_2024_resultados.pdf), datos 2024.
+9. Banco de México, [Indicadores Básicos de Tarjetas de Crédito, datos a junio de 2025](https://www.banxico.org.mx/publicaciones-y-prensa/rib-tarjetas-de-credito/%7BEDFAC909-76C7-749D-778B-859D724250E2%7D.pdf), publicado en 2026.
 
 ## 15. Supuestos explícitos
 

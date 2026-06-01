@@ -4,6 +4,8 @@
 
 El negocio quiere lanzar una funcionalidad de credito para un supermercado online con delivery: **"pide tu super ahora y pagalo en quince dias"**.
 
+El piloto prioriza el **checkout del super online de OXXO** por facilidad de partnership (integracion, datos, repago Spin/caja). Otros retailers pueden evaluarse despues; la investigacion debe servir primero al canal piloto sin cerrar el caso a un solo actor para siempre.
+
 El foco es validar un **BNPL embebido en checkout** que ayude a cerrar compras necesarias sin obligar al usuario a pagar todo hoy.
 
 El equipo necesita evidence rapido para responder preguntas criticas:
@@ -27,6 +29,7 @@ Entender si un BNPL del super a 15 dias es deseable, comprensible y viable para 
 - Medir valor percibido del producto frente a otros mecanismos no crediticios.
 - Entender si el usuario percibe el BNPL como apoyo de conveniencia o como deuda riesgosa.
 - Definir principios de experiencia, tono y guardrails para el flujo de checkout.
+- Evaluar si la relacion con OXXO, Spin o Premia aumenta confianza y disposicion a repagar en el piloto.
 
 #### Preguntas de investigacion
 
@@ -38,6 +41,8 @@ Entender si un BNPL del super a 15 dias es deseable, comprensible y viable para 
 - Que lo haria confiar en la opcion?
 - Que consecuencias de atraso necesita entender antes de aceptar?
 - Que tan probable es que una experiencia positiva aumente la recompra?
+- Que tan importante es pagar via Spin, caja OXXO u otro canal ya conocido frente a un flujo nuevo?
+- Que senales de marca (OXXO, Spin) aumentan o reducen desconfianza hacia el BNPL?
 
 #### Hipotesis iniciales con framework XYZ
 
@@ -55,7 +60,7 @@ Entender si un BNPL del super a 15 dias es deseable, comprensible y viable para 
 | --- | --- |
 | Enfoque | Investigacion ligera orientada a decisiones de MVP |
 | Duracion | 5 a 10 dias habiles |
-| Cualitativo principal | Entrevistas semiestructuradas de 30 a 40 minutos con compradores digitales de supermercado |
+| Cualitativo principal | Entrevistas semiestructuradas de 30 a 40 minutos con compradores digitales de super; priorizar quienes usen o puedan usar el super online de OXXO |
 | Cualitativo complementario | Test moderado de comprension con concepto y pantallas de baja fidelidad |
 | Cuantitativo rapido | Encuesta o intercept para medir intencion, claridad, confianza y sensibilidad a costo |
 | Cuantitativo secundario | Analisis de data existente: abandono de carrito, ticket promedio, frecuencia de recompra, medios de pago, cupones y tasas de error/fraude |
@@ -66,8 +71,8 @@ Entender si un BNPL del super a 15 dias es deseable, comprensible y viable para 
 | --- | --- |
 | Muestra cualitativa | 8 a 12 participantes |
 | Muestra cuantitativa | 100 a 150 respuestas como minimo practico |
-| Segmentos | Compradores online de supermercado, compradores hibridos, usuarios que abandonaron o redujeron carrito por presupuesto, usuarios con experiencia en apps de delivery |
-| Inclusion | Personas adultas, compran para el hogar, usan e-commerce o delivery, han sentido restriccion de presupuesto al comprar despensa o reposicion |
+| Segmentos | Compradores online de super; compradores hibridos; usuarios que abandonaron o redujeron carrito por presupuesto; usuarios con relacion OXXO/Spin/Premia (deseable, no obligatorio) |
+| Inclusion | Personas adultas, compran para el hogar, usan e-commerce o delivery, han sentido restriccion de presupuesto al comprar despensa o reposicion; idealmente con experiencia reciente en super online o delivery de conveniencia |
 | Exclusion | Usuarios sin control de compra del hogar o sin experiencia reciente en compra online |
 
 #### Estimulos
@@ -84,12 +89,12 @@ Entender si un BNPL del super a 15 dias es deseable, comprensible y viable para 
   - despensa media;
   - carrito grande de quincena;
   - carrito de compra poco esencial.
-- Wireframes de checkout con:
+- Wireframes de checkout del super online OXXO con:
   - opcion BNPL;
   - resumen financiero;
   - confirmacion;
   - recordatorio;
-  - pantalla de repayment.
+  - pantalla de repayment (Spin, caja OXXO u otro canal acordado).
 
 #### Senales cuantitativas a levantar
 
@@ -145,7 +150,25 @@ Entender si un BNPL del super a 15 dias es deseable, comprensible y viable para 
 
 ### JTBD inicial a validar
 
-> Cuando ya arme mi pedido del super y no quiero o no puedo pagar todo hoy, quiero una opcion clara para recibirlo ahora y pagarlo en quince dias, para no recortar demasiado la compra ni posponer algo que necesito.
+Job principal por resolver (alineado a oportunidad de negocio):
+
+> Cuando cierro un carrito de despensa o reposicion en el super online y no tengo liquidez para pagarlo completo hoy — aunque ya decidi que la compra es necesaria —, quiero una forma de pago acotada que me permita recibir el pedido ahora y liquidarlo en una fecha conocida, para no recortar categorias del hogar ni posponer una necesidad que no puede esperar.
+
+#### Que debe validar la investigacion del job
+
+| Dimension | Pregunta de validacion |
+| --- | --- |
+| Funcional | El usuario reconoce el momento de carrito listo + falta de liquidez, no solo "no quiero pagar hoy" |
+| Emocional | Puede repetir monto, fecha y consecuencia de atraso sin ayuda |
+| Social | El producto reduce verguenza o dependencia de familia frente a recortar o posponer |
+| Contratacion | Prefiere BNPL frente a recortar carrito, posponer o cupon cuando la compra es necesaria |
+| Legitimidad | Rankea despensa/reposicion por encima de carritos discrecionales |
+
+#### Jobs secundarios a observar (no bloquean MVP)
+
+- Consultar deuda y fecha sin friccion post-compra.
+- Pagar al vencimiento por canal conocido (Spin, caja OXXO).
+- Intencion de segundo uso si el primer ciclo fue claro y puntual.
 
 ### Propuesta de valor inicial a validar
 
@@ -158,4 +181,5 @@ Entender si un BNPL del super a 15 dias es deseable, comprensible y viable para 
 - **Legitimidad de la compra:** priorizar carritos necesarios y de abastecimiento.
 - **Friccion responsable:** evitar una aceptacion impulsiva por urgencia.
 - **Control posterior:** repayment, recordatorios y estado visibles.
+- **Repago en ecosistema conocido:** priorizar Spin y/o caja OXXO cuando el partnership lo permita.
 - **Tono sin euforia:** evitar promesas tipo "dinero gratis" o "sin preocupaciones".
