@@ -1,0 +1,21 @@
+/* Tokens: docs/spin/deliverables/design.md */
+:root {
+  --brand-primary: #5925cd;
+  --brand-primary-strong: #3811a3;
+  --brand-gradient-end: #8c3fff;
+  --brand-soft: #ece3ff;
+  --text-primary: #1f1f24;
+  --text-secondary: #6f6f78;
+  --surface-primary: #f9faff;
+  --surface-white: #ffffff;
+  --feedback-warning: #ff9f1a;
+  --feedback-success: #dff6e7;
+  --shadow-soft: 0 18px 40px rgba(56, 17, 163, 0.08);
+  --shadow-card: 0 12px 32px rgba(31, 31, 36, 0.08);
+  --content-max: 460px;
+  --desktop-width: 1180px;
+  --page-gutter: 32px;
+  --mobile-gutter: 24px;
+  --grid-gap: 16px;
+  --grid-columns: 12;
+}

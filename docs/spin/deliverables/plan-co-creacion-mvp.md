@@ -4,12 +4,12 @@
 
 - **Discovery y delivery en paralelo:** investigar para decidir mejor, sin bloquear al equipo de development.
 - **AI-native workflow:** usar AI para acelerar exploración, síntesis, prototipado, documentación y handoff.
-- **Benchmarking:** usar Mobbin MCP o recopilacion manual de referencias reales para revisar patrones de checkout, BNPL, crédito, pagos y repayment antes de definir la solución.
+- **Benchmarking:** usar Mobbin MCP o recopilacion manual de referencias reales para revisar patrones de checkout, BNPL, credito, pagos y repago antes de definir la solucion.
 - **Code-first design:** omitir Figma como artefacto principal y usar un prototipo de alta fidelidad en código como fuente viva.
 - **Domain-Driven Design para alinear arquitectura:** usar Domain-Driven Design como herramienta de alineación entre negocio, diseño y tecnología, sin convertirlo en un proceso pesado.
-- **Mejora del design system existente:** revisar componentes disponibles, detectar gaps y proponer mejoras reutilizables para no resolver el MVP como una experiencia aislada.
+- **Mejora del design system existente:** revisar componentes disponibles, detectar brechas y proponer mejoras reutilizables para no resolver el MVP como una experiencia aislada.
 - **Medición integral:** evaluar adopción, comprensión, pago puntual y riesgo.
-- **Data como disciplina de decisión:** definir baseline, instrumentación, cohortes, thresholds y lectura de incrementalidad desde framing, no al cierre del piloto.
+- **Data como disciplina de decisión:** definir baseline, instrumentacion, cohortes, umbrales y lectura de incrementalidad desde framing, no al cierre del piloto.
 
 ## Leadership blueprint
 
@@ -24,7 +24,7 @@ La confianza es la base para que el squad pueda moverse rápido.
 | **Drive Outcomes, Not Just Outputs** | Conectar contexto de negocio, UX strategy, datos y metas para priorizar el trabajo que más impacta: no solo entregar pantallas, sino reducir riesgo, mejorar comprensión y habilitar un MVP medible |
 | **Raise Standards, Respect People** | Elevar la calidad del trabajo sin perder empatía: escuchar al equipo, desafiar supuestos, mentorear cuando haga falta y crear condiciones para que todos puedan aportar |
 | **Lead Through Trust and Collaboration** | Construir relaciones de trabajo sólidas desde el inicio, crear espacios donde el equipo pueda aportar con seguridad y convertir colaboración en influencia para lograr la misión |
-| **AI-Native Workflows, Human Judgment** | Usar AI para mejorar velocidad, exploración y documentación, manteniendo pensamiento crítico, systems thinking y colaboración como filtros para decidir qué se construye y por qué |
+| **AI-Native Workflows, Human Judgment** | Usar AI para mejorar velocidad, exploracion y documentacion, manteniendo pensamiento critico, vision de sistema y colaboracion como filtros para decidir que se construye y por que |
 
 ## Modelo de colaboración
 
@@ -33,7 +33,7 @@ El plan no solo organiza fases de diseño. Organiza cómo producto, diseño y te
 ### Núcleo de decisión
 
 - La tríada `Product Manager + Product Designer + Tech Lead` toma decisiones de alcance, tradeoffs, secuencia y riesgos.
-- `Data` participa desde framing para definir baseline, criterios de medición, cohorts, thresholds y lectura del piloto.
+- `Data` participa desde framing para definir baseline, criterios de medicion, cohortes, umbrales y lectura del piloto.
 - `Content Designer` y `UX Researcher` participan como owners en discovery, comprensión y validación, no solo como apoyo.
 - `Legal`, `Riesgo`, `Marketing` y `Producto` entran desde definición, no solo al final.
 - `Tech Lead` participa desde benchmarking y prototipo para asegurar que el code-first design sea un puente real hacia implementación.
@@ -49,7 +49,7 @@ El plan no solo organiza fases de diseño. Organiza cómo producto, diseño y te
 ### Rituales del squad
 
 - **Tríada 2 veces por semana:** decide alcance, dependencias, cambios y riesgos.
-- **Design-definition review semanal:** Product Designer, Content, Research, Data, Tech Lead y Front Lead revisan flujo, estados, copy, medición y readiness.
+- **Design-definition review semanal:** Product Designer, Content, Research, Data, Tech Lead y Front Lead revisan flujo, estados, copy, medicion y nivel de preparacion.
 - **Decision log vivo:** toda decisión que cambie experiencia, esfuerzo o riesgo queda registrada con responsable, fecha y tradeoff.
 - **Checkpoint de release:** Product Manager, Tech Lead, Data, Riesgo y Soporte confirman si el MVP sigue siendo lanzable.
 
@@ -88,30 +88,30 @@ Milestones claves para asegurar la ejecución saludable del plan:
 | Semana | Fase | Enfoque de diseño/producto | Enfoque de research | Trabajo adelantable de development | Trabajo dependiente de definición | Artefactos de salida |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Strategic framing | Oportunidad de negocio + hipótesis estratégica | Identificar oportunidad, segmentos iniciales y alternativas competitivas | Backend comparte definiciones ya asumidas para contrastarlas con hipótesis de negocio y riesgos de cartera | No cerrar aún copy, reglas finas ni flujo final | [Doc Opportunity Framing](./business-opportunity-bnpl.md), mapa de competidores y sustitutos, hipótesis estratégica inicial, criterios para decidir si avanzar|
-| 2 | Strategic framing | Kickoff de decisiones + alineación inicial | Definir objetivos, preguntas críticas y supuestos a validar | Setup técnico, navegación base, instrumentación analítica base, architecture draft adaptable | No congelar aún estados regulatorios ni criterios finales | Canal del proyecto, decision log, lista de riesgos y preguntas críticas, architecture draft v0 |
-| 3 | Discovery| Discovery setup + definición provisional | Cerrar plan de investigación, muestra, screener y estímulos | Estructura base de frontend y backend alineada al architecture draft | No cerrar todavía copy final de disclosures ni orden final del flujo | Research plan final, backlog de hipótesis, flow provisional v0, primeros estados y lenguaje ubicuo inicial |
-| 4 | Discovery| Discovery fieldwork + freeze preliminar del happy path | Ejecutar entrevistas, survey y señales cuantitativas direccionales | Base de componentes, navegación inicial y capas técnicas no bloqueadas | Mantener abiertos edge cases regulatorios y criterios finales | Notas de entrevistas, primeros patrones de confianza y comprensión, happy path preliminar congelable, iteración del architecture draft |
-| 5 | Discovery| Síntesis + principios de experiencia + system audit | Sintetizar hallazgos y validar hipótesis clave | Ajustes a estructura, componentes reutilizables y contratos base | No cerrar aún reglas finas de elegibilidad ni copy final | JTBDs, customer journey, principios de experiencia, arquitectura mínima, inventario de componentes reutilizables |
-| 6 | Solution shaping | Benchmarking aterrizado + definición de solución | Contrastar hallazgos con patrones de mercado y expectativas de experiencia | Extensiones de componentes ya priorizadas, dependencias técnicas definidas | Mantener abiertos solo puntos finos de contenido y consentimiento | Benchmark deck, backlog de componentes, design use cases, reglas visibles y architecture draft v1 |
+| 2 | Strategic framing | Kickoff de decisiones + alineación inicial | Definir objetivos, preguntas críticas y supuestos a validar | Setup técnico, navegación base, instrumentación analítica base, borrador de arquitectura adaptable | No congelar aún estados regulatorios ni criterios finales | Canal del proyecto, decision log, lista de riesgos y preguntas críticas, borrador de arquitectura v0 |
+| 3 | Discovery | Discovery setup + definición provisional | Cerrar plan de investigación, muestra, screener y estímulos | Estructura base de frontend y backend alineada al borrador de arquitectura | No cerrar todavía copy final de disclosures ni orden final del flujo | Research plan final, backlog de hipótesis, flujo provisional v0, primeros estados y lenguaje ubicuo inicial |
+| 4 | Discovery | Discovery fieldwork + freeze preliminar del happy path | Ejecutar entrevistas, survey y señales cuantitativas direccionales | Base de componentes, navegación inicial y capas técnicas no bloqueadas | Mantener abiertos edge cases regulatorios y criterios finales | Notas de entrevistas, primeros patrones de confianza y comprensión, happy path preliminar congelable, iteración del borrador de arquitectura |
+| 5 | Discovery | Sintesis + principios de experiencia + system audit | Sintetizar hallazgos y validar hipotesis clave | Ajustes a estructura, componentes reutilizables y contratos base | No cerrar aun reglas finas de elegibilidad ni copy final | JTBDs, customer journey, principios de experiencia, arquitectura minima, inventario de componentes reutilizables |
+| 6 | Solution shaping | Benchmarking aterrizado + definición de solución | Contrastar hallazgos con patrones de mercado y expectativas de experiencia | Extensiones de componentes ya priorizadas, dependencias técnicas definidas | Mantener abiertos solo puntos finos de contenido y consentimiento | Benchmark deck, backlog de componentes, design use cases, reglas visibles y borrador de arquitectura v1 |
 | 7 | Solution shaping | Flujo validado + edge cases MVP | Validar riesgos críticos del flujo con stakeholders y usuarios cuando aplique | Revisión de lo construido contra casos de uso y contratos mínimos | No introducir nuevos jobs o problemas al scope del MVP | Happy path validado, edge cases MVP, contratos mínimos, decisiones clave de producto y contenido |
 | 8 | Solution shaping | Prototipo code-first v1 | Evaluar comprensión y claridad sobre prototipo v1 | Construcción sobre prototipo v1 e integración temprana | Mantener fuera del scope nuevos escenarios no críticos | Prototipo v1 en código, estados críticos, feedback del squad |
-| 9 | Build and launch readiness | Iteración fina + spec viva | Validar copy, jerarquía y fricciones críticas | Iteración de estados, copy y comportamiento a partir de feedback validado | No reabrir happy path ni contratos mínimos | Prototipo v2, copy refinado, QA scenarios preliminares |
+| 9 | Build and launch readiness | Iteración fina + spec viva | Validar copy, jerarquía y fricciones críticas | Iteración de estados, copy y comportamiento a partir de feedback validado | No reabrir happy path ni contratos mínimos | Prototipo v2, copy refinado, escenarios de QA preliminares |
 | 10 | Build and launch readiness | Consolidación de spec y backlog final | Verificar que la spec preserve hallazgos y criterios de comprensión | Front y back trabajan con contratos estabilizados y backlog refinado | No inventar decisiones nuevas de producto en esta semana | Spec ejecutable final, contratos validados, eventos analíticos, criterios de aceptación, backlog MVP |
-| 11 | Build and launch readiness | Build sprint + GTM prep | Preparar plan de medición, soporte y protocolo post-launch | Implementación principal y QA temprano sobre casos críticos | No abrir scope nuevo | MVP integrado, ADRs clave, QA cases, materiales de servicio al cliente y plan de rollout |
-| 12 | Build and launch readiness | Build sprint + launch readiness | Cerrar baseline de medición y logística de post-launch testing | Hardening, fixes finales y readiness de release | No agregar nuevos requisitos | MVP funcional, release checklist, piloto controlado listo, dashboard inicial y plan de monitoreo |
+| 11 | Build and launch readiness | Build sprint + GTM prep | Preparar plan de medición, soporte y protocolo post-launch | Implementación principal y QA temprano sobre casos críticos | No abrir scope nuevo | MVP integrado, ADRs clave, casos de QA, materiales de servicio al cliente y plan de rollout |
+| 12 | Build and launch readiness | Build sprint + launch readiness | Cerrar baseline de medición y logística de post-launch testing | Hardening, fixes finales y preparacion de release | No agregar nuevos requisitos | MVP funcional, release checklist, piloto controlado listo, tablero inicial y plan de monitoreo |
 
 ## Roles y responsabilidades
 
 | Rol | Responsabilidad |
 | --- | --- |
-| Product Manager | Liderar alcance, priorización, apoyar framing, hipótesis, métricas, tradeoffs de negogio/producto y criterio de qué entra o sale del MVP |
+| Product Manager | Liderar alcance, priorización, apoyar framing, hipótesis, métricas, tradeoffs de negocio y producto, y criterio de qué entra o sale del MVP |
 | Product Designer | Liderar estrategia de experiencia, benchmarking, prototipo code-first, decisiones de flujo y spec |
 | Tech Lead | Definir arquitectura, dependencias, contratos, factibilidad y secuencia técnica junto con la tríada |
-| Data | Definir motor de aprobación si no existe, taxonomía de eventos, cohortes, thresholds, lectura de incrementalidad y monitoreo del piloto |
+| Data | Definir motor de aprobación si no existe, taxonomía de eventos, cohortes, umbrales, lectura de incrementalidad y monitoreo del piloto |
 | Content Designer | Definir lenguaje claro, jerarquía de información, estados, mensajes críticos, disclosures y diseñar FAQs |
 | UX Researcher | Ejecutar discovery, traducir hallazgos en implicaciones accionables y conducir post-launch testing |
 | Front Lead | Aterrizar factibilidad del flujo, componentes y prototipo code-first hacia implementación real |
-| QA | Convertir criterios en escenarios verificables desde definición y validar readiness antes del release |
+| QA | Convertir criterios en escenarios verificables desde definición y validar preparacion antes del release |
 | Business Analyst | Apoyar framing, hipótesis, métricas y tradeoffs de negocio |
 | Dev team | Implementar MVP según spec, componentes definidos y mejoras reutilizables |
 | Legal/riesgo | Validar disclosures, consentimiento, costos, elegibilidad y política de cobranza antes del cierre final |
@@ -139,7 +139,7 @@ Milestones claves para asegurar la ejecución saludable del plan:
 
 **1.2 Alineación:** Convertimos esa hipótesis inicial en una base compartida de decisiones, restricciones y lenguaje de dominio.
 
-### Why
+### Why?
 
 Nos ayuda a evitar que el equipo arranque con una meta incompleta o contradictoria. Alineamos negocio, producto, tecnología, data y riesgo antes de profundizar en solución, y reducimos el riesgo de optimizar por originación sin claridad sobre valor, cartera ni aprendizaje.
 
@@ -171,13 +171,13 @@ Nos ayuda a evitar que el equipo arranque con una meta incompleta o contradictor
 5. **Generar una primera capa de alineación arquitectónica con Domain-Driven Design**:
    - Entidades y eventos de dominio clave.
    - Revisión de supuestos de backend contra objetivos de negocio y casos de uso esperados.
-   - Architecture draft con decisiones abiertas, dependencias y supuestos de arquitectura.
+   - Borrador de arquitectura con decisiones abiertas, dependencias y supuestos de arquitectura.
    - Primer ADR con tradeoffs todavía por validar.
 6. **Definir con Data la primera capa de medición**:
    - Baseline previo al experimento.
    - Cohortes iniciales.
    - Eventos y propiedades críticas.
-   - Thresholds de lectura para escalar, iterar o pausar.
+   - Umbrales de lectura para escalar, iterar o pausar.
 
 ### Resultado esperado
 
@@ -188,16 +188,16 @@ Una hipótesis inicial del MVP con oportunidad priorizada, segmento objetivo, le
 | Decisión | Hipótesis de MVP y criterios de éxito iniciales |
 | Dueño | Product Manager y Product Designer |
 | Impacto en alcance | Qué entra al framing del MVP y qué queda fuera por ahora |
-| Artefacto actualizado | Opportunity framing, decision log, architecture draft v0, baseline y plan de medición v0 |
+| Artefacto actualizado | Opportunity framing, decision log, borrador de arquitectura v0, baseline y plan de medicion v0 |
 | Efecto sobre development | Backend puede contrastar lo ya iniciado; frontend puede recibir un paquete inicial para arrancar sin esperar el diseño final |
 
 ## Fase 2: Discovery y definición temprana
 
 **2.1 Product discovery:** Entiende el problema real del usuario, los JTBDs y los riesgos de comprensión antes de cerrar la solución.
 
-**2.2 Benchmarking y Design System review:** Contrasta hallazgos con patrones de mercado y con las capacidades reales del sistema de diseño.
+**2.2 Benchmarking y revision del design system:** Contrasta hallazgos con patrones de mercado y con las capacidades reales del sistema de diseño.
 
-### Why
+### Why?
 
 Nos ayuda a no diseñar una solución correcta en ejecución pero equivocada en valor. Esta fase traduce evidencia de usuario, referencias de mercado y capacidades internas en una definición temprana que protege el avance técnico y reduce retrabajo posterior.
 
@@ -222,14 +222,14 @@ Nos ayuda a no diseñar una solución correcta en ejecución pero equivocada en 
    - JTBDs principal y secundarios.
    - Customer Journey con pains, puntos de contacto y oportunidades.
    - Principios de experiencia.
-   - Ajustes al modelo de diagrama de architectura.
+   - Ajustes al modelo de diagrama de arquitectura.
 6. **Hacer benchmarking de flujos comparables**:
    - Checkout con financiamiento o pago diferido.
    - BNPL y créditos de corto plazo.
    - Wallets y métodos de pago guardados.
    - Pantallas de elegibilidad o preaprobación.
    - Resumen de costo, fecha límite y términos.
-   - Recordatorios de pago y repayment.
+   - Recordatorios de pago y repago.
    - Estados de atraso, error y servicio al cliente.
 7. **Definir con Data la estructura de instrumentación del flujo**:
    - Eventos del funnel.
@@ -240,14 +240,14 @@ Nos ayuda a no diseñar una solución correcta en ejecución pero equivocada en 
 
 ### Resultado esperado
 
-JTBD, principios de experiencia, criterios de comprensión, patterns reutilizables, backlog de componentes y una definición temprana suficientemente clara para congelar un happy path preliminar.
+JTBD, principios de experiencia, criterios de comprension, patrones reutilizables, backlog de componentes y una definicion temprana suficientemente clara para congelar un happy path preliminar.
 
 | Elemento | Cierre esperado |
 | --- | --- |
 | Decisión | Happy path preliminar congelable y experiencia mínima a proteger |
 | Dueño | Tech Lead, Product Manager y Product Designer con input de Research y Content |
 | Impacto en alcance | Qué jobs y problemas sí justifican el MVP; qué hallazgos no se intentarán resolver en esta versión |
-| Artefacto actualizado | Research synthesis, principios de experiencia, inventario de patrones y componentes, diagrama de architectura, taxonomía de eventos v0 |
+| Artefacto actualizado | Research synthesis, principios de experiencia, inventario de patrones y componentes, diagrama de arquitectura, taxonomía de eventos v0 |
 | Efecto sobre development | El equipo puede seguir avanzando en trabajo adelantable con menos riesgo de retrabajo sobre estructura, componentes y contratos base |
 
 ## Fase 3: Solution shaping
@@ -256,13 +256,13 @@ JTBD, principios de experiencia, criterios de comprensión, patterns reutilizabl
 
 **3.2 Prototipo code-first:** Vuelve la definición una experiencia tangible, evaluable y útil para destrabar implementación.
 
-### Why
+### Why?
 
 Convertimos hallazgos y decisiones de producto en una solución implementable. Esta fase baja la ambigüedad antes de construir a escala, congela lo esencial del MVP y usa el prototipo como puente real entre diseño, frontend y backend.
 
 **Decisión a cerrar:** Happy path, edge cases críticos del MVP, reglas de negocio visibles para front, componentes, estados y contratos mínimos para implementación.
 
-**Participan:** Product Manager, Product Designer, Tech Lead, Content Designer, Front Lead.
+**Participan:** Product Manager, Product Designer, Tech Lead, Data, Content Designer, Front Lead.
 
 ### Actividades
 
@@ -293,12 +293,12 @@ Convertimos hallazgos y decisiones de producto en una solución implementable. E
 6. **Consolidar la definición de arquitectura**:
    - Revisar que backend soporte los design use cases priorizados.
    - Registrar decisiones de arquitectura y tradeoffs en ADRs cortos.
-8. **Explorar 2 o 3 rutas** basadas en JTBD usando AI.
-9. **Diseñar directamente en un prototipo de alta fidelidad en código del happy path** usando componentes reales o equivalentes del design system.
+7. **Explorar 2 o 3 rutas** basadas en JTBD usando AI.
+8. **Diseñar directamente en un prototipo de alta fidelidad en código del happy path** usando componentes reales o equivalentes del design system.
 
 ### Resultado esperado
 
-Un prototipo happy path code-first validado, content aprobado, estados críticos definidos que sirve para validar y para destrabar implementación.
+Un prototipo code-first del happy path, validado, con contenido aprobado y estados criticos definidos, que sirva tanto para validar como para destrabar la implementacion.
 
 | Elemento | Cierre esperado |
 | --- | --- |
@@ -314,7 +314,7 @@ Un prototipo happy path code-first validado, content aprobado, estados críticos
 
 **4.2 GTM y medición:** Preparamos el piloto, la operación de soporte y el aprendizaje post-launch para decidir si iterar, pausar o escalar.
 
-### Why
+### Why?
 
 Nos ayuda a evitar que la presión de entrega degrade el criterio de producto, experiencia y riesgo. Esta fase convierte la definición en producto real, prepara un lanzamiento controlado y deja listo el sistema de lectura para decidir con datos qué hacer después del piloto.
 
@@ -359,14 +359,14 @@ Nos ayuda a evitar que la presión de entrega degrade el criterio de producto, e
 
 ### Resultado esperado
 
-Una spec ejecutable, criterios verificables, aceptación QA, readiness legal y operativa, y un esquema claro de monitoreo para iterar sin abrir scope tardíamente.
+Una spec ejecutable, criterios verificables, aceptacion de QA, preparacion legal y operativa, y un esquema claro de monitoreo para iterar sin abrir scope tardiamente.
 
 | Elemento | Cierre esperado |
 | --- | --- |
-| Decisión | Scope final del MVP, riesgos aceptados y readiness de lanzamiento |
+| Decisión | Alcance final del MVP, riesgos aceptados y preparacion de lanzamiento |
 | Dueño | Tech Lead, Product Manager y Product Designer con validación de Riesgo |
 | Impacto en alcance | Qué se lanza ahora, qué se difiere y qué queda como aprendizaje post-launch |
-| Artefacto actualizado | Spec ejecutable final, QA scenarios, release checklist, dashboard inicial, definición de cohorts y thresholds |
+| Artefacto actualizado | Spec ejecutable final, escenarios de QA, release checklist, tablero inicial, definición de cohortes y umbrales |
 | Efecto sobre development | El equipo entra a hardening y release sin abrir scope nuevo ni introducir decisiones estructurales tardías |
 
 ### Estructura recomendada de la spec

@@ -79,3 +79,54 @@ Reglas:
 - mantener la accion principal en la mitad inferior cuando sea posible
 - contemplar teclado, notch y home indicator desde base
 - evitar inputs outline-heavy o cajas con stroke marcado
+
+## 4. Principios de experiencia
+
+| Principio | Implicacion de diseno |
+| --- | --- |
+| Contexto antes que promocion | BNPL aparece como metodo de pago dentro del checkout, no como modulo de marketing separado |
+| Claridad antes de consentimiento | costo total, fecha exacta y consecuencia basica por atraso deben estar visibles antes de aceptar |
+| Friccion responsable | OTP e identidad se explican como proteccion y validacion, no como obstaculo arbitrario |
+| Continuidad del checkout | el usuario no debe sentir que salio del proceso de compra para entrar a otro producto aparte |
+| Confirmacion doble | la experiencia final confirma tanto la orden como la activacion del BNPL |
+
+## 5. Supuestos de producto
+
+- se disena primero el happy path
+- el usuario ya tiene sesion iniciada
+- el sistema ya cuenta con un celular registrado para OTP
+- la validacion de identidad se hace con Incode usando INE + biometria facial
+- la aprobacion del BNPL ocurre en tiempo real dentro del checkout
+- no se define todavia repago, cobranza ni recordatorios mas alla de la promesa de aviso previo
+
+## 6. Flujo, vistas y wireframes
+
+Especificacion de flujo (9 pasos), vistas 0-8, wireframes ASCII, alineacion con customer journey, reglas transversales y criterios de aceptacion UX: ver [experiencia-bnpl-classic.md](./experiencia-bnpl-classic.md).
+
+Resumen del happy path:
+
+1. Carrito en marketplace
+2. Checkout: descubre BNPL
+3. Educacion del producto
+4. Anticipacion de validacion
+5. OTP
+6. Identidad con Incode
+7. Oferta y consentimiento
+8. Loading
+9. Success unificado
+
+Customer journey: [customer-journey-map.md](./customer-journey-map.md).
+
+## 7. Analitica sugerida por vista
+
+| Vista | Evento principal | Senal a observar |
+| --- | --- | --- |
+| Carrito | inicio de checkout | conversion carrito → checkout |
+| Checkout | seleccion de BNPL | take rate sobre checkouts elegibles |
+| Detalle BNPL | click en continuar | interes real despues de entender el producto |
+| Anticipacion | inicio de validacion | abandono previo a OTP |
+| OTP | exito de codigo | completion del paso y reenvios |
+| Incode | identidad validada | completion biometrico |
+| Oferta | confirmacion de oferta | comprension y aceptacion |
+| Processing | tiempo hasta resultado | latencia percibida |
+| Success | vista cargada | ordenes y activaciones completadas |
