@@ -371,25 +371,4 @@ Una spec ejecutable, criterios verificables, aceptacion de QA, preparacion legal
 
 ### Estructura recomendada de la spec
 
-```md
-# Spec: Agentic Hand-off
-
-## Feature Overview
-## Sign-off
-## Business Context
-## Objective
-## Intent (The "What")
-## In Scope and Out of Scope
-## User Story
-### Why this is priority
-### Test Scenarios
-### Acceptance Criteria
-## Vistas
-## Datos requeridos
-## Estados y errores
-## Content aprobado
-## Componentes existentes, extensiones y componentes nuevos
-## Eventos de analítica
-## Dependencias
-## Riesgos abiertos
-```
+Ver template: [templates/agentic-hand-off.md](../../templates/agentic-hand-off.md)
