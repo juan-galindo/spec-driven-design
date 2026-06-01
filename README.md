@@ -10,6 +10,8 @@ El contenido actual está enfocado en el caso **Spin - Product Designer Sr chall
 .
 ├── AGENTS.md
 ├── README.md
+├── templates/
+│   └── agentic-hand-off.md
 └── docs/
     └── spin/
         ├── challenge/
@@ -36,6 +38,10 @@ El contenido actual está enfocado en el caso **Spin - Product Designer Sr chall
 - [Customer Journey Map](docs/spin/deliverables/customer-journey-map.md): recorrido del usuario primario, momentos de verdad, pain points, oportunidades de producto, hipótesis y métricas.
 - [Diseño del MVP](docs/spin/deliverables/design.md): propuesta de experiencia para el happy path de crédito, pantallas, estados, contenido, componentes, analítica y criterios de aceptación UX.
 - [Plan de investigación](docs/spin/deliverables/research-plan.md): objetivos, preguntas, hipótesis XYZ, metodología, muestra, estímulos, señales cuantitativas y criterios de decisión.
+
+## Templates
+
+- [Agentic Hand-off](templates/agentic-hand-off.md): template genérico de spec ejecutable para handoff entre diseño, producto y development. Incluye guía por sección, tablas y placeholders pensados para completar la spec a partir del prototipo code-first, decision log y artefactos upstream.
 
 ## Flujo de trabajo recomendado
 
