@@ -31,7 +31,7 @@
 }
 
 .entries {
-  padding: 40px 0;
+  padding: 64px 0;
 }
 
 .sectionHeader {
@@ -123,112 +123,29 @@
 
 .visualStage {
   position: relative;
-  min-height: 420px;
-  display: grid;
-  place-items: center;
-}
-
-.phone {
-  width: min(360px, 100%);
-  border-radius: 28px;
-  background: linear-gradient(180deg, #20184d 0%, #120d30 100%);
-  padding: 10px;
-  box-shadow: 0 24px 60px rgba(31, 31, 36, 0.22);
-}
-
-.screen {
   min-height: 520px;
-  border-radius: 22px;
-  background: var(--surface-white);
-  padding: 22px;
-  color: var(--text-primary);
 }
 
-.screenTop {
+.deviceShowcase {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: min(300px, 100%);
+  height: 480px;
+  overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 24px;
+  align-items: flex-start;
+  justify-content: center;
+  filter: drop-shadow(0 30px 60px rgba(18, 13, 48, 0.34));
 }
 
-.screenTop strong {
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.status {
-  border-radius: 999px;
-  background: var(--feedback-success);
-  color: #1c7f47;
-  padding: 7px 10px;
-  font-size: 11px;
-  font-weight: 500;
-}
-
-.amountLabel {
-  margin: 0 0 8px;
-  color: var(--text-secondary);
-  font-size: 13px;
-  font-weight: 300;
-}
-
-.amount {
+.deviceShowcase img {
+  width: 100%;
+  height: auto;
+  display: block;
   margin: 0;
-  color: var(--brand-primary);
-  font-size: clamp(40px, 12vw, 56px);
-  font-weight: 500;
-  line-height: 0.95;
-}
-
-.summary {
-  margin: 20px 0 0;
-  border-radius: 16px;
-  background: var(--surface-primary);
-  padding: 4px 14px;
-}
-
-.summaryRow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  border-bottom: 1px solid rgba(236, 227, 255, 0.88);
-  padding: 12px 0;
-  color: var(--text-secondary);
-  font-size: 13px;
-  font-weight: 300;
-}
-
-.summaryRow:last-child {
-  border-bottom: 0;
-}
-
-.summaryRow strong {
-  color: var(--text-primary);
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.screenCta {
-  min-height: 48px;
-  display: grid;
-  place-items: center;
-  margin-top: 16px;
-  border-radius: 999px;
-  background: var(--brand-primary);
-  color: var(--surface-white);
-  font-size: 14px;
-  font-weight: 500;
-  box-shadow: var(--shadow-soft);
-}
-
-.screenNote {
-  margin: 14px 0 0;
-  color: var(--text-secondary);
-  font-size: 12px;
-  font-weight: 300;
-  line-height: 1.45;
-  text-align: center;
+  vertical-align: bottom;
 }
 
 .floatCard {
@@ -266,7 +183,7 @@
 }
 
 .outcome {
-  padding: 32px 0 48px;
+  padding: 0 0 64px;
 }
 
 .outcomeInner {
@@ -347,8 +264,9 @@
     position: absolute;
   }
 
-  .visualStage {
+  .hero--landing .visualStage {
     min-height: 520px;
+    margin-bottom: -64px;
   }
 }
 
@@ -364,5 +282,15 @@
     flex-direction: column;
     gap: 12px;
     min-height: auto;
+    align-items: center;
+  }
+
+  .deviceShowcase {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    width: min(300px, 100%);
+    height: 480px;
   }
 }

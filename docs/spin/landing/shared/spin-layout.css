@@ -131,7 +131,7 @@
 .hero--landing .heroBody {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: 120px;
 }
 
 .hero--landing .heroIntro {
@@ -295,8 +295,12 @@
 
   .hero--landing .heroBody {
     grid-template-columns: minmax(0, 1fr) minmax(300px, 400px);
-    align-items: center;
-    gap: 40px;
+    align-items: start;
+    gap: 120px;
+  }
+
+  .hero--landing .visualStage {
+    align-self: end;
   }
 
   .hero:not(.hero--landing) .heroMeta {
