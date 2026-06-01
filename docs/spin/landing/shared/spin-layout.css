@@ -50,7 +50,7 @@
 }
 
 .hero {
-  padding: 0 0 2px;
+  padding: 0;
 }
 
 .hero--landing {
@@ -97,8 +97,8 @@
 }
 
 .hero:not(.hero--landing) .heroInner.heroCard {
-  padding: 40px 0;
-  margin-bottom: 40px;
+  padding: 64px 0;
+  margin-bottom: 64px;
 }
 
 .heroGrid {
@@ -201,8 +201,8 @@
   }
 
   .hero:not(.hero--landing) .heroInner.heroCard {
-    padding: 40px 0;
-    margin-bottom: 40px;
+    padding: 64px 0;
+    margin-bottom: 64px;
   }
 
   .hero:not(.hero--landing) .heroGrid,
