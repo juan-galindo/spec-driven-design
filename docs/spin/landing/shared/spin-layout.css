@@ -54,7 +54,7 @@
 }
 
 .hero--landing {
-  padding: calc(18px + env(safe-area-inset-top)) 0 22px;
+  padding: 0;
 }
 
 .heroInner {
@@ -65,7 +65,6 @@
 .heroCard {
   overflow: hidden;
   position: relative;
-  border-radius: 20px;
   background:
     radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.22), transparent 22%),
     radial-gradient(circle at 86% 22%, rgba(255, 255, 255, 0.18), transparent 26%),
@@ -119,11 +118,14 @@
 
 .hero--landing .heroGrid {
   display: block;
-  width: min(var(--content-max), calc(100% - var(--page-gutter)));
+  width: calc(100% - var(--page-gutter));
+  max-width: var(--content-max);
+  margin-inline: auto;
 }
 
 .hero--landing .heroInner.heroCard {
-  padding: 24px;
+  padding: 40px 0;
+  border-radius: 0;
 }
 
 .hero--landing .heroBody {
@@ -281,13 +283,20 @@
   .footerInner,
   .wrap,
   .layout,
-  .heroGrid {
+  .heroGrid,
+  .hero--landing .heroGrid {
     width: min(var(--desktop-width), calc(100% - var(--page-gutter)));
+    max-width: none;
+  }
+
+  .hero--landing .heroInner.heroCard {
+    padding: 56px 0 64px;
   }
 
   .hero--landing .heroBody {
     grid-template-columns: minmax(0, 1fr) minmax(300px, 400px);
     align-items: center;
+    gap: 40px;
   }
 
   .hero:not(.hero--landing) .heroMeta {

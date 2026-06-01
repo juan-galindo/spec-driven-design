@@ -4,15 +4,13 @@
 
 Traducir la oportunidad de negocio del BNPL del súper a 15 días en decisiones de experiencia, producto y medición.
 
-Este journey no describe un crédito amplio. Describe un **producto embebido en checkout** para una compra necesaria de supermercado online con delivery.
+Este journey no describe un crédito amplio. Describe un **producto embebido en checkout** del súper online de **OXXO** (retailer piloto prioritario por facilidad de partnership), para una compra necesaria con delivery.
 
 ## Tesis estratégica
 
 La oportunidad no es lanzar una línea de crédito general ni una tarjeta propia. La oportunidad es ofrecer una opción clara para **cerrar hoy una compra necesaria y pagarla quince días después**.
 
-El wedge del MVP es:
-
-> Destrabar carritos necesarios cuando el usuario ya decidió comprar, pero no quiere pagar todo hoy.
+El piloto se prioriza en **OXXO** por menor fricción de alianza (checkout, datos, repago Spin/caja). La expansión a otros retailers queda condicionada a resultados del piloto.
 
 ## Usuario primario
 
@@ -23,11 +21,24 @@ Persona adulta, urbana o semiurbana, que compra despensa o reposición del hogar
 - recortar categorías;
 - posponer la compra;
 - cambiar de tienda;
-- o buscar una promo.
+- o buscar una promo;
+- en el piloto, puede tener relación con **OXXO, Spin o Premia**, lo que facilita confianza y repago.
 
 ### Job principal
 
-> Cuando ya armé mi carrito del súper y no quiero pagarlo todo hoy, quiero una opción simple para recibir el pedido ahora y pagarlo después sin sorpresas.
+Job principal por resolver:
+
+> Cuando cierro un carrito de despensa o reposición en el súper online y no tengo liquidez para pagarlo completo hoy — aunque ya decidí que la compra es necesaria —, quiero una forma de pago acotada que me permita recibir el pedido ahora y liquidarlo en una fecha conocida, para no recortar categorías del hogar ni posponer una necesidad que no puede esperar.
+
+| Dimensión | Lectura para el journey |
+| --- | --- |
+| Funcional | El valor vive en checkout: cerrar sin recortar canasta necesaria |
+| Emocional | Control antes de aceptar: costo total, fecha y atraso visibles |
+| Social | Herramienta puntual de cierre de compra, no crédito amplio |
+
+**Progreso:** de carrito listo con riesgo de abandono → pedido confirmado con compromiso de pago previsible.
+
+**Fuera de scope del job:** línea revolvente, liquidez general, consumo impulsivo no ligado al hogar.
 
 ### Misiones de compra prioritarias
 
@@ -47,6 +58,7 @@ Persona adulta, urbana o semiurbana, que compra despensa o reposición del hogar
 | Conveniencia con control | Debe sentirse útil, no como deuda escondida |
 | Guardrails visibles | Montos, frecuencia y estados deben ser comprensibles |
 | Recompra como norte | El producto debe mejorar hábito, no solo originación |
+| Repago en ecosistema | Priorizar Spin y/o caja OXXO cuando el partnership lo permita |
 
 ## Customer journey map
 
@@ -61,7 +73,7 @@ Persona adulta, urbana o semiurbana, que compra despensa o reposición del hogar
 | 7. Confirma pedido | Termina checkout y recibe confirmación | "¿Ya quedó? ¿Qué tengo que hacer después?" | Ambigüedad sobre deuda activa | Confirmación clara del pedido y del repago | Éxito de checkout, errores, contactos a soporte |
 | 8. Recibe el pedido | La compra llega y el valor del producto se materializa | "¿Valió la pena usar esta opción?" | Mala experiencia de delivery afecta la percepción del BNPL | Reforzar control posterior, no vender más crédito | Satisfacción, cancelaciones, devoluciones |
 | 9. Recibe recordatorios | Se acerca la fecha límite | "¿Cuándo vence y cómo pago?" | Mora por olvido o baja visibilidad | Recordatorios útiles, no agresivos | Apertura, consultas, promesas de pago |
-| 10. Paga | Liquida por el canal definido | "¿Cómo cierro esto fácil y con certeza?" | Falla operativa o pago no aplicado | Flujo simple, comprobante y confirmación inmediata | Pago puntual, éxito, errores |
+| 10. Paga | Liquida por Spin, caja OXXO u otro canal acordado | "¿Cómo cierro esto fácil y con certeza?" | Falla operativa o pago no aplicado | Flujo simple en ecosistema conocido; comprobante y confirmación inmediata | Pago puntual, éxito, errores |
 | 11. Repite o se restringe | El sistema permite nueva compra o bloquea por atraso | "¿Puedo volver a usarlo?" | Reuso riesgoso o arbitrariedad | Hacer visibles reglas de continuidad o pausa | Recompra, segundo uso, mora por cohorte |
 
 ## Momentos de verdad
@@ -96,12 +108,12 @@ Persona adulta, urbana o semiurbana, que compra despensa o reposición del hogar
 
 ### Alcance recomendado
 
-- opción BNPL en checkout;
+- opción BNPL en checkout del súper online de OXXO;
 - financiamiento a 15 días;
 - montos iniciales acotados;
 - resumen financiero claro;
 - recordatorios previos al vencimiento;
-- repago digital simple;
+- repago prioritario vía Spin y/o caja OXXO;
 - reglas de pausa o reuso visibles.
 
 ### Fuera de alcance inicial
@@ -110,7 +122,8 @@ Persona adulta, urbana o semiurbana, que compra despensa o reposición del hogar
 - múltiples mensualidades;
 - uso fuera de checkout;
 - categorías de alto riesgo sin aprendizaje previo;
-- ampliación agresiva de monto desde el primer ciclo.
+- ampliación agresiva de monto desde el primer ciclo;
+- expansión a otros retailers antes de validar adopción, mora y economía en cohorte OXXO.
 
 ## Métricas recomendadas
 

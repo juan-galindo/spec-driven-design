@@ -1,6 +1,6 @@
 # Estructura de presentación - Spin Product Designer Sr Challenge
 
-Presentación compacta para 20 minutos, con enfoque de Principal Designer estratégico.
+Presentación compacta para 20 minutos
 
 ## Audiencia
 
@@ -14,11 +14,11 @@ Demostrar una postura de diseñador estratégico sobre si conviene avanzar con e
 
 ## Tesis central
 
-El reto no es solo diseñar un flujo de crédito, sino liderar el lanzamiento responsable de un BNPL embebido en checkout que mejore conversión y frecuencia sin sacrificar comprensión, confianza ni pago puntual.
+El reto no es solo diseñar un flujo de crédito, sino liderar el lanzamiento responsable de un BNPL embebido en checkout del súper online de OXXO (retailer piloto prioritario por facilidad de partnership) que mejore conversión y frecuencia sin sacrificar comprensión, confianza ni pago puntual.
 
 ## Narrativa
 
-1. Sí conviene avanzar, pero solo como una apuesta controlada, clara y medible.
+1. Sí conviene avanzar, inicialente como un piloto OXXO-first controlado, claro y medible.
 2. Diseño debe liderar el encuadre estratégico, la experiencia y el sistema de decisiones, no solo la interfaz.
 3. La ejecución correcta combina un happy path tangible, investigación ligera y entrega en paralelo.
 
@@ -26,19 +26,15 @@ El reto no es solo diseñar un flujo de crédito, sino liderar el lanzamiento re
 
 ## Slide 1: Spin debe lanzar crédito como una apuesta controlada de aprendizaje, no solo como un nuevo medio de pago
 
-**Mensaje:** Recomiendo avanzar con un MVP controlado de `pide tu súper ahora y págalo en 15 días`, embebido en checkout y diseñado para validar valor, comprensión, pago puntual y recompra.
+**Mensaje:** Recomiendo avanzar con un MVP controlado de `pide tu súper ahora y págalo en 15 días`, embebido en el checkout del súper online de OXXO y diseñado para validar valor, comprensión, pago puntual y recompra.
 
 **Contenido:**
 
-- Sí lanzaría el MVP, pero no como una línea de crédito amplia.
-- La mejor primera apuesta es un BNPL contextual dentro del checkout.
+- La primera apuesta es un BNPL contextual en checkout, con **piloto OXXO-first** por facilidad de partnership (integración, datos, repago Spin/caja).
+- Otros retailers pueden evaluarse después; el canal piloto no debe elegirse solo por TAM.
 - El producto debe salir con guardrails: monto acotado, elegibilidad clara, costo visible y repayment simple.
 - La meta de `3,000 créditos` debe complementarse con métricas de salud del piloto.
 - Diseño debe liderar el encuadre estratégico, la experiencia, la investigación, la colaboración y los criterios de decisión.
-
-**Visual sugerido:** Resumen ejecutivo con una recomendación central y 4 dimensiones: `usuario`, `negocio`, `riesgo`, `entrega`.
-
-**Nota para presentar:** Abre con la respuesta completa al caso. La idea es que el panel entienda tu posición en menos de un minuto.
 
 ---
 
@@ -52,10 +48,6 @@ El reto no es solo diseñar un flujo de crédito, sino liderar el lanzamiento re
 - **Build trust through clarity:** hacer visibles decisiones, prioridades, riesgos y tradeoffs.
 - **Raise standards, respect people:** elevar la calidad sin romper la colaboración ni la seguridad psicológica.
 - **AI-native workflows, human judgment:** usar AI para acelerar exploración, síntesis y documentación, manteniendo criterio humano en las decisiones clave.
-
-**Visual sugerido:** Cuatro principios en tarjetas simples, cada uno con una línea de impacto.
-
-**Nota para presentar:** Presenta tus principios como forma de operar en el proyecto, no como valores abstractos.
 
 ---
 
@@ -75,41 +67,20 @@ El reto no es solo diseñar un flujo de crédito, sino liderar el lanzamiento re
 
 Línea inferior sugerida: `AI accelerates exploration / Human judgment makes decisions`.
 
-**Nota para presentar:** Enmárcalo como una manera contemporánea de trabajar con AI, donde tu criterio sigue liderando.
-
 ---
 
-## Slide 4: El reto real es lanzar crédito responsable bajo presión de tiempo y supuestos no validados
-
-**Mensaje:** El challenge no pide solo pantallas; pide demostrar cómo lideraría una solución de crédito en 4 meses, sin discovery previo y con backend ya en movimiento.
-
-**Contenido:**
-
-- Hay un compromiso ejecutivo: MVP productivo en 4 meses.
-- El squad ya empezó backend con definiciones iniciales de negocio.
-- No existe investigación previa con usuarios.
-- La meta de `3,000 créditos` puede empujar al equipo a optimizar originación por encima de calidad.
-- Diseño debe reducir incertidumbre, alinear decisiones y proteger comprensión, confianza y viabilidad.
-
-**Visual sugerido:** Tabla de `realidad del brief` frente a `implicación para diseño`.
-
-**Nota para presentar:** Reencuadra el reto para mostrar que entiendes el sistema completo, no solo el artefacto visual.
-
----
-
-## Slide 5: El BNPL en checkout vale la pena porque resuelve una restricción de presupuesto en el momento de mayor intención
+## Slide 5: El BNPL en checkout aporta valor porque resuelve una restricción de presupuesto en el momento de mayor intención
 
 **Mensaje:** El valor aparece cuando el usuario ya armó su carrito, quiere comprar, pero no quiere o no puede pagar todo hoy.
 
 **Contenido:**
 
-- El supermercado online tiene una necesidad recurrente y funcional.
+- El súper online tiene una necesidad recurrente y funcional; el piloto prioriza **OXXO** por menor fricción de alianza dentro de Spin/FEMSA.
 - El caso de uso es más legítimo cuando financia compras necesarias del hogar.
 - El beneficio es fácil de explicar: recibir el súper hoy y pagar en 15 días.
-- Puede proteger carrito, conversión y recompra.
-- Debe validarse con disciplina porque también introduce riesgo financiero, operativo y reputacional.
+- Repago potencial vía **Spin y/o caja OXXO** refuerza confianza y operación.
 
-**Visual sugerido:** Mini journey de checkout con el momento de tensión marcado: `carrito listo -> restricción de presupuesto -> opción BNPL`.
+**Visual sugerido:** Mini journey de checkout OXXO con el momento de tensión marcado: `carrito listo -> restricción de presupuesto -> opción BNPL -> repago en ecosistema`.
 
 **Nota para presentar:** Conecta oportunidad de negocio con necesidad de usuario en una sola lectura.
 
@@ -122,6 +93,7 @@ Línea inferior sugerida: `AI accelerates exploration / Human judgment makes dec
 **Contenido:**
 
 - **Negocio:** además de `3,000 créditos`, ¿qué outcome importa más: conversión, ticket, recompra, aprendizaje o margen?
+- **Partner retail:** ¿qué acuerdos de checkout, datos y repago con OXXO son mínimos para lanzar en 4 meses?
 - **Riesgo/legal:** ¿qué reglas de elegibilidad, disclosures, atraso y cobranza aplican?
 - **Usuario:** ¿para qué tipos de compra se siente legítimo pagar después?
 - **Tech/data:** ¿qué asumió ya backend y qué señales existen para elegibilidad, tracking y monitoreo?
@@ -143,8 +115,8 @@ Línea inferior sugerida: `AI accelerates exploration / Human judgment makes dec
 - Antes de aceptar, el usuario debe entender monto, costo total, fecha exacta y consecuencias del atraso.
 - La experiencia debe sentirse como una herramienta puntual, no como "crédito fácil".
 - Incluiría fricción responsable en confirmación, consentimiento y resumen financiero.
-- El repayment debe diseñarse como parte central del producto, no como postventa.
-- El tono debe ser claro, sobrio y directo.
+- El repayment debe diseñarse como parte central del producto, no como postventa; priorizar **Spin y/o caja OXXO** cuando el partnership lo permita.
+- El tono debe ser claro, sobrio y directo; la marca OXXO exige más cuidado reputacional que un retailer sin presencia física diaria.
 
 **Visual sugerido:** Principios de experiencia con ejemplos de aplicación: `claridad`, `control`, `fricción responsable`, `repayment visible`.
 
@@ -162,7 +134,7 @@ Línea inferior sugerida: `AI accelerates exploration / Human judgment makes dec
 - **Financial summary:** monto de compra, costo del servicio si aplica, total a pagar y fecha límite.
 - **Confirmation:** aceptación explícita del compromiso.
 - **Order confirmation:** refuerzo de cuánto debe, cuándo paga y dónde puede consultarlo.
-- **Reminder and repayment:** recordatorios claros y pago simple.
+- **Reminder and repayment:** recordatorios claros y pago simple vía Spin, caja OXXO u otro canal acordado.
 - **Edge cases mínimos:** no elegible, error de activación, pago vencido inicial y contacto con soporte.
 
 **Visual sugerido:** Flujo de 5 pantallas principales + 3 estados de excepción.
@@ -180,7 +152,7 @@ Línea inferior sugerida: `AI accelerates exploration / Human judgment makes dec
 - Activaría una tríada fuerte: `PM + Product Designer + Tech Lead`.
 - Content Designer y UX Researcher entrarían desde el encuadre, la comprensión y la validación.
 - Data definiría baseline, eventos, cohortes y thresholds desde el inicio.
-- Legal, riesgo y CX revisarían la solución antes del cierre final.
+- Legal, riesgo, CX y **stakeholders del partnership OXXO** revisarían la solución antes del cierre final.
 - Usaría rituales simples: tríada dos veces por semana, revisión de definición y registro vivo de decisiones.
 - Cada decisión importante debe dejar claro qué cambió, quién decidió, qué impacto tiene y qué implica para desarrollo.
 
@@ -196,11 +168,11 @@ Línea inferior sugerida: `AI accelerates exploration / Human judgment makes dec
 
 **Contenido:**
 
-- **Semanas 1-2: Strategic framing:** alinear objetivo real, riesgos, baseline, preguntas críticas y supuestos existentes de backend.
+- **Semanas 1-2: Strategic framing:** alinear objetivo real, criterios de partner retail, riesgos, baseline, preguntas críticas y supuestos existentes de backend.
 - **Semanas 3-5: Lightweight discovery:** validar JTBD, legitimidad del caso de uso, comprensión, confianza y happy path preliminar.
 - **Semanas 6-8: Solution shaping:** traducir hallazgos en reglas, estados, contenido, componentes y prototipo code-first.
 - **Semanas 9-12: Build and launch readiness:** afinar QA, analytics, soporte, criterios de salida y preparación del piloto.
-- **Hitos:** happy path preliminar hacia semana 4 y contratos mínimos hacia semana 7.
+- **Hitos:** happy path preliminar hacia semana 4 y acuerdos mínimos de partnership (checkout, datos, repago) hacia semana 7.
 
 **Visual sugerido:** Timeline por semanas con tracks paralelos: `design`, `research`, `tech`, `data`.
 
@@ -219,7 +191,7 @@ Línea inferior sugerida: `AI accelerates exploration / Human judgment makes dec
 - **Repayment health:** pago puntual y mora temprana dentro de umbrales aceptables.
 - **Behavior change:** protección de carrito, conversión incremental y recompra.
 - **Support load:** bajo volumen de dudas por falta de claridad.
-- **Decision quality:** evidencia suficiente para escalar, ajustar o detener.
+- **Decision quality:** evidencia suficiente para escalar a otros retailers, ajustar o detener — solo después de validar cohorte OXXO.
 
 **Visual sugerido:** Scorecard de éxito con dimensiones, métricas y decisión asociada.
 
@@ -237,7 +209,7 @@ Línea inferior sugerida: `AI accelerates exploration / Human judgment makes dec
 - Me interesa diseñar experiencias financieras que generen confianza, no solo conversión.
 - Sé trabajar en contextos donde hay que avanzar rápido sin perder criterio.
 - Puedo colaborar con producto, research, content, data, tech, riesgo y operación.
-- Mi aporte no sería solo diseñar el happy path, sino ayudar a Spin a lanzar una apuesta de crédito con responsabilidad y aprendizaje real.
+- Mi aporte no sería solo diseñar el happy path, sino ayudar a Spin a lanzar un piloto OXXO-first con responsabilidad, aprendizaje real y criterio explícito de expansión de canal.
 
 **Visual sugerido:** Estructura `Lo que Spin necesita` / `Lo que yo aporto`.
 

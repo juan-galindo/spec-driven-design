@@ -43,7 +43,7 @@
 .topActions .primary,
 .buttonPrimary,
 .navCta {
-  background: var(--brand-primary);
+  background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-gradient-end) 100%);
   color: var(--surface-white);
   box-shadow: var(--shadow-soft);
 }
