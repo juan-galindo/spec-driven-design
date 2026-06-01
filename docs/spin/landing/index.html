@@ -1,0 +1,1049 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super credito MVP case</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <style>
+      :root {
+        --spin-pink: #e5007d;
+        --spin-aqua: #19c9c3;
+        --spin-yellow: #ffd54a;
+        --ink: #111111;
+        --white: #ffffff;
+        --soft: #f4f4f4;
+        --text: #211d20;
+        --muted: #625b61;
+        --line: #e7e1e5;
+        --pink-dark: #b90064;
+        --pink-soft: #fff0f8;
+        --aqua-soft: #e9fffd;
+        --yellow-soft: #fff8db;
+        --shadow: 0 24px 70px rgba(17, 17, 17, 0.14);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--text);
+        background: var(--white);
+        font-family:
+          Figtree, "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      input,
+      textarea,
+      select,
+      button {
+        border: 0;
+        outline: none;
+        box-shadow: none;
+        appearance: none;
+        -webkit-appearance: none;
+      }
+
+      input:focus,
+      textarea:focus,
+      select:focus,
+      button:focus,
+      a:focus,
+      a:focus-visible,
+      input:focus-visible,
+      textarea:focus-visible,
+      select:focus-visible,
+      button:focus-visible {
+        outline: none;
+        box-shadow: none;
+      }
+
+      .page {
+        min-height: 100vh;
+        background: var(--white);
+      }
+
+      .heroShell {
+        color: var(--white);
+        background:
+          linear-gradient(180deg, rgba(17, 17, 17, 0.08), transparent 34%),
+          var(--spin-pink);
+      }
+
+      .wrap {
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .nav {
+        min-height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 15px;
+        font-weight: 900;
+      }
+
+      .brandMark {
+        width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--white);
+        color: var(--spin-pink);
+        font-size: 18px;
+        font-weight: 900;
+      }
+
+      .navLinks {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .navCta {
+        min-height: 38px;
+        display: inline-flex;
+        align-items: center;
+        border-radius: 999px;
+        background: var(--white);
+        color: var(--spin-pink);
+        padding: 0 14px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(340px, 430px);
+        gap: 62px;
+        align-items: center;
+        padding: 70px 0 92px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 18px;
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 13px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 32px;
+        height: 5px;
+        border-radius: 999px;
+        background: var(--spin-yellow);
+      }
+
+      h1 {
+        max-width: 780px;
+        margin: 0;
+        color: var(--white);
+        font-size: clamp(54px, 8vw, 108px);
+        font-weight: 900;
+        line-height: 0.9;
+        letter-spacing: 0;
+      }
+
+      .statement {
+        max-width: 720px;
+        margin: 28px 0 0;
+        color: rgba(255, 255, 255, 0.88);
+        font-size: clamp(18px, 2vw, 23px);
+        font-weight: 600;
+        line-height: 1.42;
+      }
+
+      .heroActions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 34px;
+      }
+
+      .button {
+        min-height: 48px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        padding: 0 18px;
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      .buttonPrimary {
+        background: var(--white);
+        color: var(--spin-pink);
+      }
+
+      .buttonSecondary {
+        background: rgba(255, 255, 255, 0.14);
+        color: var(--white);
+      }
+
+      .heroProof {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 30px;
+      }
+
+      .proofPill {
+        border-radius: 999px;
+        padding: 9px 12px;
+        background: rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .visualStage {
+        position: relative;
+        min-height: 610px;
+        display: grid;
+        place-items: center;
+      }
+
+      .phone {
+        width: min(360px, 82vw);
+        border: 11px solid var(--ink);
+        border-radius: 46px;
+        background: var(--ink);
+        box-shadow: var(--shadow);
+        transform: rotate(2deg);
+        overflow: hidden;
+      }
+
+      .screen {
+        min-height: 610px;
+        border-radius: 34px;
+        background: var(--white);
+        padding: 22px;
+        color: var(--ink);
+      }
+
+      .screenTop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+      }
+
+      .screenTop strong {
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      .status {
+        border-radius: 999px;
+        background: var(--aqua-soft);
+        color: #087e7a;
+        padding: 7px 10px;
+        font-size: 11px;
+        font-weight: 900;
+      }
+
+      .amountLabel {
+        margin: 0 0 8px;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .amount {
+        margin: 0;
+        color: var(--spin-pink);
+        font-size: 64px;
+        font-weight: 900;
+        line-height: 0.95;
+      }
+
+      .summary {
+        margin: 22px 0 0;
+        border-radius: 8px;
+        background: var(--soft);
+        padding: 6px 14px;
+        box-shadow: 0 14px 34px rgba(17, 17, 17, 0.08);
+      }
+
+      .summaryRow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        border-bottom: 1px solid var(--line);
+        padding: 13px 0;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .summaryRow:last-child {
+        border-bottom: 0;
+      }
+
+      .summaryRow strong {
+        color: var(--ink);
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      .screenCta {
+        min-height: 48px;
+        display: grid;
+        place-items: center;
+        margin-top: 18px;
+        border-radius: 999px;
+        background: var(--spin-pink);
+        color: var(--white);
+        font-size: 13px;
+        font-weight: 900;
+      }
+
+      .screenNote {
+        margin: 16px 0 0;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.45;
+        text-align: center;
+      }
+
+      .floatCard {
+        position: absolute;
+        max-width: 210px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.95);
+        color: var(--ink);
+        padding: 16px;
+        box-shadow: 0 18px 45px rgba(17, 17, 17, 0.16);
+      }
+
+      .floatCard strong {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      .floatCard span {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.38;
+      }
+
+      .floatAqua {
+        left: 0;
+        top: 118px;
+        border-left: 6px solid var(--spin-aqua);
+      }
+
+      .floatYellow {
+        right: 0;
+        bottom: 128px;
+        border-left: 6px solid var(--spin-yellow);
+      }
+
+      .principles {
+        background: var(--white);
+        padding: 30px 0;
+      }
+
+      .principleGrid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        border-radius: 8px;
+        overflow: hidden;
+        gap: 1px;
+        background: rgba(17, 17, 17, 0.04);
+      }
+
+      .principle {
+        min-height: 150px;
+        background: var(--white);
+        padding: 20px;
+      }
+
+      .principle b {
+        display: block;
+        margin-bottom: 14px;
+        color: var(--spin-pink);
+        font-size: 13px;
+        font-weight: 900;
+      }
+
+      .principle span {
+        color: var(--text);
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.45;
+      }
+
+      .entries {
+        background: var(--white);
+        padding: 78px 0 86px;
+      }
+
+      .sectionHeader {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 440px);
+        gap: 42px;
+        align-items: end;
+        margin-bottom: 28px;
+      }
+
+      h2 {
+        margin: 0;
+        color: var(--ink);
+        font-size: clamp(34px, 5vw, 58px);
+        font-weight: 900;
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      .sectionHeader p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.56;
+      }
+
+      .cardGrid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .card {
+        min-height: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 8px;
+        background: var(--white);
+        padding: 20px;
+        transition:
+          transform 160ms ease,
+          box-shadow 160ms ease;
+        box-shadow: 0 18px 44px rgba(17, 17, 17, 0.08);
+      }
+
+      .card:hover,
+      .card:focus-visible {
+        outline: none;
+        transform: translateY(-4px);
+        box-shadow: 0 18px 44px rgba(17, 17, 17, 0.1);
+      }
+
+      .card:nth-child(1) {
+        background: var(--pink-soft);
+      }
+
+      .card:nth-child(2) {
+        background: var(--aqua-soft);
+      }
+
+      .card:nth-child(3) {
+        background: var(--ink);
+        color: var(--white);
+      }
+
+      .card:nth-child(4) {
+        background: var(--yellow-soft);
+      }
+
+      .cardNumber {
+        width: 40px;
+        height: 40px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--white);
+        color: var(--spin-pink);
+        font-size: 13px;
+        font-weight: 900;
+      }
+
+      .card:nth-child(3) .cardNumber {
+        background: var(--spin-pink);
+        color: var(--white);
+      }
+
+      .card h3 {
+        margin: 26px 0 12px;
+        color: inherit;
+        font-size: 23px;
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.5;
+      }
+
+      .card:nth-child(3) p {
+        color: rgba(255, 255, 255, 0.72);
+      }
+
+      .cardFooter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        margin-top: 32px;
+        color: var(--spin-pink);
+        font-size: 12px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .card:nth-child(3) .cardFooter {
+        color: var(--spin-yellow);
+      }
+
+      .arrow {
+        color: inherit;
+        font-size: 18px;
+      }
+
+      .outcome {
+        background: var(--ink);
+        color: var(--white);
+        padding: 68px 0;
+      }
+
+      .outcomeInner {
+        display: grid;
+        grid-template-columns: minmax(0, 0.86fr) minmax(280px, 0.5fr);
+        gap: 48px;
+        align-items: center;
+      }
+
+      .outcome h2 {
+        color: var(--white);
+      }
+
+      .outcome p {
+        margin: 18px 0 0;
+        color: rgba(255, 255, 255, 0.74);
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 1.58;
+      }
+
+      .outcomeList {
+        display: grid;
+        gap: 10px;
+      }
+
+      .outcomeItem {
+        border: 0;
+        border-radius: 8px;
+        padding: 16px;
+        background: rgba(255, 255, 255, 0.04);
+        box-shadow: 0 14px 34px rgba(17, 17, 17, 0.08);
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .outcomeItem:nth-child(1) {
+        border-left: 6px solid var(--spin-pink);
+      }
+
+      .outcomeItem:nth-child(2) {
+        border-left: 6px solid var(--spin-aqua);
+      }
+
+      .outcomeItem:nth-child(3) {
+        border-left: 6px solid var(--spin-yellow);
+      }
+
+      @media (max-width: 980px) {
+        .hero,
+        .sectionHeader,
+        .outcomeInner {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          gap: 44px;
+          text-align: center;
+        }
+
+        .heroActions,
+        .heroProof {
+          justify-content: center;
+        }
+
+        .visualStage {
+          min-height: auto;
+          gap: 12px;
+        }
+
+        .floatCard {
+          position: static;
+          width: min(360px, 82vw);
+          max-width: none;
+        }
+
+        .principleGrid,
+        .cardGrid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+      }
+
+      @media (max-width: 640px) {
+        .wrap {
+          width: min(100% - 28px, 1180px);
+        }
+
+        .navLinks a:not(.navCta) {
+          display: none;
+        }
+
+        .hero {
+          padding: 48px 0 62px;
+        }
+
+        h1 {
+          font-size: 52px;
+        }
+
+        .statement {
+          font-size: 17px;
+        }
+
+        .phone {
+          transform: none;
+        }
+
+        .screen {
+          min-height: 540px;
+        }
+
+        .amount {
+          font-size: 54px;
+        }
+
+        .principleGrid,
+        .cardGrid {
+          grid-template-columns: 1fr;
+        }
+
+        .entries {
+          padding: 56px 0 64px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <main class="page">
+        <section class="heroShell">
+          <header class="wrap nav">
+            <a class="brand" href="#">
+              <span class="brandMark">S</span>
+              <span>Super credito MVP</span>
+            </a>
+            <nav class="navLinks" aria-label="Navegacion principal">
+              <a href="#principios">Principios</a>
+              <a href="#entry-points">Artefactos</a>
+              <a class="navCta" href="docs/project-plan.html">Abrir plan</a>
+            </nav>
+          </header>
+
+          <div class="wrap hero">
+            <div>
+              <p class="eyebrow">BNPL del super a 15 dias</p>
+              <h1>Pide tu super hoy, pagalo en quince dias</h1>
+              <p class="statement">
+                El caso ahora se centra en un BNPL embebido en checkout para un supermercado
+                online con delivery: una apuesta para defender conversion, proteger ticket y
+                aumentar recompra sin perder control de mora, fraude ni comprension.
+              </p>
+              <div class="heroActions">
+                <a class="button buttonPrimary" href="#entry-points">Ver artefactos</a>
+                <a class="button buttonSecondary" href="docs/project-plan-presentation.html">Abrir presentacion</a>
+              </div>
+              <div class="heroProof" aria-label="Guardrails del MVP">
+                <span class="proofPill">Conversion en checkout</span>
+                <span class="proofPill">Pago a 15 dias</span>
+                <span class="proofPill">Guardrails de riesgo</span>
+              </div>
+            </div>
+
+            <div class="visualStage" aria-label="Mockup conceptual del MVP">
+              <div class="floatCard floatAqua">
+                <strong>Claridad antes de aceptar</strong>
+                <span>Monto, costo total y fecha visibles antes de confirmar.</span>
+              </div>
+              <div class="phone">
+                <div class="screen">
+                  <div class="screenTop">
+                    <strong>Super checkout</strong>
+                    <span class="status">Elegible</span>
+                  </div>
+                  <p class="amountLabel">Paga hoy una parte y liquida el resto en</p>
+                  <p class="amount">15 dias</p>
+                  <div class="summary">
+                    <div class="summaryRow"><span>Carrito</span><strong>$1,180</strong></div>
+                    <div class="summaryRow"><span>Total a pagar</span><strong>$1,240</strong></div>
+                    <div class="summaryRow"><span>Fecha limite</span><strong>15 jun</strong></div>
+                    <div class="summaryRow"><span>Uso permitido</span><strong>Despensa elegible</strong></div>
+                  </div>
+                  <div class="screenCta">Revisar terminos</div>
+                  <p class="screenNote">Checkout, costo y fecha visibles antes de confirmar.</p>
+                </div>
+              </div>
+              <div class="floatCard floatYellow">
+                <strong>Escala con guardrails</strong>
+                <span>Cohortes, limites bajos y seguimiento de recompra vs mora.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="principles" id="principios">
+          <div class="wrap principleGrid">
+            <div class="principle"><b>01 / Alineacion</b><span>Negocio, diseno y tecnologia trabajan sobre la misma realidad.</span></div>
+            <div class="principle"><b>02 / Research</b><span>Lenguaje, confianza y comprension guian las decisiones.</span></div>
+            <div class="principle"><b>03 / Code-first</b><span>El prototipo acerca la experiencia a la implementacion real.</span></div>
+            <div class="principle"><b>04 / Rollout</b><span>El piloto aprende por cohortes antes de ampliar escala.</span></div>
+          </div>
+        </section>
+
+        <section class="entries" id="entry-points">
+          <div class="wrap">
+            <div class="sectionHeader">
+              <h2>Entry points del caso</h2>
+              <p>
+                Cuatro accesos para revisar el trabajo desde estrategia, narrativa ejecutiva,
+                proceso agentic y experiencia del usuario.
+              </p>
+            </div>
+            <div class="cardGrid">
+              <a class="card" href="docs/project-plan.html">
+                <div>
+                  <span class="cardNumber">01</span>
+                  <h3>Project plan</h3>
+                  <p>Plan de co-creacion del MVP, fases, actividades, entregables y rollout.</p>
+                </div>
+                <div class="cardFooter"><span>Plan</span><span class="arrow">-&gt;</span></div>
+              </a>
+              <a class="card" href="docs/project-plan-presentation.html">
+                <div>
+                  <span class="cardNumber">02</span>
+                  <h3>Project plan presentation</h3>
+                  <p>Narrativa ejecutiva para explicar y aprobar el enfoque del caso.</p>
+                </div>
+                <div class="cardFooter"><span class="arrow">-&gt;</span></div>
+              </a>
+              <a class="card" href="https://github.com/REPLACE-ME/agentic-design-process" target="_blank" rel="noreferrer">
+                <div>
+                  <span class="cardNumber">03</span>
+                  <h3>Agentic-design process</h3>
+                  <p>Repositorio externo del proceso agentic para research, prototipo y handoff.</p>
+                </div>
+                <div class="cardFooter"><span class="arrow">-&gt;</span></div>
+              </a>
+              <a class="card" href="docs/experiencia.html">
+                <div>
+                  <span class="cardNumber">04</span>
+                  <h3>Experiencia</h3>
+                  <p>Journey, momentos de verdad, pain points y oportunidades del MVP.</p>
+                </div>
+                <div class="cardFooter"><span>Journey</span><span class="arrow">-&gt;</span></div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="outcome">
+          <div class="wrap outcomeInner">
+            <div>
+              <h2>Un MVP responsable no persigue solo volumen.</h2>
+              <p>
+                Debe demostrar que el usuario entiende lo que acepta, puede pagar sin friccion
+                y que el negocio aprende con riesgo controlado antes de escalar.
+              </p>
+            </div>
+            <div class="outcomeList">
+              <div class="outcomeItem">Funnel de originacion medible</div>
+              <div class="outcomeItem">Comprension de costo, fecha y total</div>
+              <div class="outcomeItem">Pago puntual y carga operativa controlada</div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const entryPoints = [
+        {
+          title: "Project plan",
+          description: "Plan de co-creacion del MVP, fases, actividades, entregables y rollout.",
+          href: "docs/project-plan.html",
+          tag: "",
+          number: "01",
+        },
+        {
+          title: "Project plan presentation",
+          description: "Narrativa ejecutiva para explicar y aprobar el enfoque del caso.",
+          href: "docs/project-plan-presentation.html",
+          tag: "",
+          number: "02",
+        },
+        {
+          title: "Agentic-design process",
+          description: "Repositorio externo del proceso Agentic AI.",
+          href: "https://github.com/juan-galindo/spec-driven-design",
+          tag: "",
+          number: "03",
+          external: true,
+        },
+        {
+          title: "Experiencia",
+          description: "Journey, momentos de verdad, pain points y oportunidades del MVP.",
+          href: "docs/experiencia.html",
+          tag: "Journey",
+          number: "04",
+        },
+      ];
+
+      function App() {
+        return React.createElement(
+          "main",
+          { className: "page" },
+          React.createElement(
+            "section",
+            { className: "heroShell" },
+            React.createElement(
+              "header",
+              { className: "wrap nav" },
+              React.createElement(
+                "a",
+                { className: "brand", href: "#" },
+                React.createElement("span", { className: "brandMark" }, "S"),
+                React.createElement("span", null, "Super credito MVP")
+              ),
+              React.createElement(
+                "nav",
+                { className: "navLinks", "aria-label": "Navegacion principal" },
+                React.createElement("a", { href: "#principios" }, "Principios"),
+                React.createElement("a", { href: "#entry-points" }, "Artefactos"),
+                React.createElement("a", { className: "navCta", href: "docs/project-plan.html" }, "Abrir plan")
+              )
+            ),
+            React.createElement(
+              "div",
+              { className: "wrap hero" },
+              React.createElement(
+                "div",
+                null,
+                React.createElement("p", { className: "eyebrow" }, "BNPL del super a 15 dias"),
+                React.createElement("h1", null, "Pide tu super hoy, pagalo en quince dias"),
+                React.createElement(
+                  "p",
+                  { className: "statement" },
+                  "El caso ahora se centra en un BNPL embebido en checkout para un supermercado online con delivery: una apuesta para defender conversion, proteger ticket y aumentar recompra sin perder control de mora, fraude ni comprension."
+                ),
+                React.createElement(
+                  "div",
+                  { className: "heroActions" },
+                  React.createElement("a", { className: "button buttonPrimary", href: "#entry-points" }, "Ver artefactos"),
+                  React.createElement("a", { className: "button buttonSecondary", href: "docs/project-plan-presentation.html" }, "Abrir presentacion")
+                ),
+                React.createElement(
+                  "div",
+                  { className: "heroProof", "aria-label": "Guardrails del MVP" },
+                  ["Conversion en checkout", "Pago a 15 dias", "Guardrails de riesgo"].map((item) =>
+                    React.createElement("span", { className: "proofPill", key: item }, item)
+                  )
+                )
+              ),
+              React.createElement(
+                "div",
+                { className: "visualStage", "aria-label": "Mockup conceptual del MVP" },
+                React.createElement(
+                  "div",
+                  { className: "floatCard floatAqua" },
+                  React.createElement("strong", null, "Claridad antes de aceptar"),
+                  React.createElement("span", null, "Monto, costo total y fecha visibles antes de confirmar.")
+                ),
+                React.createElement(
+                  "div",
+                  { className: "phone" },
+                  React.createElement(
+                    "div",
+                    { className: "screen" },
+                    React.createElement(
+                      "div",
+                      { className: "screenTop" },
+                      React.createElement("strong", null, "Super checkout"),
+                      React.createElement("span", { className: "status" }, "Elegible")
+                    ),
+                    React.createElement("p", { className: "amountLabel" }, "Paga hoy una parte y liquida el resto en"),
+                    React.createElement("p", { className: "amount" }, "15 dias"),
+                    React.createElement(
+                      "div",
+                      { className: "summary" },
+                      [
+                        ["Carrito", "$1,180"],
+                        ["Total a pagar", "$1,240"],
+                        ["Fecha limite", "15 jun"],
+                        ["Uso permitido", "Despensa elegible"],
+                      ].map(([label, value]) =>
+                        React.createElement(
+                          "div",
+                          { className: "summaryRow", key: label },
+                          React.createElement("span", null, label),
+                          React.createElement("strong", null, value)
+                        )
+                      )
+                    ),
+                    React.createElement("div", { className: "screenCta" }, "Revisar terminos"),
+                    React.createElement("p", { className: "screenNote" }, "Checkout, costo y fecha visibles antes de confirmar.")
+                  )
+                ),
+                React.createElement(
+                  "div",
+                  { className: "floatCard floatYellow" },
+                  React.createElement("strong", null, "Escala con guardrails"),
+                  React.createElement("span", null, "Cohortes, limites bajos y seguimiento de recompra vs mora.")
+                )
+              )
+            )
+          ),
+          React.createElement(
+            "section",
+            { className: "principles", id: "principios" },
+            React.createElement(
+              "div",
+              { className: "wrap principleGrid" },
+              [
+                ["01 / Alineacion", "Negocio, diseno y tecnologia trabajan sobre la misma realidad."],
+                ["02 / Research", "Lenguaje, confianza y comprension guian las decisiones."],
+                ["03 / Code-first", "El prototipo acerca la experiencia a la implementacion real."],
+                ["04 / Rollout", "El piloto aprende por cohortes antes de ampliar escala."],
+              ].map(([label, text]) =>
+                React.createElement(
+                  "div",
+                  { className: "principle", key: label },
+                  React.createElement("b", null, label),
+                  React.createElement("span", null, text)
+                )
+              )
+            )
+          ),
+          React.createElement(
+            "section",
+            { className: "entries", id: "entry-points" },
+            React.createElement(
+              "div",
+              { className: "wrap" },
+              React.createElement(
+                "div",
+                { className: "sectionHeader" },
+                React.createElement("h2", null, "Entry points del caso"),
+                React.createElement("p", null, "Cuatro accesos para revisar el trabajo desde estrategia, narrativa ejecutiva, proceso agentic y experiencia del usuario.")
+              ),
+              React.createElement(
+                "div",
+                { className: "cardGrid" },
+                entryPoints.map((item) =>
+                  React.createElement(
+                    "a",
+                    {
+                      className: "card",
+                      href: item.href,
+                      key: item.title,
+                      target: item.external ? "_blank" : undefined,
+                      rel: item.external ? "noreferrer" : undefined,
+                    },
+                    React.createElement(
+                      "div",
+                      null,
+                      React.createElement("span", { className: "cardNumber" }, item.number),
+                      React.createElement("h3", null, item.title),
+                      React.createElement("p", null, item.description)
+                    ),
+                    React.createElement(
+                      "div",
+                      { className: "cardFooter" },
+                      React.createElement("span", null, item.tag),
+                      React.createElement("span", { className: "arrow", "aria-hidden": "true" }, "->")
+                    )
+                  )
+                )
+              )
+            )
+          ),
+          React.createElement(
+            "section",
+            { className: "outcome" },
+            React.createElement(
+              "div",
+              { className: "wrap outcomeInner" },
+              React.createElement(
+                "div",
+                null,
+                React.createElement("h2", null, "Un MVP responsable no persigue solo volumen."),
+                React.createElement("p", null, "Debe demostrar que el usuario entiende lo que acepta, puede pagar sin friccion y que el negocio aprende con riesgo controlado antes de escalar.")
+              ),
+              React.createElement(
+                "div",
+                { className: "outcomeList" },
+                ["Funnel de originacion medible", "Comprension de costo, fecha y total", "Pago puntual y carga operativa controlada"].map((item) =>
+                  React.createElement("div", { className: "outcomeItem", key: item }, item)
+                )
+              )
+            )
+          )
+        );
+      }
+
+      ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(App));
+    </script>
+  </body>
+</html>

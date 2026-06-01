@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Strategist"
+  short_description: "Design strategy and experience direction"
+  default_prompt: "Use $design-strategist to define the design strategy, experience principles, and user journey for this product opportunity."

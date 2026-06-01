@@ -2,13 +2,15 @@
 
 ## Referencias
 
-- Reto original: [sr-product-designer-spin.md](../../challenges/sr-product-designer-spin.md)
-- Plan de co-creación del MVP: [plan-co-creacion-mvp-credito-spin.md](../../plan-co-creacion-mvp-credito-spin.md)
-- Contexto estratégico de crédito: [oportunidad-creditos-oxxo-play-to-win.md](../../oportunidad-creditos-oxxo-play-to-win.md)
+- Reto original: [challenge.md](./challenge/challenge.md)
+- Plan de co-creación del MVP: [plan-co-creacion-mvp.md](./deliverables/plan-co-creacion-mvp.md)
+- Contexto estratégico de crédito: [business-opportunity-bnpl.md](./deliverables/business-opportunity-bnpl.md)
 
 ## Resumen del reto
 
 La organización quiere lanzar una funcionalidad de crédito para un supermercado online: **"pide tu súper ahora y págalo en 15 días"**.
+
+En esta propuesta, el documento de oportunidad de negocio responde **literalmente a ese brief**: recomienda evaluar un **BNPL embebido en checkout**, con foco en conversion, frecuencia de compra y riesgo de pago controlado.
 
 El equipo tiene 4 meses para llevar un MVP productivo al mercado y el negocio espera 3,000 créditos otorgados durante los primeros 3 meses de operación. El squad ya comenzó trabajo de backend, pero no existe discovery previo ni validación con usuarios.
 
@@ -24,5 +26,4 @@ El equipo tiene 4 meses para llevar un MVP productivo al mercado y el negocio es
 
 El caso debe demostrar liderazgo de diseño bajo ambigüedad. La postura recomendada es lanzar un **MVP controlado de crédito responsable**, no solo optimizar por originación.
 
-El éxito no debe medirse únicamente por créditos otorgados, sino también por comprensión del costo, confianza, pago puntual, soporte, mora temprana y aprendizaje para escalar.
-
+El éxito no debe medirse únicamente por créditos otorgados, sino también por comprensión del costo, confianza, pago puntual, servicio al cliente, mora temprana y aprendizaje para escalar.

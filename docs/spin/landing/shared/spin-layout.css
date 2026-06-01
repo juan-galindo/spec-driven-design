@@ -1,0 +1,307 @@
+.shell {
+  min-height: 100vh;
+  padding-bottom: calc(24px + env(safe-area-inset-bottom));
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(249, 250, 255, 0.92);
+  backdrop-filter: blur(16px);
+}
+
+.topbarInner,
+.content,
+.footerInner,
+.wrap,
+.layout {
+  width: min(var(--content-max), calc(100% - var(--page-gutter)));
+  margin: 0 auto;
+}
+
+.topbarInner {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.brandMark {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-gradient-end) 100%);
+  color: var(--surface-white);
+  font-weight: 500;
+  box-shadow: var(--shadow-soft);
+}
+
+.hero {
+  padding: 0 0 2px;
+}
+
+.hero--landing {
+  padding: calc(18px + env(safe-area-inset-top)) 0 22px;
+}
+
+.heroInner {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.heroCard {
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.22), transparent 22%),
+    radial-gradient(circle at 86% 22%, rgba(255, 255, 255, 0.18), transparent 26%),
+    radial-gradient(circle at 55% 100%, rgba(255, 255, 255, 0.12), transparent 28%),
+    linear-gradient(
+      120deg,
+      #2e0b7f 0%,
+      var(--brand-primary-strong) 24%,
+      var(--brand-primary) 58%,
+      var(--brand-gradient-end) 100%
+    );
+  box-shadow: var(--shadow-soft);
+}
+
+.heroCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 82%);
+  pointer-events: none;
+}
+
+.heroInner.heroCard {
+  position: relative;
+  padding: 34px 0 30px;
+}
+
+.hero:not(.hero--landing) .heroInner.heroCard {
+  padding: 40px 0;
+  margin-bottom: 40px;
+}
+
+.heroGrid {
+  width: min(var(--content-max), calc(100% - var(--page-gutter)));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+.heroBody {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+.hero--landing .heroGrid {
+  display: block;
+  width: min(var(--content-max), calc(100% - var(--page-gutter)));
+}
+
+.hero--landing .heroInner.heroCard {
+  padding: 24px;
+}
+
+.hero--landing .heroBody {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.hero--landing .heroIntro {
+  display: grid;
+  gap: 0;
+}
+
+.hero--landing .heroMeta {
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.eyebrow .icon {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.heroCard h1,
+.hero .heroInner:not(.heroCard) h1 {
+  margin: 0;
+  color: var(--surface-white);
+  font-size: clamp(30px, 7vw, 48px);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+.heroText,
+.statement {
+  margin: 16px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(16px, 1.8vw, 18px);
+  font-weight: 300;
+  line-height: 1.58;
+}
+
+.heroMeta {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.hero:not(.hero--landing) .heroBody > .eyebrow,
+.hero:not(.hero--landing) .heroBody > h1,
+.hero:not(.hero--landing) .heroBody > .heroText,
+.hero:not(.hero--landing) .heroBody > .heroMeta {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 899px) {
+  .hero:not(.hero--landing) .heroCard {
+    border-radius: 0;
+  }
+
+  .hero:not(.hero--landing) .heroInner.heroCard {
+    padding: 40px 0;
+    margin-bottom: 40px;
+  }
+
+  .hero:not(.hero--landing) .heroGrid,
+  .hero:not(.hero--landing) .heroBody {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.heroProof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.proofPill {
+  border-radius: 999px;
+  padding: 9px 12px;
+  background: rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.content {
+  display: block;
+  padding: 0 0 24px;
+  min-width: 0;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 0 24px;
+}
+
+.footer {
+  padding: 0 0 calc(8px + env(safe-area-inset-bottom));
+}
+
+.footerInner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text-secondary);
+  font-size: 14px;
+  box-shadow: var(--shadow-card);
+}
+
+.footerLine,
+.brandLine {
+  width: 140px;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand-primary) 0%, var(--brand-gradient-end) 100%);
+}
+
+@media (min-width: 900px) {
+  :root {
+    --page-gutter: 40px;
+  }
+
+  .topbarInner,
+  .content,
+  .footerInner,
+  .wrap,
+  .layout,
+  .heroGrid {
+    width: min(var(--desktop-width), calc(100% - var(--page-gutter)));
+  }
+
+  .hero--landing .heroBody {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 400px);
+    align-items: center;
+  }
+
+  .hero:not(.hero--landing) .heroMeta {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .heroCard h1,
+  .hero .heroInner:not(.heroCard) h1 {
+    font-size: clamp(36px, 5vw, 56px);
+  }
+}
+
+@media (max-width: 520px) {
+  .topActions .ghost {
+    display: none;
+  }
+}

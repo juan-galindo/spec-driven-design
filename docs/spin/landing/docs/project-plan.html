@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plan alto nivel co-creación del MVP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+    <link rel="stylesheet" href="../shared/spin-site.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div class="topbarInner">
+          <a class="brand" href="../index.html">
+            <span class="brandMark"><i class="icon hgi-stroke hgi-dashboard-square-01" aria-hidden="true"></i></span>
+          </a>
+          <nav class="topActions">
+            <details class="sectionMenu">
+              <summary>
+                <span>Secciones</span>
+                <i class="icon hgi-stroke hgi-arrow-down-01 sectionMenuCaret" aria-hidden="true"></i>
+              </summary>
+              <button type="button" class="sectionMenuBackdrop" aria-label="Cerrar menú de secciones"></button>
+              <div class="sectionMenuPanel">
+                <a href="#principios-de-construccion-del-plan">Principios de construcción del plan</a>
+                <a href="#leadership-blueprint">Leadership blueprint</a>
+                <a href="#modelo-de-colaboracion">Modelo de colaboración</a>
+                <a href="#criterios-de-exito-del-mvp">Criterios de éxito del MVP</a>
+                <a href="#timeline-sugerido-de-3-meses">Timeline sugerido de 3 meses</a>
+                <a href="#roles-y-responsabilidades">Roles y responsabilidades</a>
+                <a href="#riesgos-del-plan">Riesgos del plan</a>
+                <a href="#fase-1-strategic-framing">Fase 1: Strategic framing</a>
+                <a href="#fase-2-discovery-y-definicion-temprana">Fase 2: Discovery y definición temprana</a>
+                <a href="#fase-3-solution-shaping">Fase 3: Solution shaping</a>
+                <a href="#fase-4-build-and-launch-readiness">Fase 4: Build and launch readiness</a>
+              </div>
+            </details>
+            <a class="primary" href="../index.html#entry-points">
+              <span>Ver Artefactos</span>
+            </a>
+            <a class="ghost" href="../../deliverables/plan-co-creacion-mvp.md">
+              <i class="icon hgi-stroke hgi-note-01" aria-hidden="true"></i>
+              <span>Ver Markdown</span>
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <section class="hero hero--plan">
+        <div class="heroInner heroCard">
+          <div class="heroGrid">
+            <div class="heroBody">
+              <p class="eyebrow">
+                <i class="icon hgi-stroke hgi-sparkles" aria-hidden="true"></i>
+                <span>Plan</span>
+              </p>
+              <h1>Plan alto nivel co-creación del MVP</h1>
+              <p class="heroText">
+                Esta página sincroniza la versión cerrada de <code>plan-co-creacion-mvp.md</code> en un formato visual
+                mobile-first. Resume un plan de co-creación orientado a decisiones, con development en paralelo, prototipo
+                code-first y una lectura integral de negocio, experiencia, riesgo y data.
+              </p>
+              <div class="heroMeta">
+                <div class="summaryCard">
+                  <h2>8 principios</h2>
+                  <p>Guardrails para decidir mejor, alinear negocio, diseño y tecnología, y reducir retrabajo temprano.</p>
+                </div>
+                <div class="summaryCard">
+                  <h2>12 semanas</h2>
+                  <p>Timeline progresivo para cerrar happy path, contratos mínimos, spec ejecutable y piloto controlado.</p>
+                </div>
+                <div class="summaryCard">
+                  <h2>Code-first</h2>
+                  <p>El prototipo en código y la spec viva funcionan como puente real entre definición e implementación.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="content">
+        <article class="doc">
+          <section class="section" id="principios-de-construccion-del-plan">
+            <h2>Principios de construcción del plan</h2>
+            <ul>
+              <li><strong>Discovery y delivery en paralelo:</strong> investigar para decidir mejor, sin bloquear al equipo de development.</li>
+              <li><strong>AI-native workflow:</strong> usar AI para acelerar exploración, síntesis, prototipado, documentación y handoff.</li>
+              <li><strong>Benchmarking:</strong> usar Mobbin MCP o recopilación manual de referencias reales para revisar patrones de checkout, BNPL, crédito, pagos y repago antes de definir la solución.</li>
+              <li><strong>Code-first design:</strong> omitir Figma como artefacto principal y usar un prototipo de alta fidelidad en código como fuente viva.</li>
+              <li><strong>Domain-Driven Design para alinear arquitectura:</strong> usar Domain-Driven Design como herramienta de alineación entre negocio, diseño y tecnología, sin convertirlo en un proceso pesado.</li>
+              <li><strong>Mejora del design system existente:</strong> revisar componentes disponibles, detectar brechas y proponer mejoras reutilizables para no resolver el MVP como una experiencia aislada.</li>
+              <li><strong>Medición integral:</strong> evaluar adopción, comprensión, pago puntual y riesgo.</li>
+              <li><strong>Data como disciplina de decisión:</strong> definir baseline, instrumentación, cohortes, umbrales y lectura de incrementalidad desde framing, no al cierre del piloto.</li>
+            </ul>
+          </section>
+
+          <section class="section" id="leadership-blueprint">
+            <h2>Leadership blueprint</h2>
+            <p>
+              Al ser nuevo en el equipo, la primera responsabilidad no sería imponer una solución. Sería construir
+              confianza, conexiones y credibilidad rápidamente para poder influir en la misión. Usualmente comparto un
+              <a href="https://docs.google.com/document/d/1WayagV_CErjZYm-mcz0FpfNQndqIYlTG/edit">leadership blueprint</a>
+              con Design Team, Head of Design, Design Lead, Product Manager, Tech Lead y Development Team para establecer
+              expectativas sobre cómo trabajo con las personas.
+            </p>
+            <p>La confianza es la base para que el squad pueda moverse rápido.</p>
+            <div class="tableWrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Principio</th>
+                    <th>¿Qué significa?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Drive Outcomes, Not Just Outputs</strong></td>
+                    <td>Conectar contexto de negocio, UX strategy, datos y metas para priorizar el trabajo que más impacta: no solo entregar pantallas, sino reducir riesgo, mejorar comprensión y habilitar un MVP medible</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Raise Standards, Respect People</strong></td>
+                    <td>Elevar la calidad del trabajo sin perder empatía: escuchar al equipo, desafiar supuestos, mentorear cuando haga falta y crear condiciones para que todos puedan aportar</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Lead Through Trust and Collaboration</strong></td>
+                    <td>Construir relaciones de trabajo sólidas desde el inicio, crear espacios donde el equipo pueda aportar con seguridad y convertir colaboración en influencia para lograr la misión</td>
+                  </tr>
+                  <tr>
+                    <td><strong>AI-Native Workflows, Human Judgment</strong></td>
+                    <td>Usar AI para mejorar velocidad, exploración y documentación, manteniendo pensamiento crítico, visión de sistema y colaboración como filtros para decidir qué se construye y por qué</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="section" id="modelo-de-colaboracion">
+            <h2>Modelo de colaboración</h2>
+            <p>El plan no solo organiza fases de diseño. Organiza cómo producto, diseño y tecnología co-crean una solución.</p>
+            <h3>Núcleo de decisión</h3>
+            <ul>
+              <li>La tríada <code>Product Manager + Product Designer + Tech Lead</code> toma decisiones de alcance, tradeoffs, secuencia y riesgos.</li>
+              <li><code>Data</code> participa desde framing para definir baseline, criterios de medición, cohortes, umbrales y lectura del piloto.</li>
+              <li><code>Content Designer</code> y <code>UX Researcher</code> participan como owners en discovery, comprensión y validación, no solo como apoyo.</li>
+              <li><code>Legal</code>, <code>Riesgo</code>, <code>Marketing</code> y <code>Producto</code> entran desde definición, no solo al final.</li>
+              <li><code>Tech Lead</code> participa desde benchmarking y prototipo para asegurar que el code-first design sea un puente real hacia implementación.</li>
+            </ul>
+            <h3>Elementos explícitos de cierre por fase</h3>
+            <ol>
+              <li>Decisión tomada.</li>
+              <li>Dueño de la decisión.</li>
+              <li>Impacto en alcance.</li>
+              <li>Artefacto actualizado.</li>
+              <li>Efecto sobre development.</li>
+            </ol>
+            <h3>Rituales del squad</h3>
+            <ul>
+              <li><strong>Tríada 2 veces por semana:</strong> decide alcance, dependencias, cambios y riesgos.</li>
+              <li><strong>Design-definition review semanal:</strong> Product Designer, Content, Research, Data, Tech Lead y Front Lead revisan flujo, estados, copy, medición y nivel de preparación.</li>
+              <li><strong>Decision log vivo:</strong> toda decisión que cambie experiencia, esfuerzo o riesgo queda registrada con responsable, fecha y tradeoff.</li>
+              <li><strong>Checkpoint de release:</strong> Product Manager, Tech Lead, Data, Riesgo y Soporte confirman si el MVP sigue siendo lanzable.</li>
+            </ul>
+            <h3>Creando confianza</h3>
+            <ul>
+              <li>Publicar una forma de trabajo clara desde la primera semana: canales, rituales, responsables, decisiones y artefactos.</li>
+              <li>Escuchar primero a Product Manager, Tech Lead, Data, Research, Content y negocio para entender restricciones reales antes de proponer solución.</li>
+              <li>Convertir complejidad en dirección accionable: supuestos priorizados, decisiones pendientes y tradeoffs visibles.</li>
+              <li>Usar evidencia y prototipos para alinear, no opiniones aisladas.</li>
+              <li>Mantener un estándar alto en valor al cliente: si una decisión mejora conversión pero reduce comprensión o confianza, se discute explícitamente.</li>
+            </ul>
+          </section>
+
+          <section class="section" id="criterios-de-exito-del-mvp">
+            <h2>Criterios de éxito del MVP</h2>
+            <ul>
+              <li>Hay adopción y recurrencia.</li>
+              <li>Los usuarios entienden cuánto pagan, cuándo pagan y qué pasa si se atrasan.</li>
+              <li>La experiencia no genera confusión ni presión indebida.</li>
+              <li>El pago puntual es suficiente para justificar continuidad.</li>
+              <li>La mora temprana está dentro de umbrales aceptables.</li>
+              <li>El servicio al cliente no se satura por dudas básicas.</li>
+              <li>El squad puede iterar con datos reales.</li>
+              <li>El negocio puede decidir si escalar, ajustar o detener.</li>
+            </ul>
+          </section>
+
+          <section class="section" id="timeline-sugerido-de-3-meses">
+            <h2>Timeline sugerido de 3 meses</h2>
+            <p>Development arranca en la semana 1 y trabaja en paralelo con diseño hasta la semana 11. El plan libera definiciones progresivas para evitar desalinear lo ya avanzado.</p>
+            <ul>
+              <li>Cerrar un <strong>happy path preliminar</strong> al final de semana 3.</li>
+              <li>Cerrar <strong>principios de experiencia + arquitectura mínima + componentes reutilizables</strong> no más tarde de semana 5.</li>
+              <li>Llegar a semana 7 con el flujo ya totalmente definido.</li>
+              <li>Usar semanas 8 a 10 para iteración fina, no para descubrir la solución principal.</li>
+            </ul>
+            <div class="tableWrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Semana</th>
+                    <th>Fase</th>
+                    <th>Enfoque de diseño/producto</th>
+                    <th>Enfoque de research</th>
+                    <th>Trabajo adelantable de development</th>
+                    <th>Trabajo dependiente de definición</th>
+                    <th>Artefactos de salida</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>1</td><td>Strategic framing</td><td>Oportunidad de negocio + hipótesis estratégica</td><td>Identificar oportunidad, segmentos iniciales y alternativas competitivas</td><td>Backend comparte definiciones ya asumidas para contrastarlas con hipótesis de negocio y riesgos de cartera</td><td>No cerrar aún copy, reglas finas ni flujo final</td><td><a href="../../deliverables/business-opportunity-bnpl.md">Doc Opportunity Framing</a>, mapa de competidores y sustitutos, hipótesis estratégica inicial, criterios para decidir si avanzar</td></tr>
+                  <tr><td>2</td><td>Strategic framing</td><td>Kickoff de decisiones + alineación inicial</td><td>Definir objetivos, preguntas críticas y supuestos a validar</td><td>Setup técnico, navegación base, instrumentación analítica base, borrador de arquitectura adaptable</td><td>No congelar aún estados regulatorios ni criterios finales</td><td>Canal del proyecto, decision log, lista de riesgos y preguntas críticas, borrador de arquitectura v0</td></tr>
+                  <tr><td>3</td><td>Discovery</td><td>Discovery setup + definición provisional</td><td>Cerrar plan de investigación, muestra, screener y estímulos</td><td>Estructura base de frontend y backend alineada al borrador de arquitectura</td><td>No cerrar todavía copy final de disclosures ni orden final del flujo</td><td>Research plan final, backlog de hipótesis, flujo provisional v0, primeros estados y lenguaje ubicuo inicial</td></tr>
+                  <tr><td>4</td><td>Discovery</td><td>Discovery fieldwork + freeze preliminar del happy path</td><td>Ejecutar entrevistas, survey y señales cuantitativas direccionales</td><td>Base de componentes, navegación inicial y capas técnicas no bloqueadas</td><td>Mantener abiertos edge cases regulatorios y criterios finales</td><td>Notas de entrevistas, primeros patrones de confianza y comprensión, happy path preliminar congelable, iteración del borrador de arquitectura</td></tr>
+                  <tr><td>5</td><td>Discovery</td><td>Síntesis + principios de experiencia + system audit</td><td>Sintetizar hallazgos y validar hipótesis clave</td><td>Ajustes a estructura, componentes reutilizables y contratos base</td><td>No cerrar aún reglas finas de elegibilidad ni copy final</td><td>JTBDs, customer journey, principios de experiencia, arquitectura mínima, inventario de componentes reutilizables</td></tr>
+                  <tr><td>6</td><td>Solution shaping</td><td>Benchmarking aterrizado + definición de solución</td><td>Contrastar hallazgos con patrones de mercado y expectativas de experiencia</td><td>Extensiones de componentes ya priorizadas, dependencias técnicas definidas</td><td>Mantener abiertos solo puntos finos de contenido y consentimiento</td><td>Benchmark deck, backlog de componentes, design use cases, reglas visibles y borrador de arquitectura v1</td></tr>
+                  <tr><td>7</td><td>Solution shaping</td><td>Flujo validado + edge cases MVP</td><td>Validar riesgos críticos del flujo con stakeholders y usuarios cuando aplique</td><td>Revisión de lo construido contra casos de uso y contratos mínimos</td><td>No introducir nuevos jobs o problemas al scope del MVP</td><td>Happy path validado, edge cases MVP, contratos mínimos, decisiones clave de producto y contenido</td></tr>
+                  <tr><td>8</td><td>Solution shaping</td><td>Prototipo code-first v1</td><td>Evaluar comprensión y claridad sobre prototipo v1</td><td>Construcción sobre prototipo v1 e integración temprana</td><td>Mantener fuera del scope nuevos escenarios no críticos</td><td>Prototipo v1 en código, estados críticos, feedback del squad</td></tr>
+                  <tr><td>9</td><td>Build and launch readiness</td><td>Iteración fina + spec viva</td><td>Validar copy, jerarquía y fricciones críticas</td><td>Iteración de estados, copy y comportamiento a partir de feedback validado</td><td>No reabrir happy path ni contratos mínimos</td><td>Prototipo v2, copy refinado, escenarios de QA preliminares</td></tr>
+                  <tr><td>10</td><td>Build and launch readiness</td><td>Consolidación de spec y backlog final</td><td>Verificar que la spec preserve hallazgos y criterios de comprensión</td><td>Front y back trabajan con contratos estabilizados y backlog refinado</td><td>No inventar decisiones nuevas de producto en esta semana</td><td>Spec ejecutable final, contratos validados, eventos analíticos, criterios de aceptación, backlog MVP</td></tr>
+                  <tr><td>11</td><td>Build and launch readiness</td><td>Build sprint + GTM prep</td><td>Preparar plan de medición, soporte y protocolo post-launch</td><td>Implementación principal y QA temprano sobre casos críticos</td><td>No abrir scope nuevo</td><td>MVP integrado, ADRs clave, casos de QA, materiales de servicio al cliente y plan de rollout</td></tr>
+                  <tr><td>12</td><td>Build and launch readiness</td><td>Build sprint + launch readiness</td><td>Cerrar baseline de medición y logística de post-launch testing</td><td>Hardening, fixes finales y preparación de release</td><td>No agregar nuevos requisitos</td><td>MVP funcional, release checklist, piloto controlado listo, tablero inicial y plan de monitoreo</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="section" id="roles-y-responsabilidades">
+            <h2>Roles y responsabilidades</h2>
+            <div class="tableWrap">
+              <table>
+                <thead>
+                  <tr><th>Rol</th><th>Responsabilidad</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Product Manager</td><td>Liderar alcance, priorización, apoyar framing, hipótesis, métricas, tradeoffs de negocio y producto, y criterio de qué entra o sale del MVP</td></tr>
+                  <tr><td>Product Designer</td><td>Liderar estrategia de experiencia, benchmarking, prototipo code-first, decisiones de flujo y spec</td></tr>
+                  <tr><td>Tech Lead</td><td>Definir arquitectura, dependencias, contratos, factibilidad y secuencia técnica junto con la tríada</td></tr>
+                  <tr><td>Data</td><td>Definir motor de aprobación si no existe, taxonomía de eventos, cohortes, umbrales, lectura de incrementalidad y monitoreo del piloto</td></tr>
+                  <tr><td>Content Designer</td><td>Definir lenguaje claro, jerarquía de información, estados, mensajes críticos, disclosures y diseñar FAQs</td></tr>
+                  <tr><td>UX Researcher</td><td>Ejecutar discovery, traducir hallazgos en implicaciones accionables y conducir post-launch testing</td></tr>
+                  <tr><td>Front Lead</td><td>Aterrizar factibilidad del flujo, componentes y prototipo code-first hacia implementación real</td></tr>
+                  <tr><td>QA</td><td>Convertir criterios en escenarios verificables desde definición y validar preparación antes del release</td></tr>
+                  <tr><td>Business Analyst</td><td>Apoyar framing, hipótesis, métricas y tradeoffs de negocio</td></tr>
+                  <tr><td>Dev team</td><td>Implementar MVP según spec, componentes definidos y mejoras reutilizables</td></tr>
+                  <tr><td>Legal/riesgo</td><td>Validar disclosures, consentimiento, costos, elegibilidad y política de cobranza antes del cierre final</td></tr>
+                  <tr><td>Soporte o CX</td><td>Preparar FAQs, scripts y rutas de escalamiento para el piloto</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="section" id="riesgos-del-plan">
+            <h2>Riesgos del plan</h2>
+            <div class="tableWrap">
+              <table>
+                <thead>
+                  <tr><th>Riesgo</th><th>Impacto</th><th>Mitigación</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Optimizar solo por 3,000 créditos</td><td>Puede generar mala cartera y daño reputacional</td><td>Medir comprensión, pago puntual y mora desde el inicio</td></tr>
+                  <tr><td>Baja comprensión del costo</td><td>Puede causar quejas, abandono o mora</td><td>Copy claro, resumen antes de aceptar y comprehension testing</td></tr>
+                  <tr><td>Discovery insuficiente</td><td>Se construye una solución basada en supuestos</td><td>Discovery rápido antes del concepto y traducción de hallazgos a reglas, estados y contratos</td></tr>
+                  <tr><td>Benchmarking superficial</td><td>Se copian patrones sin entender contexto</td><td>Evaluar patrones con criterios de crédito responsable, costo de implementación y compatibilidad con el design system</td></tr>
+                  <tr><td>Duplicación de componentes</td><td>Inconsistencia y deuda de UI</td><td>Auditar componentes antes de prototipar y priorizar extensiones reutilizables</td></tr>
+                  <tr><td>Handoff ambiguo</td><td>Retrabajo entre diseño y development</td><td>Prototipo code-first, spec viva, decision log y gates por fase</td></tr>
+                  <tr><td>Cambios tardíos sobre happy path o contratos</td><td>Retrabajo en front y back</td><td>Congelar happy path preliminar en semana 4 y contratos mínimos en semana 7</td></tr>
+                  <tr><td>AI usada sin criterio</td><td>Soluciones rápidas pero desconectadas del usuario</td><td>AI después de JTBD y con validación humana</td></tr>
+                  <tr><td>Riesgo legal o regulatorio</td><td>Bloqueo de lanzamiento o daño reputacional</td><td>Incluir legal/riesgo desde framing, definición y release checkpoint</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="section" id="fase-1-strategic-framing">
+            <h2>Fase 1: Strategic framing</h2>
+            <p><strong>1.1 Oportunidad de negocio:</strong> Define por qué vale la pena lanzar este MVP, qué oportunidad concreta se quiere capturar y desde qué ventaja se va a competir.</p>
+            <p><strong>1.2 Alineación:</strong> Convertimos esa hipótesis inicial en una base compartida de decisiones, restricciones y lenguaje de dominio.</p>
+            <h3>Why?</h3>
+            <p>Nos ayuda a evitar que el equipo arranque con una meta incompleta o contradictoria. Alineamos negocio, producto, tecnología, data y riesgo antes de profundizar en solución, y reducimos el riesgo de optimizar por originación sin claridad sobre valor, cartera ni aprendizaje.</p>
+            <p><strong>Decisión a cerrar:</strong> Qué estamos validando realmente con el MVP, qué no vamos a validar todavía y qué resultados no se deben sacrificar por perseguir originación.</p>
+            <p><strong>Participan:</strong> Product Manager, Product Designer, Tech Lead, Data, Riesgo, Marketing y stakeholders clave.</p>
+            <h3>Actividades</h3>
+            <ol>
+              <li>
+                <strong>Descubrir la meta real del MVP</strong> con producto, tecnologia, data, riesgo y marketing:
+                <ul>
+                  <li>¿Adquisición, frecuencia, ticket promedio, retención, margen, aprendizaje o una combinación?</li>
+                  <li>Qué resultado importa más en el corto plazo y cuál no se debe sacrificar.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Mapear la oportunidad de negocio</strong>:
+                <ul>
+                  <li>Tamaño potencial de la oportunidad dentro del contexto.</li>
+                  <li>Segmentos de usuario con mayor probabilidad de adopción y pago sano.</li>
+                  <li>Momentos del journey donde crédito podría destrabar valor.</li>
+                  <li>Señales disponibles o faltantes para medir elegibilidad, incrementalidad y calidad de cartera.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Analizar el landscape competitivo y los sustitutos</strong>:
+                <ul>
+                  <li>Tarjetas de crédito.</li>
+                  <li>Otros BNPL o créditos de corto plazo.</li>
+                  <li>Otros mecanismos de financiamiento.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Facilitar un kickoff de decisiones o workshop</strong> para cerrar:
+                <ul>
+                  <li>Problema inicial.</li>
+                  <li>Objetivo de negocio.</li>
+                  <li>Restricciones no negociables.</li>
+                  <li>Riesgos principales.</li>
+                  <li>Alcance del discovery.</li>
+                  <li>Primer criterio de éxito.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Generar una primera capa de alineación arquitectónica con Domain-Driven Design</strong>:
+                <ul>
+                  <li>Entidades y eventos de dominio clave.</li>
+                  <li>Revisión de supuestos de backend contra objetivos de negocio y casos de uso esperados.</li>
+                  <li>Borrador de arquitectura con decisiones abiertas, dependencias y supuestos de arquitectura.</li>
+                  <li>Primer ADR con tradeoffs todavía por validar.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Definir con Data la primera capa de medición</strong>:
+                <ul>
+                  <li>Baseline previo al experimento.</li>
+                  <li>Cohortes iniciales.</li>
+                  <li>Eventos y propiedades críticas.</li>
+                  <li>Umbrales de lectura para escalar, iterar o pausar.</li>
+                </ul>
+              </li>
+            </ol>
+            <h3>Resultado esperado</h3>
+            <p>Una hipótesis inicial del MVP con oportunidad priorizada, segmento objetivo, leading and lagging indicators, baseline inicial, restricciones no negociables, primer lenguaje de dominio y backlog de preguntas críticas.</p>
+            <div class="tableWrap">
+              <table>
+                <thead>
+                  <tr><th>Elemento</th><th>Cierre esperado</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Decisión</td><td>Hipótesis de MVP y criterios de éxito iniciales</td></tr>
+                  <tr><td>Dueño</td><td>Product Manager y Product Designer</td></tr>
+                  <tr><td>Impacto en alcance</td><td>Qué entra al framing del MVP y qué queda fuera por ahora</td></tr>
+                  <tr><td>Artefacto actualizado</td><td>Opportunity framing, decision log, borrador de arquitectura v0, baseline y plan de medicion v0</td></tr>
+                  <tr><td>Efecto sobre development</td><td>Backend puede contrastar lo ya iniciado; frontend puede recibir un paquete inicial para arrancar sin esperar el diseño final</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="section" id="fase-2-discovery-y-definicion-temprana">
+            <h2>Fase 2: Discovery y definición temprana</h2>
+            <p><strong>2.1 Product discovery:</strong> Entiende el problema real del usuario, los JTBDs y los riesgos de comprensión antes de cerrar la solución.</p>
+            <p><strong>2.2 Benchmarking y revisión del design system:</strong> Contrasta hallazgos con patrones de mercado y con las capacidades reales del sistema de diseño.</p>
+            <h3>Why?</h3>
+            <p>Nos ayuda a no diseñar una solución correcta en ejecución pero equivocada en valor. Esta fase traduce evidencia de usuario, referencias de mercado y capacidades internas en una definición temprana que protege el avance técnico y reduce retrabajo posterior.</p>
+            <p><strong>Decisión a cerrar:</strong> Qué problemas del usuario sí justifican el MVP y qué experiencia mínima debemos proteger para no lanzar una solución que no aporta valor o no mueve la aguja.</p>
+            <p><strong>Participan:</strong> Product Designer, UX Researcher, Content Designer, Product Manager, Data, Tech Lead y Front Lead.</p>
+            <h3>Actividades</h3>
+            <ol>
+              <li><strong>Apoyar la definición y ejecución de investigación</strong> junto al Researcher. <a href="./research-plan.md">Propuesta plan de investigación</a></li>
+              <li><strong>Identificar Jobs To Be Done</strong> funcionales, emocionales y sociales.</li>
+              <li>
+                <strong>Trabajar con Content Designer para definir</strong>:
+                <ul>
+                  <li>Estrategia de contenido.</li>
+                  <li>Jerarquía de información.</li>
+                  <li>Mensajes mínimos para comprensión.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Traducir cada hallazgo relevante en implicaciones</strong>:
+                <ul>
+                  <li>Implicación de experiencia.</li>
+                  <li>Implicación de regla de negocio.</li>
+                  <li>Implicación de contrato, estado o dependencia técnica.</li>
+                  <li>Implicación de medición, segmentación o lectura posterior.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Sintetizar hallazgos</strong> en:
+                <ul>
+                  <li>JTBDs principal y secundarios.</li>
+                  <li>Customer Journey con pains, puntos de contacto y oportunidades.</li>
+                  <li>Principios de experiencia.</li>
+                  <li>Ajustes al modelo de diagrama de arquitectura.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Hacer benchmarking de flujos comparables</strong>:
+                <ul>
+                  <li>Checkout con financiamiento o pago diferido.</li>
+                  <li>BNPL y créditos de corto plazo.</li>
+                  <li>Wallets y métodos de pago guardados.</li>
+                  <li>Pantallas de elegibilidad o preaprobación.</li>
+                  <li>Resumen de costo, fecha límite y términos.</li>
+                  <li>Recordatorios de pago y repago.</li>
+                  <li>Estados de atraso, error y servicio al cliente.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Definir con Data la estructura de instrumentación del flujo</strong>:
+                <ul>
+                  <li>Eventos del funnel.</li>
+                  <li>Propiedades de elegibilidad, oferta, aceptación, pago y atraso.</li>
+                  <li>Cohortes y cortes de lectura.</li>
+                  <li>Dependencias de tracking con frontend y backend.</li>
+                </ul>
+              </li>
+              <li><strong>Definir qué componentes se reutilizan, qué se extiende y qué se crea desde cero</strong>.</li>
+            </ol>
+            <h3>Resultado esperado</h3>
+            <p>JTBD, principios de experiencia, criterios de comprension, patrones reutilizables, backlog de componentes y una definicion temprana suficientemente clara para congelar un happy path preliminar.</p>
+            <div class="tableWrap">
+              <table>
+                <thead>
+                  <tr><th>Elemento</th><th>Cierre esperado</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Decisión</td><td>Happy path preliminar congelable y experiencia mínima a proteger</td></tr>
+                  <tr><td>Dueño</td><td>Tech Lead, Product Manager y Product Designer con input de Research y Content</td></tr>
+                  <tr><td>Impacto en alcance</td><td>Qué jobs y problemas sí justifican el MVP; qué hallazgos no se intentarán resolver en esta versión</td></tr>
+                  <tr><td>Artefacto actualizado</td><td>Research synthesis, principios de experiencia, inventario de patrones y componentes, diagrama de arquitectura, taxonomía de eventos v0</td></tr>
+                  <tr><td>Efecto sobre development</td><td>El equipo puede seguir avanzando en trabajo adelantable con menos riesgo de retrabajo sobre estructura, componentes y contratos base</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="section" id="fase-3-solution-shaping">
+            <h2>Fase 3: Solution shaping</h2>
+            <p><strong>3.1 Definición:</strong> Convertimos el aprendizaje en reglas, estados, componentes, criterios de experiencia y contratos mínimos.</p>
+            <p><strong>3.2 Prototipo code-first:</strong> Vuelve la definición una experiencia tangible, evaluable y útil para destrabar implementación.</p>
+            <h3>Why?</h3>
+            <p>Convertimos hallazgos y decisiones de producto en una solución implementable. Esta fase baja la ambigüedad antes de construir a escala, congela lo esencial del MVP y usa el prototipo como puente real entre diseño, frontend y backend.</p>
+            <p><strong>Decisión a cerrar:</strong> Happy path, edge cases críticos del MVP, reglas de negocio visibles para front, componentes, estados y contratos mínimos para implementación.</p>
+            <p><strong>Participan:</strong> Product Manager, Product Designer, Tech Lead, Data, Content Designer, Front Lead.</p>
+            <h3>Actividades</h3>
+            <ol>
+              <li><strong>Traducir hallazgos del discovery a design use cases priorizados</strong>.</li>
+              <li><strong>Definir criterios de experiencia por design use case</strong>.</li>
+              <li>
+                <strong>Definir estrategia de contenido</strong>:
+                <ul>
+                  <li>Jerarquía de información por momento del flujo.</li>
+                  <li>Terminología clara para crédito, costo total, fecha límite, atraso, pago y elegibilidad.</li>
+                  <li>Mensajes clave por design use case.</li>
+                  <li>Tono responsable: claro, directo y sin presión comercial.</li>
+                  <li>Disclosures mínimos que deben aparecer antes de aceptar.</li>
+                  <li>Criterios de comprensión para validar copy con usuarios.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Definir reglas de negocio, estados y restricciones del MVP</strong>:
+                <ul>
+                  <li>Elegibilidad.</li>
+                  <li>Límite disponible.</li>
+                  <li>Cálculo de costo total.</li>
+                  <li>Fecha límite de pago.</li>
+                  <li>Aceptación de términos.</li>
+                  <li>Confirmación de originación.</li>
+                  <li>Pago pendiente, pagado y vencido.</li>
+                  <li>Servicio al cliente y escalamiento.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Traducir reglas de negocio a reglas de medición y monitoreo</strong>:
+                <ul>
+                  <li>Qué define una oferta elegible.</li>
+                  <li>Qué define una adopción válida.</li>
+                  <li>Qué define un pago puntual.</li>
+                  <li>Qué define deterioro temprano.</li>
+                  <li>Qué alertas disparan revisión manual o pausa.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Consolidar la definición de arquitectura</strong>:
+                <ul>
+                  <li>Revisar que backend soporte los design use cases priorizados.</li>
+                  <li>Registrar decisiones de arquitectura y tradeoffs en ADRs cortos.</li>
+                </ul>
+              </li>
+              <li><strong>Explorar 2 o 3 rutas</strong> basadas en JTBD usando AI.</li>
+              <li><strong>Diseñar directamente en un prototipo de alta fidelidad en código del happy path</strong> usando componentes reales o equivalentes del design system.</li>
+            </ol>
+            <h3>Resultado esperado</h3>
+            <p>Un prototipo code-first del happy path, validado, con contenido aprobado y estados criticos definidos, que sirva tanto para validar como para destrabar la implementacion.</p>
+            <div class="tableWrap">
+              <table>
+                <thead>
+                  <tr><th>Elemento</th><th>Cierre esperado</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Decisión</td><td>Flujo validado, edge cases MVP, reglas visibles y contratos mínimos</td></tr>
+                  <tr><td>Dueño</td><td>Tech Lead, Product Manager y Product Designer con soporte de Front y Content</td></tr>
+                  <tr><td>Impacto en alcance</td><td>Qué se congela para MVP y qué se mueve a post-MVP</td></tr>
+                  <tr><td>Artefacto actualizado</td><td>Prototipo code-first, spec viva v1, ADRs, decisiones de componente, scorecard de métricas y alertas</td></tr>
+                  <tr><td>Efecto sobre development</td><td>Front y back pueden construir sobre una definición ya encaminada, no apenas descubierta</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="section" id="fase-4-build-and-launch-readiness">
+            <h2>Fase 4: Build and launch readiness</h2>
+            <p><strong>4.1 Spec y build:</strong> Consolida la definición en una fuente de verdad ejecutable y acompaña la implementación sin abrir scope tardío.</p>
+            <p><strong>4.2 GTM y medición:</strong> Preparamos el piloto, la operación de soporte y el aprendizaje post-launch para decidir si iterar, pausar o escalar.</p>
+            <h3>Why?</h3>
+            <p>Nos ayuda a evitar que la presión de entrega degrade el criterio de producto, experiencia y riesgo. Esta fase convierte la definición en producto real, prepara un lanzamiento controlado y deja listo el sistema de lectura para decidir con datos qué hacer después del piloto.</p>
+            <p><strong>Decisión a cerrar:</strong> Qué entra al MVP, qué se difiere y qué riesgos quedan aceptados antes de lanzar.</p>
+            <p><strong>Participan:</strong> Squad completo: Product Manager, Product Designer, Tech Lead, Dev team, QA, Content, Research, Data, Marketing, Riesgo y Soporte.</p>
+            <h3>Actividades</h3>
+            <ol>
+              <li>
+                <strong>Consolidar la spec final</strong> con:
+                <ul>
+                  <li>Vistas.</li>
+                  <li>Casos de uso.</li>
+                  <li>Comportamientos esperados.</li>
+                  <li>Restricciones legales y de consentimiento.</li>
+                  <li>Dependencias técnicas.</li>
+                  <li>Eventos analíticos.</li>
+                  <li>Definiciones de métricas y cohortes.</li>
+                </ul>
+              </li>
+              <li><strong>Trabajar con development desde la spec</strong> para cubrir escenarios críticos.</li>
+              <li>
+                <strong>Compartir progreso en async daily y mantener alineaciones semanales con el squad</strong>:
+                <ul>
+                  <li>Decisiones tomadas.</li>
+                  <li>Cambios por discovery validado.</li>
+                  <li>Riesgos abiertos.</li>
+                  <li>Dependencias.</li>
+                  <li>Casos no cubiertos.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Verificar que la implementación respete</strong>:
+                <ul>
+                  <li>Comportamientos del prototipo.</li>
+                  <li>Spec.</li>
+                  <li>Uso acordado de componentes existentes y nuevos.</li>
+                  <li>Estados definidos.</li>
+                  <li>Criterios de aceptación.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Preparar el lanzamiento como piloto limitado</strong>:
+                <ul>
+                  <li>Segmento inicial.</li>
+                  <li>Mensajes responsables.</li>
+                  <li>FAQs.</li>
+                  <li>Scripts de atención.</li>
+                  <li>Rutas de escalamiento.</li>
+                  <li>Rollout gradual.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Establecer el ritual de seguimiento post-launch</strong>:
+                <ul>
+                  <li>Reunión semanal con Product Manager, Product Design, Research, Content, Data y Tech Lead.</li>
+                  <li>Revisar métricas, hallazgos y riesgos.</li>
+                  <li>Tomar una de cuatro decisiones: iterar, pausar, ampliar o rediseñar.</li>
+                </ul>
+              </li>
+            </ol>
+            <h3>Resultado esperado</h3>
+            <p>Una spec ejecutable, criterios verificables, aceptacion de QA, preparacion legal y operativa, y un esquema claro de monitoreo para iterar sin abrir scope tardiamente.</p>
+            <div class="tableWrap">
+              <table>
+                <thead>
+                  <tr><th>Elemento</th><th>Cierre esperado</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Decisión</td><td>Alcance final del MVP, riesgos aceptados y preparacion de lanzamiento</td></tr>
+                  <tr><td>Dueño</td><td>Tech Lead, Product Manager y Product Designer con validación de Riesgo</td></tr>
+                  <tr><td>Impacto en alcance</td><td>Qué se lanza ahora, qué se difiere y qué queda como aprendizaje post-launch</td></tr>
+                  <tr><td>Artefacto actualizado</td><td>Spec ejecutable final, escenarios de QA, release checklist, tablero inicial, definición de cohortes y umbrales</td></tr>
+                  <tr><td>Efecto sobre development</td><td>El equipo entra a hardening y release sin abrir scope nuevo ni introducir decisiones estructurales tardías</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <h3>Estructura recomendada de la spec</h3>
+            <pre><code># Spec: Agentic Hand-off
+
+## Feature Overview
+## Sign-off
+## Business Context
+## Objective
+## Intent (The "What")
+## In Scope and Out of Scope
+## User Story
+### Why this is priority
+### Test Scenarios
+### Acceptance Criteria
+## Vistas
+## Datos requeridos
+## Estados y errores
+## Content aprobado
+## Componentes existentes, extensiones y componentes nuevos
+## Eventos de analítica
+## Dependencias
+## Riesgos abiertos</code></pre>
+          </section>
+        </article>
+      </div>
+
+      <footer class="footer">
+        <div class="footerInner wrap">
+          <div class="footerLine"></div>
+          <div>Representación visual sincronizada con <code>plan-co-creacion-mvp.md</code>.</div>
+        </div>
+      </footer>
+    </main>
+    <script src="../shared/spin-nav.js"></script>
+  </body>
+</html>
