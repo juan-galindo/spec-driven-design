@@ -6,40 +6,6 @@ Traducir la oportunidad de negocio del BNPL del súper a 15 días en decisiones 
 
 Este journey no describe un crédito amplio. Describe un **producto embebido en checkout** del súper online de **OXXO** (retailer piloto prioritario por facilidad de partnership), para una compra necesaria con delivery.
 
-## Tesis estratégica
-
-La oportunidad no es lanzar una línea de crédito general ni una tarjeta propia. La oportunidad es ofrecer una opción clara para **cerrar hoy una compra necesaria y pagarla quince días después**.
-
-El piloto se prioriza en **OXXO** por menor fricción de alianza (checkout, datos, repago Spin/caja). La expansión a otros retailers queda condicionada a resultados del piloto.
-
-## Usuario primario
-
-**Responsable de compra del hogar que compra súper online y llega corto de presupuesto al cierre**
-
-Persona adulta, urbana o semiurbana, que compra despensa o reposición del hogar por e-commerce o delivery y que, al cierre del carrito, puede:
-
-- recortar categorías;
-- posponer la compra;
-- cambiar de tienda;
-- o buscar una promo;
-- en el piloto, puede tener relación con **OXXO, Spin o Premia**, lo que facilita confianza y repago.
-
-### Job principal
-
-Job principal por resolver:
-
-> Cuando cierro un carrito de despensa o reposición en el súper online y no tengo liquidez para pagarlo completo hoy — aunque ya decidí que la compra es necesaria —, quiero una forma de pago acotada que me permita recibir el pedido ahora y liquidarlo en una fecha conocida, para no recortar categorías del hogar ni posponer una necesidad que no puede esperar.
-
-| Dimensión | Lectura para el journey |
-| --- | --- |
-| Funcional | El valor vive en checkout: cerrar sin recortar canasta necesaria |
-| Emocional | Control antes de aceptar: costo total, fecha y atraso visibles |
-| Social | Herramienta puntual de cierre de compra, no crédito amplio |
-
-**Progreso:** de carrito listo con riesgo de abandono → pedido confirmado con compromiso de pago previsible.
-
-**Fuera de scope del job:** línea revolvente, liquidez general, consumo impulsivo no ligado al hogar.
-
 ### Misiones de compra prioritarias
 
 | Misión | Descripción | Prioridad MVP |
@@ -104,33 +70,11 @@ Job principal por resolver:
 4. **Convertir el repago en parte de la experiencia:** no dejarlo escondido tras la compra.
 5. **Aprender por misiones de compra:** reposición, despensa y promoción útil no tienen el mismo riesgo.
 
-## Implicaciones para el MVP
-
-### Alcance recomendado
-
-- opción BNPL en checkout del súper online de OXXO;
-- financiamiento a 15 días;
-- montos iniciales acotados;
-- resumen financiero claro;
-- recordatorios previos al vencimiento;
-- repago prioritario vía Spin y/o caja OXXO;
-- reglas de pausa o reuso visibles.
-
-### Fuera de alcance inicial
-
-- línea abierta de crédito;
-- múltiples mensualidades;
-- uso fuera de checkout;
-- categorías de alto riesgo sin aprendizaje previo;
-- ampliación agresiva de monto desde el primer ciclo;
-- expansión a otros retailers antes de validar adopción, mora y economía en cohorte OXXO.
-
 ## Métricas recomendadas
 
 | Dimensión | Métricas |
 | --- | --- |
 | Conversión | Take rate, uplift en checkout, disminución de abandono |
-| Producto | Comprensión de costo y fecha, completion del flujo, éxito de repago |
 | Riesgo | Mora temprana, fraude, reversos, segunda compra sana |
 | Negocio | Ticket retenido, frecuencia de recompra, contribución por cohorte |
 

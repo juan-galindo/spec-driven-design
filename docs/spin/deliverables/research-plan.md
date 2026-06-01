@@ -1,185 +1,165 @@
-### Propuesta de plan de investigacion
+### Propuesta de plan de investigación
 
 #### Contexto
 
-El negocio quiere lanzar una funcionalidad de credito para un supermercado online con delivery: **"pide tu super ahora y pagalo en quince dias"**.
+El negocio ve una oportunidad en la compra de super online con delivery, pero todavía no ha hecho discovery con usuarios. El canal piloto probable es **OXXO** por facilidad de partnership; eso es contexto de negocio, no premisa del research.
 
-El piloto prioriza el **checkout del super online de OXXO** por facilidad de partnership (integracion, datos, repago Spin/caja). Otros retailers pueden evaluarse despues; la investigacion debe servir primero al canal piloto sin cerrar el caso a un solo actor para siempre.
+**Este research no valida una solución.** Explora cómo compran despensa online, dónde aparecen fricciones reales (presupuesto, confianza, timing, canal) y qué alternativas usan hoy para resolverlas. Las ideas de producto (crédito, pago diferido, promo u otro mecanismo) salen después, a partir del usuario real.
 
-El foco es validar un **BNPL embebido en checkout** que ayude a cerrar compras necesarias sin obligar al usuario a pagar todo hoy.
-
-El equipo necesita evidence rapido para responder preguntas criticas:
-
-- realmente hay abandono por restriccion de presupuesto en el checkout?
-- para que tipos de compra se percibe legitimo financiar?
-- que informacion necesita el usuario antes de aceptar?
-- el beneficio mueve solo conversion o tambien recompra?
-- que barreras de confianza, fraude o comprension pueden frenar adopcion?
+Este plan existe para confirmar, refutar o reorientar esos supuestos antes de definir MVP.
 
 #### Objetivo general
 
-Entender si un BNPL del super a 15 dias es deseable, comprensible y viable para el usuario objetivo, y que condiciones de experiencia y riesgo deberia tener el MVP para mejorar conversion y frecuencia sin deteriorar pago puntual.
+Descubrir cómo compran super/despensa online las personas del universo piloto: quiénes son, qué misiones de compra tienen, dónde se rompe el flujo, qué hacen cuando no les alcanza el presupuesto y qué lenguaje usan para describir el problema.
 
-#### Objetivos especificos
+#### Objetivos específicos
 
-- Entender en que momentos el usuario reduce, abandona o pospone un carrito de super por restriccion de presupuesto.
-- Identificar para que misiones de compra un BNPL de 15 dias se siente legitimo: reposicion, despensa, compra urgente, compra promocional o carrito grande.
-- Entender que alternativas usa hoy cuando no quiere o no puede pagar el carrito completo: tarjeta, debito, reduccion de carrito, cupon, otra tienda o posponer.
-- Detectar que informacion minima necesita antes de aceptar: costo, fecha exacta, monto, atraso, metodo de pago y recordatorios.
-- Medir valor percibido del producto frente a otros mecanismos no crediticios.
-- Entender si el usuario percibe el BNPL como apoyo de conveniencia o como deuda riesgosa.
-- Definir principios de experiencia, tono y guardrails para el flujo de checkout.
-- Evaluar si la relacion con OXXO, Spin o Premia aumenta confianza y disposicion a repagar en el piloto.
+- **Descubrir perfiles reales:** frecuencia, canal, ticket, quién decide, composición del hogar, relación con marcas del ecosistema (OXXO, Spin, Premia).
+- **Descubrir misiones de compra:** reposición, despensa de quincena, urgencia, promo, compra discrecional.
+- **Descubrir momentos de quiebre:** cuándo y por qué recortan, abandonan o posponen; separar presupuesto de otras causas (precio, delivery, confianza, tiempo).
+- **Descubrir alternativas actuales:** qué hacen hoy cuando el carrito no cuadra: tarjeta, débito, efectivo, reducción, cupón, otra tienda, posponer, apoyo familiar, crédito informal.
+- **Descubrir lenguaje y miedos:** cómo nombran el problema, qué les preocupa de pedir ayuda o endeudarse, qué asocian con confianza en un canal digital.
+- **Contrastar supuestos del negocio:** verificar si el usuario hipotético existe, con qué frecuencia y en qué condiciones.
 
-#### Preguntas de investigacion
+#### Preguntas de investigación
 
-- Que hace el usuario cuando el carrito final queda por encima de su presupuesto disponible?
-- Que tipos de carrito consideraria razonable pagar en 15 dias y cuales no?
-- Que tan sensible es a frases como "paga despues", "sin intereses", "costo del servicio" o "fecha limite"?
-- Que tan importante es que el producto aparezca en checkout y no antes?
-- Que tipo de monto siente manejable a 15 dias?
-- Que lo haria confiar en la opcion?
-- Que consecuencias de atraso necesita entender antes de aceptar?
-- Que tan probable es que una experiencia positiva aumente la recompra?
-- Que tan importante es pagar via Spin, caja OXXO u otro canal ya conocido frente a un flujo nuevo?
-- Que senales de marca (OXXO, Spin) aumentan o reducen desconfianza hacia el BNPL?
+**Sobre el usuario y la compra**
 
-#### Hipotesis iniciales con framework XYZ
+- ¿Quién compra super online y con qué frecuencia? ¿Quién decide y planifica el presupuesto?
+- ¿Qué misiones de compra dominan: reposición, despensa, urgencia, promo?
+- ¿Qué canal prefieren y por qué (app del retailer, marketplace, delivery agregador)?
 
-| Hipotesis XYZ | Que valida | Evidencia esperada |
+**Sobre fricción y abandono**
+
+- ¿Con qué frecuencia el carrito final no cuadra con lo que tenían previsto pagar?
+- ¿Qué hacen cuando pasa? ¿Recortan, posponen, cambian tienda, buscan promo, piden apoyo?
+- ¿Qué otras razones, además del presupuesto, los hacen abandonar o reducir el carrito?
+
+**Sobre alternativas y sustitutos**
+
+- ¿Qué opciones consideran legítimas cuando no pueden pagar completo hoy?
+- ¿Qué les preocupa de cada alternativa (deuda, vergüenza, perder la compra, costo oculto)?
+- ¿Qué papel juegan OXXO, Spin o Premia en su confianza y hábitos de pago?
+
+**Sobre oportunidad (sin asumir solución)**
+
+- ¿Existe un job claro que hoy no resuelven bien?
+- ¿Ese job es lo suficientemente frecuente y doloroso para justificar un producto nuevo?
+- ¿Hay segmentos distintos con necesidades distintas que el negocio está mezclando?
+
+#### Metodología multimétodo
+
+Enfoque **exploratorio**: primero entender al usuario en su contexto real.
+
+| Fase | Método | Objetivo |
 | --- | --- | --- |
-| Si mostramos una opcion de BNPL de 15 dias en checkout para carritos necesarios, esperamos reducir abandono por presupuesto en usuarios que ya decidieron comprar. | Valor del producto en el momento de cierre. | El usuario reconoce situaciones reales donde preferiria financiar una parte o todo el carrito en vez de recortarlo o posponerlo. |
-| Si el BNPL se comunica como forma de resolver una compra necesaria y no como credito generico, esperamos mayor comprension y menor rechazo. | Tesis de posicionamiento. | El usuario explica con sus palabras por que lo usaria y no lo confunde con una linea abierta de deuda. |
-| Si mostramos costo total, fecha exacta y consecuencias de atraso antes de aceptar, esperamos reducir sorpresa y aumentar confianza. | Riesgo de comprension. | El usuario puede repetir sin ayuda cuanto paga, cuando paga y que pasa si se atrasa. |
-| Si acotamos montos y frecuencia, esperamos mejor aceptacion del producto sin disparar temor a sobreendeudamiento. | Guardrails del MVP. | El usuario percibe el producto como controlado y "para resolver", no como trampa. |
-| Si el caso de uso es reposicion o despensa necesaria, esperamos mayor legitimidad que en compras mas discrecionales. | Priorizacion de misiones de compra. | El usuario rankea carritos de abastecimiento y urgencia por encima de compra aspiracional. |
+| 1 | Entrevistas en profundidad | Mapa del usuario, hábitos de compra, lenguaje, contexto de vida |
+| 1 | Switching interviews | Episodios concretos de fricción, abandono o cambio de comportamiento |
+| 2 | Survey direccional | Frecuencia del problema, segmentos, alternativas actuales a escala |
 
-#### Metodologia multi-metodo
+##### 1. Entrevistas en profundidad (exploratorias)
 
-| Componente | Definicion |
+**n = 8–10** · remoto
+
+Entrevistas semi-estructuradas **sin presentar concepto de producto**.
+
+- Rutina de compra: quién, cuándo, dónde, cuánto, cómo paga.
+- Planificación de presupuesto: quincena, imprevistos, prioridades del hogar.
+- Experiencia online vs. física: qué les gusta, qué les frena.
+- Relación con crédito, fiado, apoyo familiar: lenguaje, miedos, experiencias previas.
+- Relación con OXXO, Spin, Premia: hábitos, confianza, percepción.
+
+**Salida:** perfiles emergentes, jobs en palabras del usuario, mapa de alternativas actuales.
+
+##### 2. Switching interviews
+
+**n = 6–8** · remoto
+
+Episodio reciente (30–60 días) donde algo salió distinto a lo planeado en una compra de despensa. No solo "no me alcanzó": también abandono por precio, delivery, desconfianza o cambio de tienda.
+
+Estructura:
+
+1. **First thought:** cuándo sintió que algo no cuadraba.
+2. **Push:** qué lo empujó a actuar distinto.
+3. **Pull:** qué buscó como salida.
+4. **Anxiety:** qué le preocupaba de cada opción.
+5. **Habit:** qué hizo al final y por qué.
+
+**Salida:** momentos de quiebre reales, jobs priorizados, competidores actuales del usuario (no del producto).
+
+##### 3. Survey direccional
+
+Survey de **comportamiento y problema**, no de producto. Complementa lo cualitativo con frecuencia y segmentos, pero con rigor estadístico suficiente para tomar decisiones direccionales.
+
+**Parámetros de muestra**
+
+| Parámetro | Valor | Notas |
+| --- | --- | --- |
+| Nivel de confianza | 95% | Estándar para decisiones de producto en discovery |
+| Margen de error (estimaciones globales) | ±5 p.p. | Sobre proporciones clave (ej. % con fricción de presupuesto) |
+| Proporción de referencia | 50% | Escenario más conservador cuando no hay baseline |
+
+Bloques:
+
+- **Screening:** compra online/delivery, frecuencia, ticket, método de pago, zona.
+- **Hábitos de compra:** misiones dominantes, planificación, canal preferido.
+- **Fricción:** frecuencia de carrito que no cuadra; qué hace cuando pasa (ranking de alternativas).
+- **Abandono:** razones de abandono o recorte (presupuesto, precio, delivery, confianza, otro).
+- **Lenguaje:** cómo describiría el problema en sus palabras (abierta).
+- **Confianza de canal:** percepción de retailers y marcas del ecosistema.
+- **Concept probe *(opcional, bloque final)*:** solo si fase cualitativa confirma oportunidad; 1–2 conceptos neutros de solución para señal direccional, sin wireframes ni flujo de checkout.
+
+**Salida:** frecuencia del problema por segmento con intervalo de confianza al 95%, ranking de alternativas actuales, lenguaje del usuario, señal de oportunidad (sí/no/reorientar) documentando margen de error en cada estimación clave.
+
+##### Secuencia y duración
+
+| Semana | Actividad |
 | --- | --- |
-| Enfoque | Investigacion ligera orientada a decisiones de MVP |
-| Duracion | 5 a 10 dias habiles |
-| Cualitativo principal | Entrevistas semiestructuradas de 30 a 40 minutos con compradores digitales de super; priorizar quienes usen o puedan usar el super online de OXXO |
-| Cualitativo complementario | Test moderado de comprension con concepto y pantallas de baja fidelidad |
-| Cuantitativo rapido | Encuesta o intercept para medir intencion, claridad, confianza y sensibilidad a costo |
-| Cuantitativo secundario | Analisis de data existente: abandono de carrito, ticket promedio, frecuencia de recompra, medios de pago, cupones y tasas de error/fraude |
+| X | Cerrar screener y guías; reclutar entrevistas |
+| X | Cerrar survey; sintetizar usuario real; decidir si hay oportunidad y qué explorar en fase de solución |
+| X | Entrevistas en profundidad + switching interviews |
+| X | Sintetizar perfiles y jobs; diseñar y lanzar survey |
 
 #### Participantes y muestra
 
-| Criterio | Definicion |
-| --- | --- |
-| Muestra cualitativa | 8 a 12 participantes |
-| Muestra cuantitativa | 100 a 150 respuestas como minimo practico |
-| Segmentos | Compradores online de super; compradores hibridos; usuarios que abandonaron o redujeron carrito por presupuesto; usuarios con relacion OXXO/Spin/Premia (deseable, no obligatorio) |
-| Inclusion | Personas adultas, compran para el hogar, usan e-commerce o delivery, han sentido restriccion de presupuesto al comprar despensa o reposicion; idealmente con experiencia reciente en super online o delivery de conveniencia |
-| Exclusion | Usuarios sin control de compra del hogar o sin experiencia reciente en compra online |
+TBD
 
-#### Estimulos
+#### Estímulos
 
-- Descripcion neutral del concepto: "lleva tu pedido hoy y pagalo en quince dias".
-- Variantes de copy para:
-  - nombre del producto;
-  - costo total;
-  - fecha de pago;
-  - atraso;
-  - confirmacion.
-- Ejemplos de carrito:
-  - reposicion pequena;
-  - despensa media;
-  - carrito grande de quincena;
-  - carrito de compra poco esencial.
-- Wireframes de checkout del super online OXXO con:
-  - opcion BNPL;
-  - resumen financiero;
-  - confirmacion;
-  - recordatorio;
-  - pantalla de repayment (Spin, caja OXXO u otro canal acordado).
+TBD
 
-#### Senales cuantitativas a levantar
+#### Señales cuantitativas a levantar
 
-- Intencion de uso ante el concepto.
-- Preferencia frente a otras opciones: tarjeta, cupon, reducir carrito, posponer compra.
-- Claridad percibida de costo total y fecha.
-- Confianza en el producto y sensibilidad a penalizacion.
-- Ticket que consideraria razonable financiar.
-- Misiones de compra mas aceptables para BNPL.
-- Disposicion a recomprar si la experiencia fue positiva.
+TBD
 
-#### Guia de sesion
+#### Guía de sesión (fase exploratoria)
 
-1. **Screening y contexto:** como compra despensa, con que frecuencia y por que canal.
-2. **Comportamiento actual:** como decide monto de carrito y que hace si se pasa del presupuesto.
-3. **Momento de quiebre:** explorar una situacion reciente de recorte, abandono o posposicion.
-4. **Alternativas actuales:** tarjeta, debito, promo, otra tienda, posponer o reducir.
-5. **Reaccion al concepto:** presentar BNPL a 15 dias en checkout.
-6. **Priorizacion de carritos:** para que tipos de compra lo usaria o no.
-7. **Comprension:** pedir que explique costo, total, fecha y atraso.
-8. **Confianza y lenguaje:** comparar variantes de copy y triggers de desconfianza.
-9. **Recompra y control:** entender si una experiencia positiva cambiaria frecuencia futura.
-10. **Cierre:** condiciones minimas para usarlo y principales motivos de rechazo.
+TBD
 
-#### Plan de analisis
+**No incluir en fase exploratoria:** presentación de BNPL, wireframes, copy de producto, preguntas de intención de uso ante solución propuesta.
 
-- Agrupar hallazgos por: conversion, presupuesto, legitimidad, lenguaje, confianza, claridad, repayment y recompra.
+#### Plan de análisis
+
+- Agrupar hallazgos por: perfil, misión de compra, momento de quiebre, alternativa actual, lenguaje, confianza.
 - Separar hechos observados, interpretaciones y recomendaciones.
-- Cruzar hallazgos cualitativos con abandono de carrito, ticket y recompra si hay data disponible.
-- Priorizar hallazgos por impacto en:
-  - conversion;
-  - riesgo;
-  - claridad;
-  - factibilidad de MVP.
+- Contrastar supuestos del negocio vs. evidencia de campo.
+- Cruzar cualitativo con survey para frecuencia y segmentos; reportar proporciones con IC 95% y margen de error.
+- Priorizar hallazgos por: existencia del problema, tamaño del segmento, alternativas actuales, implicación estratégica.
 
 #### Entregables
 
 - Research brief ejecutivo.
-- JTBD principal y secundarios.
-- Lectura sobre momentos de abandono o recorte de carrito.
-- Priorizacion de misiones de compra aptas para BNPL.
-- Riesgos de comprension y confianza.
-- Recomendaciones de contenido para checkout.
-- Implicaciones para journey, prototipo y reglas de producto.
+- **Perfil(es) de usuario real** con segmentación, jobs, alternativas y lenguaje propio.
+- Mapa de momentos de quiebre y frecuencia del problema.
+- Contraste: supuestos del negocio vs. usuario descubierto.
+- Jobs to be done (formulados desde campo, no desde negocio).
+- Ranking de alternativas actuales del usuario (sustitutos reales).
+- Tabla de resultados del survey con intervalos de confianza al 95% en métricas clave.
+- Lectura go/no-go sobre si existe oportunidad de producto y en qué condiciones.
+- Preguntas abiertas para la fase de definición de solución (no recomendaciones de MVP todavía).
+- Propuesta de valor para el producto.
 
-#### Criterios de decision
+#### Criterios de decisión
 
-- Si el usuario no ve valor claro del BNPL en checkout, no se avanza sin replantear el caso de uso.
-- Si la mayoria no entiende costo total o fecha de pago, no se avanza a alta fidelidad sin redisenar el resumen financiero.
-- Si la adopcion potencial viene solo de carritos poco esenciales, se revisa el foco del MVP.
-- Si el rechazo principal es desconfianza o miedo a deuda escondida, se prioriza disclosure, tono y guardrails.
-- Si el usuario reconoce valor para compras necesarias y puede repetir claramente cuanto y cuando pagaria, se avanza a prototipo y piloto controlado.
+TBD
 
-### JTBD inicial a validar
-
-Job principal por resolver (alineado a oportunidad de negocio):
-
-> Cuando cierro un carrito de despensa o reposicion en el super online y no tengo liquidez para pagarlo completo hoy — aunque ya decidi que la compra es necesaria —, quiero una forma de pago acotada que me permita recibir el pedido ahora y liquidarlo en una fecha conocida, para no recortar categorias del hogar ni posponer una necesidad que no puede esperar.
-
-#### Que debe validar la investigacion del job
-
-| Dimension | Pregunta de validacion |
-| --- | --- |
-| Funcional | El usuario reconoce el momento de carrito listo + falta de liquidez, no solo "no quiero pagar hoy" |
-| Emocional | Puede repetir monto, fecha y consecuencia de atraso sin ayuda |
-| Social | El producto reduce verguenza o dependencia de familia frente a recortar o posponer |
-| Contratacion | Prefiere BNPL frente a recortar carrito, posponer o cupon cuando la compra es necesaria |
-| Legitimidad | Rankea despensa/reposicion por encima de carritos discrecionales |
-
-#### Jobs secundarios a observar (no bloquean MVP)
-
-- Consultar deuda y fecha sin friccion post-compra.
-- Pagar al vencimiento por canal conocido (Spin, caja OXXO).
-- Intencion de segundo uso si el primer ciclo fue claro y puntual.
-
-### Propuesta de valor inicial a validar
-
-> Lleva tu super hoy y pagalo en quince dias, con el costo total y la fecha exacta visibles antes de aceptar.
-
-### Principios de experiencia derivados del discovery
-
-- **Checkout, no banner suelto:** el valor aparece al cierre del carrito.
-- **Claridad radical:** monto, costo, total y fecha antes de aceptar.
-- **Legitimidad de la compra:** priorizar carritos necesarios y de abastecimiento.
-- **Friccion responsable:** evitar una aceptacion impulsiva por urgencia.
-- **Control posterior:** repayment, recordatorios y estado visibles.
-- **Repago en ecosistema conocido:** priorizar Spin y/o caja OXXO cuando el partnership lo permita.
-- **Tono sin euforia:** evitar promesas tipo "dinero gratis" o "sin preocupaciones".
