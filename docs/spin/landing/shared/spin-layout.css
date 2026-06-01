@@ -50,7 +50,7 @@
 }
 
 .hero {
-  padding: 0 0 2px;
+  padding: 0;
 }
 
 .hero--landing {
@@ -97,8 +97,8 @@
 }
 
 .hero:not(.hero--landing) .heroInner.heroCard {
-  padding: 40px 0;
-  margin-bottom: 40px;
+  padding: 64px 0;
+  margin-bottom: 64px;
 }
 
 .heroGrid {
@@ -131,7 +131,7 @@
 .hero--landing .heroBody {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: 120px;
 }
 
 .hero--landing .heroIntro {
@@ -201,8 +201,8 @@
   }
 
   .hero:not(.hero--landing) .heroInner.heroCard {
-    padding: 40px 0;
-    margin-bottom: 40px;
+    padding: 64px 0;
+    margin-bottom: 64px;
   }
 
   .hero:not(.hero--landing) .heroGrid,
@@ -295,8 +295,12 @@
 
   .hero--landing .heroBody {
     grid-template-columns: minmax(0, 1fr) minmax(300px, 400px);
-    align-items: center;
-    gap: 40px;
+    align-items: start;
+    gap: 120px;
+  }
+
+  .hero--landing .visualStage {
+    align-self: end;
   }
 
   .hero:not(.hero--landing) .heroMeta {
