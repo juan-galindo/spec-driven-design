@@ -16,33 +16,28 @@ Demostrar una postura de diseñador estratégico sobre si conviene avanzar con e
 
 El reto no es solo diseñar un flujo de crédito, sino liderar el lanzamiento responsable de un BNPL embebido en checkout del súper online de OXXO (retailer piloto prioritario por facilidad de partnership) que mejore conversión y frecuencia sin sacrificar comprensión, confianza ni pago puntual.
 
-## Narrativa
-
-1. Sí conviene avanzar, inicialente como un piloto OXXO-first controlado, claro y medible.
-2. Diseño debe liderar el encuadre estratégico, la experiencia y el sistema de decisiones, no solo la interfaz.
-3. La ejecución correcta combina un happy path tangible, investigación ligera y entrega en paralelo.
-
 ---
 
-## Slide 1: Spin debe lanzar crédito como una apuesta controlada de aprendizaje, no solo como un nuevo medio de pago
+## Slide 0: Executive summary, avanzar con un piloto OXXO-first para aprender sin comprometer confianza ni salud del crédito
 
-**Mensaje:** Recomiendo avanzar con un MVP controlado de `pide tu súper ahora y págalo en 15 días`, embebido en el checkout del súper online de OXXO y diseñado para validar valor, pago puntual y recompra.
+**Recomendación:** Lanzar un MVP controlado de BNPL en checkout del súper online de OXXO (`pide ahora, paga en 15 días`) con guardrails claros y criterio explícito para escalar, ajustar o detener.
 
-**Contenido:**
+| Dimensión | Decisión |
+| --- | --- |
+| **Validar** | Perfiles, misiones de compra, momentos de quiebre, alternativas actuales y lenguaje de confianza — confirmar o refutar supuestos del negocio antes de cerrar solución |
+| **Diseñar** | Journey de 11 etapas + principios de claridad, control, seguridad y continuidad; happy path que prueba comprensión y repago desde v1 |
+| **Ejecutar** | Agentic design para explorar y sintetizar; co-creación con tríada PM + PD + Tech Lead; discovery y delivery en paralelo con congelamientos |
+| **Medir** | Adoption, Default Rate, margen y take rate; no solo la meta de `3,000 créditos` |
 
-- Piloto OXXO-first por facilidad de partnership (integración, datos, repago Spin/caja).
-- Otros retailers pueden evaluarse después; el canal piloto no debe elegirse solo por TAM.
-- El producto debe salir con guardrails: monto acotado, elegibilidad clara, costo visible y repayment simple.
-- La meta de `3,000 créditos` debe complementarse con métricas como Default Rate.
-- Diseño lidera el framing estratégico, la experiencia, la investigación, la colaboración y los criterios de decisión.
+Spin puede usar crédito como apuesta de aprendizaje responsable, no como empuje de conversión sin guardrails ni evidencia.
+
+Aprender rápido / Proteger confianza / Decidir con evidencia.
 
 ---
 
 ## Slide 2: Mis principios convierten ambigüedad en dirección, confianza y momentum
 
-**Mensaje:** Mi forma de trabajar busca crear claridad rápido, elevar la calidad de la solución y mantener al equipo alineado bajo presión.
-
-**Contenido:**
+Mi forma de trabajar busca crear claridad rápido, elevar la calidad de la solución y mantener al equipo alineado bajo presión.
 
 - **Drive outcomes, not just outputs:** conectar negocio, UX, datos y ejecución.
 - **Build trust through clarity:** hacer visibles decisiones, prioridades, riesgos y tradeoffs.
@@ -53,9 +48,7 @@ El reto no es solo diseñar un flujo de crédito, sino liderar el lanzamiento re
 
 ## Slide 3: Agentic design me permitió explorar más rápido sin delegar el juicio estratégico
 
-**Mensaje:** Usé agentic design como sistema de trabajo para ampliar la exploración, acelerar la síntesis y enfocar mi tiempo en dirección de experiencia producto.
-
-**Contenido:**
+Usé agentic design como sistema de trabajo para ampliar la exploración, acelerar la síntesis y enfocar mi tiempo en dirección de experiencia de producto.
 
 - Dividí el caso en frentes especializados: oportunidad de negocio, investigación, happy path, plan de co-creación, riesgos y métricas.
 - Usé AI como colaborador para contrastar hipótesis, estructurar escenarios y sintetizar información.
@@ -63,17 +56,15 @@ El reto no es solo diseñar un flujo de crédito, sino liderar el lanzamiento re
 - Mantuve criterio humano en las decisiones críticas: qué recomendar, qué no lanzar, qué medir y cómo reducir riesgo.
 - El resultado es una propuesta integrada entre negocio, diseño, investigación, data y entrega.
 
-**Visual sugerido:** `Business framing -> Research questions -> Experience thesis -> Happy path -> Delivery plan`
+`Business framing -> Research questions -> Experience thesis -> Happy path -> Delivery plan`
 
-Línea inferior sugerida: `AI accelerates exploration / Human judgment makes decisions`.
+AI accelerates exploration / Human judgment makes decisions.
 
 ---
 
 ## Slide 4: La primera decisión de diseño es saber qué supuestos de negocio, riesgo, usuario, tecnología y operación validar
 
-**Mensaje:** Antes de cerrar la solución, aclararía los frentes que determinan si el MVP es deseable, viable, entendible y operable.
-
-**Contenido:**
+Antes de cerrar la solución, aclararía los frentes que determinan si el MVP es deseable, viable, entendible y operable.
 
 - **Negocio:** además de `3,000 créditos`, ¿qué outcome importa más: conversión, ticket, recompra, aprendizaje o margen?
 - **Partner retail:** ¿qué acuerdos de checkout, datos y repago con OXXO son mínimos para lanzar en 4 meses?
@@ -86,9 +77,9 @@ Línea inferior sugerida: `AI accelerates exploration / Human judgment makes dec
 
 ## Slide 5: Las 11 etapas del journey ubican dónde el BNPL convierte sin sacrificar confianza
 
-**Mensaje:** El BNPL es conveniencia de checkout en OXXO, no crédito genérico: de la planeación a la recompra, el journey muestra cuándo aprieta el presupuesto, qué necesita el usuario para decidir con calma y en qué cinco momentos de verdad claridad y repago visible importan más que empujar la conversión.
+El journey muestra cuándo aprieta el presupuesto, qué necesita el usuario para decidir.
 
-**Contenido:**
+**Customer Journey:**
 
 | Etapa | Situación | Necesidad / pregunta | Riesgo principal | Oportunidad de diseño |
 | --- | --- | --- | --- | --- |
@@ -112,15 +103,11 @@ Línea inferior sugerida: `AI accelerates exploration / Human judgment makes dec
 - Recordatorio previo al vencimiento (etapa 9)
 - Segundo uso (etapa 11)
 
-**Pains prioritarios:** deuda no deseada; falta de claridad en costo/fecha.
-
 ---
 
 ## Slide 6: Mis principios de diseño hacen legible la decisión financiera antes de empujar la conversión o uso irresponsable del financiamiento
 
-**Mensaje:** Estos principios definen la experiencia para que el usuario entienda, acepte y pague sin sorpresas con claridad y control por encima de urgencia visual.
-
-**Contenido:**
+Estos principios definen la experiencia para que el usuario entienda, acepte y pague sin sorpresas con claridad y control por encima de urgencia visual.
 
 **Design principles**
 
@@ -131,36 +118,35 @@ Línea inferior sugerida: `AI accelerates exploration / Human judgment makes dec
 | Seguridad | OTP, identidad y confirmación explicados como protección; pasos deliberados donde el riesgo lo exige |
 | Continuidad | Misma navegación, tono y patrones del checkout retail; el usuario no “sale” a otro producto |
 
-**Visual sugerido:** 7–9 tarjetas de principio con icono + una línea de “qué diseñamos”; línea inferior que mapea principios a etapas 4–7 y 9–11 del journey.
+---
 
-**Nota para presentar:** Tesis de diseño: claridad y control primero, conversión después. Puente slide 5 (journey) → slide 6 (principios) → slide 8 (happy path).
+## Slide 7: El BNPL gana en checkout cuando el presupuesto aprieta, no como crédito genérico
+
+El valor aparece en la etapa 3 del journey: el usuario ya armó su carrito, quiere comprar, pero no quiere o no puede pagar todo hoy.
+
+- Caso de uso legítimo: financiar compras necesarias del hogar (despensa, reposición), no consumo discrecional impulsivo.
+- Beneficio fácil de explicar: recibir el súper hoy y pagar en 15 días.
+- Repago vía Spin y/o caja OXXO refuerza confianza y operación dentro del ecosistema conocido.
+- Diseño activa BNPL solo cuando el contexto lo justifica — no como oferta permanente en todo checkout.
 
 ---
 
 ## Slide 8: El happy path debe demostrar que el usuario entiende, acepta y puede pagar con confianza
 
-**Mensaje:** El flujo no solo debe originar crédito; debe validar comprensión, consentimiento y pago desde la primera versión.
+El flujo no solo debe originar crédito; debe validar comprensión, consentimiento y pago desde la primera versión.
 
-**Contenido:**
 
 - **Checkout offer:** opción visible para usuarios elegibles: "recibe hoy y paga en 15 días".
 - **Financial summary:** monto de compra, costo del servicio si aplica, total a pagar y fecha límite.
 - **Confirmation:** aceptación explícita del compromiso.
 - **Order confirmation:** refuerzo de cuánto debe, cuándo paga y dónde puede consultarlo.
 - **Reminder and repayment:** recordatorios claros y pago simple vía Spin, caja OXXO u otro canal acordado.
-- **Edge cases mínimos:** no elegible, error de activación, pago vencido inicial y contacto con soporte.
-
-**Visual sugerido:** Flujo de 5 pantallas principales + 3 estados de excepción.
-
-**Nota para presentar:** Presenta el flow como hipótesis tangible para alinear, validar y construir, no como solución final cerrada.
 
 ---
 
 ## Slide 9: El squad necesita un sistema de decisiones, no otro proceso de handoff
 
-**Mensaje:** Para avanzar rápido sin perder calidad, diseño debe ayudar a que producto, tecnología, research, content, data y riesgo decidan juntos.
-
-**Contenido:**
+Para avanzar rápido sin perder calidad, diseño debe ayudar a que producto, tecnología, research, content, data y riesgo decidan juntos.
 
 - Activaría una tríada fuerte: `PM + Product Designer + Tech Lead`.
 - Content Designer y UX Researcher entrarían desde el encuadre, la comprensión y la validación.
@@ -169,17 +155,15 @@ Línea inferior sugerida: `AI accelerates exploration / Human judgment makes dec
 - Usaría rituales simples: tríada dos veces por semana, revisión de definición y registro vivo de decisiones.
 - Cada decisión importante debe dejar claro qué cambió, quién decidió, qué impacto tiene y qué implica para desarrollo.
 
-**Visual sugerido:** Operating model con roles, rituales y artefactos.
-
-**Nota para presentar:** Aquí muestras liderazgo multidisciplinario y seniority de producto.
+**Ver plan de co-creación (12 semanas):** [`plan-co-creacion-mvp.md`](./plan-co-creacion-mvp.md)
 
 ---
 
 ## Slide 10: Un MVP en 4 meses exige discovery y delivery en paralelo con congelamientos claros
 
-**Mensaje:** La ejecución debe permitir aprendizaje sin bloquear desarrollo, usando definiciones progresivas y decisiones explícitas.
+La ejecución debe permitir aprendizaje sin bloquear desarrollo, usando definiciones progresivas y decisiones explícitas.
 
-**Contenido:**
+**Project plan:**
 
 - **Semanas 1-2: Strategic framing:** alinear objetivo real, criterios de partner retail, riesgos, baseline, preguntas críticas y supuestos existentes de backend.
 - **Semanas 3-5: Lightweight discovery:** validar JTBD, legitimidad del caso de uso, comprensión, confianza y happy path preliminar.
@@ -197,19 +181,20 @@ Línea inferior sugerida: `AI accelerates exploration / Human judgment makes dec
 
 ## Slide 11: Éxito significa adopción sana, comprensión clara y evidencia para escalar o detener
 
-**Mensaje:** El MVP solo debe considerarse exitoso si demuestra valor para negocio y usuario sin comprometer la salud del modelo.
+El MVP solo debe considerarse exitoso si demuestra valor para negocio y usuario sin comprometer la salud del modelo.
 
 - **Adoption:** porcentaje de checkouts elegibles que usan BNPL.
-- **Margen de contribución:** aporte financiero del producto al negocio. 
-- **Default Rate:** pago puntual y mora temprana dentro de umbrales aceptables.
-- **Take Rate:** Total volumen comisión del servicio.
+- **Understanding:** % usuarios que explican correctamente monto, fecha y consecuencia de atraso (post-checkout survey).
+- **Margen de contribución:** aporte financiero del producto al negocio.
+- **Default Rate:** % de créditos con mora > X días dentro de umbrales aceptables.
+- **Take Rate:** % del GMV originado vía BNPL que genera comisión neta.
 - **Support:** volumen de tickets por falta de claridad.
 
 ---
 
-## Slide 12: Por qué soy un buen fit para Spin?
+## Slide 12: ¿Por qué soy un buen fit para Spin?
 
-**Mensaje:** Soy un diseñador de producto senior que opera entre estrategia y ejecución: traduzco complejidad en dirección clara, uso agentic design para ampliar alcance sin perder criterio, y construyo sobre sistemas.
+Soy un diseñador de producto senior que opera entre estrategia y ejecución: traduzco complejidad en dirección clara, uso agentic design para ampliar alcance sin perder criterio, y construyo sobre sistemas.
 
 **1. Diseño estratégico de producto**
 
