@@ -2,6 +2,8 @@
 
 Presentación compacta para 20 minutos
 
+English version: [`presentation-structure-spin-en.md`](./presentation-structure-spin-en.md)
+
 ## Audiencia
 
 Head of Design, Sr Design Leads y Head of Product.
@@ -56,13 +58,27 @@ Usé agentic design como sistema de trabajo para ampliar la exploración, aceler
 - Mantuve criterio humano en las decisiones críticas: qué recomendar, qué no lanzar, qué medir y cómo reducir riesgo.
 - El resultado es una propuesta integrada entre negocio, diseño, investigación, data y entrega.
 
-`Business framing -> Research questions -> Experience thesis -> Happy path -> Delivery plan`
+`Business opportunity -> Research questions -> Experience thesis -> Happy path -> Delivery plan`
 
 AI accelerates exploration / Human judgment makes decisions.
 
 ---
 
-## Slide 4: La primera decisión de diseño es saber qué supuestos de negocio, riesgo, usuario, tecnología y operación validar
+## Slide 4: Entendí la oportunidad de negocio como base del proceso, no como un brief a ilustrar
+
+Antes de diseñar flujos, mapeé por qué Spin tiene sentido avanzar con BNPL en checkout de súper online y qué debe demostrar el MVP.
+
+- **Problema:** abandono en checkout cuando el usuario ya decidió comprar pero no puede o no quiere pagar el carrito completo hoy.
+- **Encaje:** financiar despensa o reposición en contexto de compra es más legítimo que una línea de crédito genérica.
+- **Palanca:** conversión, recompra y frecuencia — con riesgo de pago controlado, no solo originación de `3,000 créditos`.
+- **Decisión de negocio:** ¿conviene un BNPL a 15 días embebido en checkout y bajo qué condiciones escalar?
+- **Piloto OXXO-first:** partnership por facilidad de integración (checkout, datos, repago), no solo TAM.
+
+**Ver oportunidad de negocio:** [`business-opportunity-bnpl.md`](./business-opportunity-bnpl.md)
+
+---
+
+## Slide 5: La primera decisión de diseño es saber qué supuestos de negocio, riesgo, usuario, tecnología y operación validar
 
 Antes de cerrar la solución, aclararía los frentes que determinan si el MVP es deseable, viable, entendible y operable.
 
@@ -75,7 +91,7 @@ Antes de cerrar la solución, aclararía los frentes que determinan si el MVP es
 
 ---
 
-## Slide 5: Las 11 etapas del journey ubican dónde el BNPL convierte sin sacrificar confianza
+## Slide 6: Las 11 etapas del journey ubican dónde el BNPL convierte sin sacrificar confianza
 
 El journey muestra cuándo aprieta el presupuesto, qué necesita el usuario para decidir.
 
@@ -105,7 +121,7 @@ El journey muestra cuándo aprieta el presupuesto, qué necesita el usuario para
 
 ---
 
-## Slide 6: Mis principios de diseño hacen legible la decisión financiera antes de empujar la conversión o uso irresponsable del financiamiento
+## Slide 7: Mis principios de diseño hacen legible la decisión financiera antes de empujar la conversión o uso irresponsable del financiamiento
 
 Estos principios definen la experiencia para que el usuario entienda, acepte y pague sin sorpresas con claridad y control por encima de urgencia visual.
 
@@ -120,7 +136,7 @@ Estos principios definen la experiencia para que el usuario entienda, acepte y p
 
 ---
 
-## Slide 7: El BNPL gana en checkout cuando el presupuesto aprieta, no como crédito genérico
+## Slide 8: El BNPL gana en checkout cuando el presupuesto aprieta, no como crédito genérico
 
 El valor aparece en la etapa 3 del journey: el usuario ya armó su carrito, quiere comprar, pero no quiere o no puede pagar todo hoy.
 
@@ -131,7 +147,7 @@ El valor aparece en la etapa 3 del journey: el usuario ya armó su carrito, quie
 
 ---
 
-## Slide 8: El happy path debe demostrar que el usuario entiende, acepta y puede pagar con confianza
+## Slide 9: El happy path debe demostrar que el usuario entiende, acepta y puede pagar con confianza
 
 El flujo no solo debe originar crédito; debe validar comprensión, consentimiento y pago desde la primera versión.
 
@@ -144,7 +160,7 @@ El flujo no solo debe originar crédito; debe validar comprensión, consentimien
 
 ---
 
-## Slide 9: El squad necesita un sistema de decisiones, no otro proceso de handoff
+## Slide 10: El squad necesita un sistema de decisiones, no otro proceso de handoff
 
 Para avanzar rápido sin perder calidad, diseño debe ayudar a que producto, tecnología, research, content, data y riesgo decidan juntos.
 
@@ -159,7 +175,7 @@ Para avanzar rápido sin perder calidad, diseño debe ayudar a que producto, tec
 
 ---
 
-## Slide 10: Un MVP en 4 meses exige discovery y delivery en paralelo con congelamientos claros
+## Slide 11: Un MVP en 4 meses exige discovery y delivery en paralelo con congelamientos claros
 
 La ejecución debe permitir aprendizaje sin bloquear desarrollo, usando definiciones progresivas y decisiones explícitas.
 
@@ -179,7 +195,7 @@ La ejecución debe permitir aprendizaje sin bloquear desarrollo, usando definici
 
 ---
 
-## Slide 11: Éxito significa adopción sana, comprensión clara y evidencia para escalar o detener
+## Slide 12: Éxito significa adopción sana, comprensión clara y evidencia para escalar o detener
 
 El MVP solo debe considerarse exitoso si demuestra valor para negocio y usuario sin comprometer la salud del modelo.
 
@@ -192,7 +208,7 @@ El MVP solo debe considerarse exitoso si demuestra valor para negocio y usuario 
 
 ---
 
-## Slide 12: ¿Por qué soy un buen fit para Spin?
+## Slide 13: ¿Por qué soy un buen fit para Spin?
 
 Soy un diseñador de producto senior que opera entre estrategia y ejecución: traduzco complejidad en dirección clara, uso agentic design para ampliar alcance sin perder criterio, y construyo sobre sistemas.
 
